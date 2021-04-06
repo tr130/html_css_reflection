@@ -1,0 +1,35 @@
+$color-webd: #926fb1;
+$color-it: #4183d7;
+$color-tele: #d64541;
+$color-besp: #67809f;
+$color-digm: #2ecc71;
+$color-cybs: #f62459;
+$color-contact: #999aa2;
+
+$breakpoints: (
+  'xs': 766px, 
+  'sm': 767px,
+ 'med': 990px,
+  'lg': 1260px,  
+);
+
+@mixin media-xs {
+  @media screen and (max-width: 766px) {
+    @content;
+  }
+}
+@mixin media-sm {
+  @media screen and (max-width: 990px) {
+    @content;
+  }
+}
+@mixin media-med {
+  @media screen and (max-width: 1259px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1260px) {
+    @content;
+  }
+}

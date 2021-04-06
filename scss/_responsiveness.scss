@@ -1,0 +1,37 @@
+@include media-xs {
+
+  .clients {
+    display: none;
+  }
+  .partners {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 766px) {
+  .topbar_btn_phone {
+    display: none !important;
+  }
+}
+
+@include media-sm {
+  .topbar_btn_contact {
+    display: none !important;
+  }
+  .topbar_btn_support {
+    display: none !important;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@include media-med {
+
+  
+}
+
+@include media-lg {
+  
+}
