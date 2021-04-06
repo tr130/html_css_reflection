@@ -1,0 +1,44 @@
+.services {
+  display: grid;
+  background: radial-gradient(#eeeeee, #ffffff);
+  margin: 2rem auto;
+  
+  &_item {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    width: 90%;
+    max-width: 720px;
+    padding: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    color: black;
+
+    @include switchthemes($themes);
+
+    button {
+      font-size: 1.1rem;
+      padding: .5rem 1rem;
+    }
+
+    &_title {
+      margin-top: 1rem;
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+
+    &_rule {
+      background-color: black;
+      margin: 1.1rem auto;
+      width: 27px;
+      height: 3px;
+    }
+
+    &_text {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.icon-background {
+  color: pink;
+}

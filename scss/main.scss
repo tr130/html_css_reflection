@@ -1,4 +1,4 @@
-@import 'variables', 'responsiveness', 'footer', 'header', 'navbar', 'slider';
+@import 'variables', 'responsiveness', 'footer', 'header', 'navbar', 'slider', 'services';
 
 * {
   box-sizing: border-box;
@@ -13,3 +13,26 @@ body {
   color: #666;
 }
 
+.btn {
+  font-size: 1.1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  transition: none;
+  @include themes($themes);
+}
+
+.icn {
+  @include themes($themes);
+}
+
+.color {
+  @include hovertheme($themes);
+}
+
+a {
+  text-decoration: none;
+}
+
+.icn {
+  @include icnrev($themes);
+}

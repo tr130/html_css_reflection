@@ -25,8 +25,346 @@
   }
 }
 
+.asterisk {
+  color: #d64541;
+}
+
 .slider {
-  background-image: url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-sqvx.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.3))), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-sqvx.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-sqvx.jpg);
+  padding: 6rem;
+  text-align: center;
+  color: white;
+}
+
+.slider_title {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.slider_text {
+  font-size: 1.2rem;
+  margin: 2rem auto;
+}
+
+.slider_btn {
+  font-size: 1.2rem;
+}
+
+.services {
+  display: -ms-grid;
+  display: grid;
+  background: radial-gradient(#eeeeee, #ffffff);
+  margin: 2rem auto;
+}
+
+.services_item {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  width: 90%;
+  max-width: 720px;
+  padding: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+  color: black;
+}
+
+.services_item-webd {
+  background-color: white;
+}
+
+.services_item-webd .fa-circle {
+  color: #926fb1;
+}
+
+.services_item-webd .fa-stack-1x {
+  color: white;
+}
+
+.services_item-webd button {
+  background-color: #926fb1;
+}
+
+.services_item-webd:hover {
+  background-color: #926fb1;
+  color: white;
+}
+
+.services_item-webd:hover .fa-circle {
+  color: white;
+}
+
+.services_item-webd:hover button {
+  background-color: white;
+  color: #926fb1;
+}
+
+.services_item-webd:hover .fa-stack-1x {
+  color: #926fb1;
+}
+
+.services_item-it {
+  background-color: white;
+}
+
+.services_item-it .fa-circle {
+  color: #4183d7;
+}
+
+.services_item-it .fa-stack-1x {
+  color: white;
+}
+
+.services_item-it button {
+  background-color: #4183d7;
+}
+
+.services_item-it:hover {
+  background-color: #4183d7;
+  color: white;
+}
+
+.services_item-it:hover .fa-circle {
+  color: white;
+}
+
+.services_item-it:hover button {
+  background-color: white;
+  color: #4183d7;
+}
+
+.services_item-it:hover .fa-stack-1x {
+  color: #4183d7;
+}
+
+.services_item-tele {
+  background-color: white;
+}
+
+.services_item-tele .fa-circle {
+  color: #d64541;
+}
+
+.services_item-tele .fa-stack-1x {
+  color: white;
+}
+
+.services_item-tele button {
+  background-color: #d64541;
+}
+
+.services_item-tele:hover {
+  background-color: #d64541;
+  color: white;
+}
+
+.services_item-tele:hover .fa-circle {
+  color: white;
+}
+
+.services_item-tele:hover button {
+  background-color: white;
+  color: #d64541;
+}
+
+.services_item-tele:hover .fa-stack-1x {
+  color: #d64541;
+}
+
+.services_item-besp {
+  background-color: white;
+}
+
+.services_item-besp .fa-circle {
+  color: #67809f;
+}
+
+.services_item-besp .fa-stack-1x {
+  color: white;
+}
+
+.services_item-besp button {
+  background-color: #67809f;
+}
+
+.services_item-besp:hover {
+  background-color: #67809f;
+  color: white;
+}
+
+.services_item-besp:hover .fa-circle {
+  color: white;
+}
+
+.services_item-besp:hover button {
+  background-color: white;
+  color: #67809f;
+}
+
+.services_item-besp:hover .fa-stack-1x {
+  color: #67809f;
+}
+
+.services_item-digm {
+  background-color: white;
+}
+
+.services_item-digm .fa-circle {
+  color: #2ecc71;
+}
+
+.services_item-digm .fa-stack-1x {
+  color: white;
+}
+
+.services_item-digm button {
+  background-color: #2ecc71;
+}
+
+.services_item-digm:hover {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.services_item-digm:hover .fa-circle {
+  color: white;
+}
+
+.services_item-digm:hover button {
+  background-color: white;
+  color: #2ecc71;
+}
+
+.services_item-digm:hover .fa-stack-1x {
+  color: #2ecc71;
+}
+
+.services_item-cybs {
+  background-color: white;
+}
+
+.services_item-cybs .fa-circle {
+  color: #f62459;
+}
+
+.services_item-cybs .fa-stack-1x {
+  color: white;
+}
+
+.services_item-cybs button {
+  background-color: #f62459;
+}
+
+.services_item-cybs:hover {
+  background-color: #f62459;
+  color: white;
+}
+
+.services_item-cybs:hover .fa-circle {
+  color: white;
+}
+
+.services_item-cybs:hover button {
+  background-color: white;
+  color: #f62459;
+}
+
+.services_item-cybs:hover .fa-stack-1x {
+  color: #f62459;
+}
+
+.services_item-contact {
+  background-color: white;
+}
+
+.services_item-contact .fa-circle {
+  color: #999aa2;
+}
+
+.services_item-contact .fa-stack-1x {
+  color: white;
+}
+
+.services_item-contact button {
+  background-color: #999aa2;
+}
+
+.services_item-contact:hover {
+  background-color: #999aa2;
+  color: white;
+}
+
+.services_item-contact:hover .fa-circle {
+  color: white;
+}
+
+.services_item-contact:hover button {
+  background-color: white;
+  color: #999aa2;
+}
+
+.services_item-contact:hover .fa-stack-1x {
+  color: #999aa2;
+}
+
+.services_item-devt {
+  background-color: white;
+}
+
+.services_item-devt .fa-circle {
+  color: #926fb1;
+}
+
+.services_item-devt .fa-stack-1x {
+  color: white;
+}
+
+.services_item-devt button {
+  background-color: #926fb1;
+}
+
+.services_item-devt:hover {
+  background-color: #926fb1;
+  color: white;
+}
+
+.services_item-devt:hover .fa-circle {
+  color: white;
+}
+
+.services_item-devt:hover button {
+  background-color: white;
+  color: #926fb1;
+}
+
+.services_item-devt:hover .fa-stack-1x {
+  color: #926fb1;
+}
+
+.services_item button {
+  font-size: 1.1rem;
+  padding: .5rem 1rem;
+}
+
+.services_item_title {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.services_item_rule {
+  background-color: black;
+  margin: 1.1rem auto;
+  width: 27px;
+  height: 3px;
+}
+
+.services_item_text {
+  font-size: 0.8rem;
+}
+
+.icon-background {
+  color: pink;
 }
 
 * {
@@ -41,5 +379,369 @@ body {
   font-size: 1rem;
   letter-spacing: .4px;
   color: #666;
+}
+
+.btn {
+  font-size: 1.1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.btn-bg-webd {
+  color: white;
+  background-color: #926fb1;
+}
+
+.btn-bg-webd:hover {
+  background-color: #79539a;
+  color: white;
+}
+
+.btn-fg-webd {
+  color: #926fb1;
+}
+
+.btn-fg-webd:hover {
+  color: #79539a;
+}
+
+.btn-bg-it {
+  color: white;
+  background-color: #4183d7;
+}
+
+.btn-bg-it:hover {
+  background-color: #286abd;
+  color: white;
+}
+
+.btn-fg-it {
+  color: #4183d7;
+}
+
+.btn-fg-it:hover {
+  color: #286abd;
+}
+
+.btn-bg-tele {
+  color: white;
+  background-color: #d64541;
+}
+
+.btn-bg-tele:hover {
+  background-color: #bc2c28;
+  color: white;
+}
+
+.btn-fg-tele {
+  color: #d64541;
+}
+
+.btn-fg-tele:hover {
+  color: #bc2c28;
+}
+
+.btn-bg-besp {
+  color: white;
+  background-color: #67809f;
+}
+
+.btn-bg-besp:hover {
+  background-color: #526781;
+  color: white;
+}
+
+.btn-fg-besp {
+  color: #67809f;
+}
+
+.btn-fg-besp:hover {
+  color: #526781;
+}
+
+.btn-bg-digm {
+  color: white;
+  background-color: #2ecc71;
+}
+
+.btn-bg-digm:hover {
+  background-color: #25a25a;
+  color: white;
+}
+
+.btn-fg-digm {
+  color: #2ecc71;
+}
+
+.btn-fg-digm:hover {
+  color: #25a25a;
+}
+
+.btn-bg-cybs {
+  color: white;
+  background-color: #f62459;
+}
+
+.btn-bg-cybs:hover {
+  background-color: #de093f;
+  color: white;
+}
+
+.btn-fg-cybs {
+  color: #f62459;
+}
+
+.btn-fg-cybs:hover {
+  color: #de093f;
+}
+
+.btn-bg-contact {
+  color: white;
+  background-color: #999aa2;
+}
+
+.btn-bg-contact:hover {
+  background-color: #7e808a;
+  color: white;
+}
+
+.btn-fg-contact {
+  color: #999aa2;
+}
+
+.btn-fg-contact:hover {
+  color: #7e808a;
+}
+
+.btn-bg-devt {
+  color: white;
+  background-color: #926fb1;
+}
+
+.btn-bg-devt:hover {
+  background-color: #79539a;
+  color: white;
+}
+
+.btn-fg-devt {
+  color: #926fb1;
+}
+
+.btn-fg-devt:hover {
+  color: #79539a;
+}
+
+.icn-bg-webd {
+  color: white;
+  background-color: #926fb1;
+}
+
+.icn-bg-webd:hover {
+  background-color: #79539a;
+  color: white;
+}
+
+.icn-fg-webd {
+  color: #926fb1;
+}
+
+.icn-fg-webd:hover {
+  color: #79539a;
+}
+
+.icn-bg-it {
+  color: white;
+  background-color: #4183d7;
+}
+
+.icn-bg-it:hover {
+  background-color: #286abd;
+  color: white;
+}
+
+.icn-fg-it {
+  color: #4183d7;
+}
+
+.icn-fg-it:hover {
+  color: #286abd;
+}
+
+.icn-bg-tele {
+  color: white;
+  background-color: #d64541;
+}
+
+.icn-bg-tele:hover {
+  background-color: #bc2c28;
+  color: white;
+}
+
+.icn-fg-tele {
+  color: #d64541;
+}
+
+.icn-fg-tele:hover {
+  color: #bc2c28;
+}
+
+.icn-bg-besp {
+  color: white;
+  background-color: #67809f;
+}
+
+.icn-bg-besp:hover {
+  background-color: #526781;
+  color: white;
+}
+
+.icn-fg-besp {
+  color: #67809f;
+}
+
+.icn-fg-besp:hover {
+  color: #526781;
+}
+
+.icn-bg-digm {
+  color: white;
+  background-color: #2ecc71;
+}
+
+.icn-bg-digm:hover {
+  background-color: #25a25a;
+  color: white;
+}
+
+.icn-fg-digm {
+  color: #2ecc71;
+}
+
+.icn-fg-digm:hover {
+  color: #25a25a;
+}
+
+.icn-bg-cybs {
+  color: white;
+  background-color: #f62459;
+}
+
+.icn-bg-cybs:hover {
+  background-color: #de093f;
+  color: white;
+}
+
+.icn-fg-cybs {
+  color: #f62459;
+}
+
+.icn-fg-cybs:hover {
+  color: #de093f;
+}
+
+.icn-bg-contact {
+  color: white;
+  background-color: #999aa2;
+}
+
+.icn-bg-contact:hover {
+  background-color: #7e808a;
+  color: white;
+}
+
+.icn-fg-contact {
+  color: #999aa2;
+}
+
+.icn-fg-contact:hover {
+  color: #7e808a;
+}
+
+.icn-bg-devt {
+  color: white;
+  background-color: #926fb1;
+}
+
+.icn-bg-devt:hover {
+  background-color: #79539a;
+  color: white;
+}
+
+.icn-fg-devt {
+  color: #926fb1;
+}
+
+.icn-fg-devt:hover {
+  color: #79539a;
+}
+
+.color-webd:hover {
+  background-color: #926fb1;
+}
+
+.color-it:hover {
+  background-color: #4183d7;
+}
+
+.color-tele:hover {
+  background-color: #d64541;
+}
+
+.color-besp:hover {
+  background-color: #67809f;
+}
+
+.color-digm:hover {
+  background-color: #2ecc71;
+}
+
+.color-cybs:hover {
+  background-color: #f62459;
+}
+
+.color-contact:hover {
+  background-color: #999aa2;
+}
+
+.color-devt:hover {
+  background-color: #926fb1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icn_webd:hover {
+  color: #926fb1;
+}
+
+.icn_it:hover {
+  color: #4183d7;
+}
+
+.icn_tele:hover {
+  color: #d64541;
+}
+
+.icn_besp:hover {
+  color: #67809f;
+}
+
+.icn_digm:hover {
+  color: #2ecc71;
+}
+
+.icn_cybs:hover {
+  color: #f62459;
+}
+
+.icn_contact:hover {
+  color: #999aa2;
+}
+
+.icn_devt:hover {
+  color: #926fb1;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,10 +1,82 @@
-$color-webd: #926fb1;
-$color-it: #4183d7;
-$color-tele: #d64541;
-$color-besp: #67809f;
-$color-digm: #2ecc71;
-$color-cybs: #f62459;
-$color-contact: #999aa2;
+$themes: (
+  'webd': #926fb1,
+  'it': #4183d7,
+  'tele': #d64541,
+  'besp': #67809f,
+  'digm': #2ecc71,
+  'cybs': #f62459,
+  'contact': #999aa2,
+  'devt': #926fb1,
+);
+
+@mixin themes($map) {
+  @each $theme, $color in $map {
+    &-bg-#{$theme} {
+      color: white;
+      background-color: $color;
+      &:hover {
+        background-color: darken($color, 10%);
+        color: white;
+      }
+    }
+    &-fg-#{$theme} {
+      color: $color;
+      &:hover {
+        color: darken($color, 10%);
+      }
+    }
+  } 
+}
+
+@mixin switchthemes($map) {
+  @each $theme, $color in $map {
+    &-#{$theme} {
+      background-color: white;
+      .fa-circle {
+        color: $color;
+      }
+
+      .fa-stack-1x {
+        color: white;
+      }
+      button {
+        background-color: $color;
+      }
+    }
+    &-#{$theme}:hover {
+      background-color: $color;
+      color: white;
+
+      .fa-circle {
+        color: white;
+      }
+      button {
+        background-color: white;
+        color: $color;
+      }
+      .fa-stack-1x {
+        color: $color;
+      }
+    }
+  }
+}
+
+
+@mixin hovertheme($map) {
+  @each $theme, $color in $map {
+    &-#{$theme}:hover {
+      background-color: $color;
+    }
+  }
+}
+
+@mixin icnrev($map) {
+  @each $theme, $color in $map {
+    &_#{$theme}:hover {
+      color: $color;
+    }
+  }
+}
 
 $breakpoints: (
   'xs': 766px, 
