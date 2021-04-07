@@ -9,13 +9,7 @@
 
 }
 
-@media screen and (min-width: 766px) {
-  .topbar_btn_phone {
-    display: none !important;
-  }
-}
-
-@include media-sm {
+@media screen and (max-width: 989px) {
   .topbar_btn_contact {
     display: none !important;
   }
@@ -27,11 +21,65 @@
   }
 }
 
-@include media-med {
+@include media-sm {
+  .standard {
+    width: 700px;
+  }
 
+  .topbar_btn_phone {
+    display: none !important;
+  }
+
+
+  .services {
+    &_upper {
+      grid-template-columns: 1fr;
+    }
+    &_lower {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include media-med {
+  .standard {
+    width: 850px;
+  }
+  .topbar_btn_contact {
+    display: inline-block;
+  }
+  .topbar_btn_support {
+    display: inline-block;
+  }
+  .nav {
+    display: block;
+  }
+
+  .services {
+    &_upper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &_lower {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   
 }
 
 @include media-lg {
-  
+  .standard {
+    width: 1170px;
+  }
+
+  .intro_text_first, .intro_text_para {
+    width: 570px;
+  }
+  .services {
+    &_upper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &_lower {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }

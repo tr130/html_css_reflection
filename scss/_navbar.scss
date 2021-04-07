@@ -1,0 +1,59 @@
+.nav {
+  background: #333645;
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 0 !important;
+    &_item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      border-right: 1px gray solid;
+      border-left: 1px gray solid;
+      
+      .icn {
+        @include icntheme($themes);
+      }
+      i {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      span {
+        font-size: 0.6rem;
+        margin: 0 auto;
+      }
+      span:last-child {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      &_sublist {
+        display: none;
+      }
+      &:hover i, &:hover {
+        color: white;
+      }
+      &:hover &_sublist {
+        display: flex;
+      }
+    }
+  }
+
+  &_item {
+    position: relative;
+    &_sub {
+      background-color: red;
+      visibility: hidden;
+      display: flex;
+      position: fixed;
+      margin: 0 !important;
+      justify-content: space-around;
+    }
+    &:hover &_sub {
+      visibility: visible;
+      
+    }
+  }
+}

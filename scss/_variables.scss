@@ -7,6 +7,7 @@ $themes: (
   'cybs': #f62459,
   'contact': #999aa2,
   'devt': #926fb1,
+  'culture': #ffffff,
 );
 
 @mixin themes($map) {
@@ -23,6 +24,7 @@ $themes: (
       color: $color;
       &:hover {
         color: darken($color, 10%);
+        color: white;
       }
     }
   } 
@@ -40,6 +42,7 @@ $themes: (
         color: white;
       }
       button {
+        color: white;
         background-color: $color;
       }
     }
@@ -50,7 +53,7 @@ $themes: (
       .fa-circle {
         color: white;
       }
-      button {
+      button, .services_item_rule {
         background-color: white;
         color: $color;
       }
@@ -70,9 +73,9 @@ $themes: (
   }
 }
 
-@mixin icnrev($map) {
+@mixin icntheme($map) {
   @each $theme, $color in $map {
-    &_#{$theme}:hover {
+    &_#{$theme} {
       color: $color;
     }
   }
@@ -91,12 +94,12 @@ $breakpoints: (
   }
 }
 @mixin media-sm {
-  @media screen and (max-width: 990px) {
+  @media screen and (min-width: 767px) {
     @content;
   }
 }
 @mixin media-med {
-  @media screen and (max-width: 1259px) {
+  @media screen and (min-width: 990px) {
     @content;
   }
 }

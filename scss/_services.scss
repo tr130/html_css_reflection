@@ -1,23 +1,37 @@
 .services {
   display: grid;
   background: radial-gradient(#eeeeee, #ffffff);
-  margin: 2rem auto;
+
+  &_upper {
+    display: grid;
+    justify-items: stretch;
+    column-gap: 2rem;
+  }
+
+  &_lower {
+    display: grid;
+    justify-items: stretch;
+    column-gap: 2rem;
+  }
   
   &_item {
     border: 1px solid #dddddd;
     border-radius: 3px;
-    width: 90%;
-    max-width: 720px;
+    width: 100%;
     padding: 2rem;
     margin: 1rem auto;
     text-align: center;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include switchthemes($themes);
 
     button {
       font-size: 1.1rem;
       padding: .5rem 1rem;
+      margin-top: auto;
     }
 
     &_title {
