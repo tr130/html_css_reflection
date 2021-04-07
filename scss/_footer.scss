@@ -1,3 +1,11 @@
 .asterisk {
   color: map-get($map: $themes, $key: 'tele');
 }
+
+.clients img, .partners img {
+  filter: grayscale(100);
+}
+
+.clients img:hover, .partners img:hover {
+  filter: grayscale(0);
+}

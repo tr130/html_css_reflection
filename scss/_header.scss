@@ -1,0 +1,52 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+
+  &_menu {
+    border: 2px solid black;
+    padding: 0.5rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  &_btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+form.example {
+  display:inline-block;
+  margin: 0;
+  width: 40%;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

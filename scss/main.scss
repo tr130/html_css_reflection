@@ -12,9 +12,11 @@ body {
   letter-spacing: .4px;
 }
 .standard {
-  margin: 2rem auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 95%;
 }
+
 .btn {
   font-size: 1.1rem;
   padding: 1rem;
@@ -28,6 +30,10 @@ body {
 }
 
 .color {
+  @include hovertheme($themes);
+}
+
+.nav-item {
   @include hovertheme($themes);
 }
 

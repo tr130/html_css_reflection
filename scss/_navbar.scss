@@ -1,17 +1,35 @@
 .nav {
-  background: #333645;
+
+  background-image: linear-gradient(#333645 100px, pink 100px);
+    
+    
+  @include dropdown($themes);
+  
   &_list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+    
+
+    &_item_sublist { grid-area: 3 / 1 / 4 / 7; }
     margin-bottom: 0 !important;
+
+    .nav-item-cybs {
+      border-right: 1px gray solid;
+    }
     &_item {
+      background: #333645;
+      grid-row-start: 1;
+      grid-row-end: 3;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       color: white;
       text-transform: uppercase;
-      border-right: 1px gray solid;
       border-left: 1px gray solid;
       
       .icn {
@@ -29,31 +47,38 @@
         font-size: 1.2rem;
         margin-bottom: 1rem;
       }
-      &_sublist {
-        display: none;
-      }
+
       &:hover i, &:hover {
         color: white;
       }
-      &:hover &_sublist {
+
+      &_sublist {
+        z-index: 3;
+        visibility: hidden;
         display: flex;
+        margin: 0 !important;
+        justify-content: space-around;
+        align-items: center;
+
+    
+        a {
+          color: white;
+          text-transform: uppercase;
+        }
       }
     }
   }
-
-  &_item {
-    position: relative;
-    &_sub {
-      background-color: red;
-      visibility: hidden;
-      display: flex;
-      position: fixed;
-      margin: 0 !important;
-      justify-content: space-around;
-    }
-    &:hover &_sub {
-      visibility: visible;
-      
-    }
-  }
 }
+
+
+
+/* .nav_list_item_sublist:before {
+  content: "";
+  display: inline-block;
+  background-color: red;
+  position: absolute;
+  width: 100vw;
+  height: 50px;
+  left: 100%;
+  z-index: 2;
+} */

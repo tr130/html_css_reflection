@@ -15,179 +15,167 @@
 
 <body>
   <header class="header">
-    <div class="topbar">
+    <div class="topbar standard">
       <logo class="topbar_logo"><img src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="netmatters logo">
       </logo>
-      <a href="https://support.netmatters.com/"><button class="topbar_btn_support btn btn-bg-it"><i class="fas fa-mouse"></i> Support</button></a>
-      <a href="https://www.netmatters.co.uk/contact-us"><button class="topbar_btn_contact btn btn-bg-contact"><i class="far fa-paper-plane"></i> Contact</button></a>
+      <span class="topbar_btns">
+      <a href="https://support.netmatters.com/"><button class="topbar_btn_support btn btn-bg-it"><i
+            class="fas fa-mouse"></i> Support</button></a>
+      <a href="https://www.netmatters.co.uk/contact-us"><button class="topbar_btn_contact btn btn-bg-contact"><i
+            class="far fa-paper-plane"></i> Contact</button></a>
       <a href="tel:01603704020"><i class="topbar_btn_phone fas fa-phone-alt"></i></a>
-      <input type="search" class="topbar_search"><i class="fas fa-search"></i>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+      
+      <form class="example" action="action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit btn-bg-contact btn"><i class="fa fa-search"></i></button>
+      </form>
+      <button class="topbar_menu btn">
+        <i class="fas fa-bars fa-2x"></i><br>menu</button>
       </button>
+    </span>
     </div>
     <nav class="nav">
-      <ul class="nav_list standard">
-        <li class="nav_item color-webd">
-        <a class="nav_list_item" href="https://www.netmatters.co.uk/web-design">
-            <i class="icn_webd fas fa-code"></i>
-            <span>Web</span><span>Design</span></a>
-            <ul class="nav_item_sub standard">
-              <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/website-design"
-                  class="nav_list_item_sublist_link">stylish websites</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/web-design/ecommerce-development"
-                  class="nav_list_item_sublist_link">ecommerce stores</a></li>
-              <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/branding"
-                  class="nav_list_item_sublist_link">branding</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/web-design/mobile-apps-development"
-                  class="nav_list_item_sublist_link">apps</a></li>
-              <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/web-hosting"
-                  class="nav_list_item_sublist_link">web hosting</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/web-design/pay-monthly-websites"
-                  class="nav_list_item_sublist_link">pay monthly websites</a></li>
-            </ul>
-          
-        </li>
+      <div class="nav_list standard">
+        <a class="nav_list_item nav-item-webd" href="https://www.netmatters.co.uk/web-design">
+          <i class="icn_webd fas fa-code"></i>
+          <span>Web</span><span>Design</span></a>
+        <a class="nav_list_item nav-item-it" href="https://www.netmatters.co.uk/it-support">
+          <i class="icn_it fas fa-desktop"></i>
+          <span>IT</span><span>Support</span></a>
+        <a class="nav_list_item nav-item-tele" href="https://www.netmatters.co.uk/telecoms-services">
+          <i class="icn_tele fas fa-phone-alt"></i>
+          <span>Telecoms</span><span>Services</span></a>
+        <a class="nav_list_item nav-item-besp" href="https://www.netmatters.co.uk/bespoke-software">
+          <i class="icn_besp fas fa-th"></i>
+          <span>Bespoke</span><span>Software</span></a>
+        <a class="nav_list_item nav-item-digm" href="https://www.netmatters.co.uk/digital-marketing">
+          <i class="icn_digm fas fa-signal"></i>
+          <span>Digital</span><span>Marketing</span></a>
+        <a class="nav_list_item nav-item-cybs" href="https://www.netmatters.co.uk/cyber-security">
+          <i class="icn_cybs fas fa-shield-alt"></i>
+          <span>Cyber</span><span>Security</span></a>
 
-        <li class="color-it">
-          <a class="nav_list_item" href="https://www.netmatters.co.uk/it-support">
-            <i class="icn_it fas fa-desktop"></i>
-            <span>IT</span><span>Support</span></a>
-            <ul class="nav_list_item_sublist">
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/it-support/managed-it-support"
-                  class="nav_list_item_sublist_link">managed IT</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/it-support/business-it-support"
-                  class="nav_list_item_sublist_link">business IT</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/it-support/office-365-for-business"
-                  class="nav_list_item_sublist_link">office 365</a></li>
-              <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/it-support/it-consultancy"
-                  class="nav_list_item_sublist_link">consultancy</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/it-support/cloud-service-provider"
-                  class="nav_list_item_sublist_link">cloud provider</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/it-support/data-backup-disaster-recovery"
-                  class="nav_list_item_sublist_link">data backup</a></li>
-            </ul>
-          
-        </li>
-        <li class="color-tele">
-          <a class="nav_list_item" href="https://www.netmatters.co.uk/telecoms-services">
-            <i class="icn_tele fas fa-phone-alt"></i>
-            <span>Telecoms</span><span>Services</span></a>
-            <ul class="nav_list_item_sublist">
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/telecoms-services/gigabit-voucher-scheme"
-                  class="nav_list_item_sublist_link">gigabit voucher</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/telecoms-services/hosted-business-voip"
-                  class="nav_list_item_sublist_link">hosted voip</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/telecoms-services/business-voip"
-                  class="nav_list_item_sublist_link">business voip</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/telecoms-services/business-broadband-provider"
-                  class="nav_list_item_sublist_link">business broadband</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/telecoms-services/leased-lines-provider"
-                  class="nav_list_item_sublist_link">leased line</a></li>
-              <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/telecoms-services/3cx-system"
-                  class="nav_list_item_sublist_link">3cx systems</a></li>
-            </ul>
-          
-        </li>
-        <li class="color-besp">
-          <a class="nav_list_item" href="https://www.netmatters.co.uk/bespoke-software">
-            <i class="icn_besp fas fa-th"></i>
-            <span>Bespoke</span><span>Software</span></a>
-            <ul class="nav_list_item_sublist">
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/bespoke-software/workflow-solutions"
-                  class="nav_list_item_sublist_link">workflow solutions</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/bespoke-software/business-automation"
-                  class="nav_list_item_sublist_link">automation</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/bespoke-software/systems-integrations"
-                  class="nav_list_item_sublist_link">system integration</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/bespoke-software/database-management-software"
-                  class="nav_list_item_sublist_link">database management</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/bespoke-software/sharepoint-development"
-                  class="nav_list_item_sublist_link">sharepoint</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/bespoke-software/erp-software"
-                  class="nav_list_item_sublist_link">erp</a></li>
-            </ul>
-          
-        </li>
-        <li class="color-digm">
-          <a class="nav_list_item" href="https://www.netmatters.co.uk/digital-marketing">
-            <i class="icn_digm fas fa-signal"></i>
-            <span>Digital</span><span>Marketing</span></a>
-            <ul class="nav_list_item_sublist">
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/digital-marketing/seo-search-engine-optimisation"
-                  class="nav_list_item_sublist_link">search (seo)</a></li>
-              <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/digital-marketing/ppc"
-                  class="nav_list_item_sublist_link">paid (ppc)</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/digital-marketing/conversion-marketing"
-                  class="nav_list_item_sublist_link">conversion (cro)</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/digital-marketing/email-marketing"
-                  class="nav_list_item_sublist_link">email</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/digital-marketing/social-media-marketing"
-                  class="nav_list_item_sublist_link">social media</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/digital-marketing/content-marketing"
-                  class="nav_list_item_sublist_link">content</a></li>
-            </ul>
-          
-        </li>
-        <li class="color-cybs">
-          <a class="nav_list_item" href="https://www.netmatters.co.uk/cyber-security">
-            <i class="icn_cybs fas fa-shield-alt"></i>
-            <span>Cyber</span><span>Security</span></a>
-            <ul class="nav_list_item_sublist">
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/cyber-security/cyber-security-assessment"
-                  class="nav_list_item_sublist_link">assessment</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/cyber-security/cyber-security-management"
-                  class="nav_list_item_sublist_link">management</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/cyber-security/cyber-penetration-testing"
-                  class="nav_list_item_sublist_link">penetration testing</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/cyber-security/cyber-essentials-certification"
-                  class="nav_list_item_sublist_link">syber essentials</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/cyber-security/pci-compliance"
-                  class="nav_list_item_sublist_link">pci/dss</a></li>
-              <li class="nav_list_item_sublist_item"><a
-                  href="https://www.netmatters.co.uk/cyber-security/hacker-prevention"
-                  class="nav_list_item_sublist_link">hacker prevention</a></li>
-            </ul>
-          
-        </li>
-      </ul>
+        
+        <ul class="nav_list_item_sublist nav-sub-webd">
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/website-design"
+              class="nav_list_item_sublist_link">stylish websites</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/ecommerce-development"
+              class="nav_list_item_sublist_link">ecommerce stores</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/branding"
+              class="nav_list_item_sublist_link">branding</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/web-design/mobile-apps-development"
+              class="nav_list_item_sublist_link">apps</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/web-hosting"
+              class="nav_list_item_sublist_link">web hosting</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/pay-monthly-websites"
+              class="nav_list_item_sublist_link">pay monthly websites</a></li>
+        </ul>
+
+        <ul class="nav_list_item_sublist nav-sub-it">
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/it-support/managed-it-support"
+              class="nav_list_item_sublist_link">managed IT</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/it-support/business-it-support"
+              class="nav_list_item_sublist_link">business IT</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/it-support/office-365-for-business"
+              class="nav_list_item_sublist_link">office 365</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/it-support/it-consultancy"
+              class="nav_list_item_sublist_link">consultancy</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/it-support/cloud-service-provider"
+              class="nav_list_item_sublist_link">cloud provider</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/it-support/data-backup-disaster-recovery"
+              class="nav_list_item_sublist_link">data backup</a></li>
+        </ul>
+        <ul class="nav_list_item_sublist nav-sub-tele">
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/telecoms-services/gigabit-voucher-scheme"
+              class="nav_list_item_sublist_link">gigabit voucher</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/telecoms-services/hosted-business-voip"
+              class="nav_list_item_sublist_link">hosted voip</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/telecoms-services/business-voip"
+              class="nav_list_item_sublist_link">business voip</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/telecoms-services/business-broadband-provider"
+              class="nav_list_item_sublist_link">business broadband</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/telecoms-services/leased-lines-provider"
+              class="nav_list_item_sublist_link">leased line</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/telecoms-services/3cx-system"
+              class="nav_list_item_sublist_link">3cx systems</a></li>
+        </ul>
+        <ul class="nav_list_item_sublist nav-sub-besp">
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/bespoke-software/workflow-solutions"
+              class="nav_list_item_sublist_link">workflow solutions</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/bespoke-software/business-automation"
+              class="nav_list_item_sublist_link">automation</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/bespoke-software/systems-integrations"
+              class="nav_list_item_sublist_link">system integration</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/bespoke-software/database-management-software"
+              class="nav_list_item_sublist_link">database management</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/bespoke-software/sharepoint-development"
+              class="nav_list_item_sublist_link">sharepoint</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/bespoke-software/erp-software"
+              class="nav_list_item_sublist_link">erp</a></li>
+        </ul>
+        <ul class="nav_list_item_sublist nav-sub-digm">
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/digital-marketing/seo-search-engine-optimisation"
+              class="nav_list_item_sublist_link">search (seo)</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/digital-marketing/ppc"
+              class="nav_list_item_sublist_link">paid (ppc)</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/digital-marketing/conversion-marketing"
+              class="nav_list_item_sublist_link">conversion (cro)</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/digital-marketing/email-marketing"
+              class="nav_list_item_sublist_link">email</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/digital-marketing/social-media-marketing"
+              class="nav_list_item_sublist_link">social media</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/digital-marketing/content-marketing"
+              class="nav_list_item_sublist_link">content</a></li>
+        </ul>
+        <ul class="nav_list_item_sublist nav-sub-cybs">
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/cyber-security/cyber-security-assessment"
+              class="nav_list_item_sublist_link">assessment</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/cyber-security/cyber-security-management"
+              class="nav_list_item_sublist_link">management</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/cyber-security/cyber-penetration-testing"
+              class="nav_list_item_sublist_link">penetration testing</a></li>
+          <li class="nav_list_item_sublist_item"><a
+              href="https://www.netmatters.co.uk/cyber-security/cyber-essentials-certification"
+              class="nav_list_item_sublist_link">cyber essentials</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/cyber-security/pci-compliance"
+              class="nav_list_item_sublist_link">pci/dss</a></li>
+          <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/cyber-security/hacker-prevention"
+              class="nav_list_item_sublist_link">hacker prevention</a></li>
+        </ul>
+      </div>
+
+
+
     </nav>
   </header>
   <main>
     <section class="slider color-webd">
       <div class="standard">
-      <h1 class="slider_title">Web Design</h1>
-      <p class="slider_text">For businesses looking to make a strong and effective first impression.</p>
-      <a href="https://www.netmatters.co.uk/web-design"><button class="slider_btn btn-bg-webd btn">Find out more <i class="icn_devt fas fa-arrow-right"></i></button></a>
+        <h1 class="slider_title">Web Design</h1>
+        <p class="slider_text">For businesses looking to make a strong and effective first impression.</p>
+        <a href="https://www.netmatters.co.uk/web-design"><button class="slider_btn btn-bg-webd btn">Find out more <i
+              class="icn_devt fas fa-arrow-right"></i></button></a>
       </div>
     </section>
     <section class="services standard">
@@ -277,16 +265,19 @@
     </section>
     <section class="intro">
       <article class="intro_text standard">
-      <h2 class="intro_text_title">Netmatters</h2>
-      <p class="intro_text_first">Netmatters Ltd is a leading web design, IT support and digital marketing agency based
-        in Wymondham, Norfolk.</p>
-      <p class="intro_text_para">Founded in 2008, we work with businesses from a variety of industries to gain new prospects,
-        nurture existing leads and further grow their sales.</p>
-      <p class="intro_text_para">We provide cost effective, reliable solutions to a range of services; from bespoke
-        cloud-based management systems, workflow and IT solutions through to creative website development and integrated
-        digital campaigning.</p>
-      <a href="https://www.netmatters.co.uk/our-culture"><button class="btn btn-bg-culture">Our
-          Culture  &nbsp;<i class="icn_devt fas fa-arrow-right"></i></button></a>
+        <h2 class="intro_text_title">Netmatters</h2>
+        <p class="intro_text_first">Netmatters Ltd is a leading web design, IT support and digital marketing agency
+          based
+          in Wymondham, Norfolk.</p>
+        <p class="intro_text_para">Founded in 2008, we work with businesses from a variety of industries to gain new
+          prospects,
+          nurture existing leads and further grow their sales.</p>
+        <p class="intro_text_para">We provide cost effective, reliable solutions to a range of services; from bespoke
+          cloud-based management systems, workflow and IT solutions through to creative website development and
+          integrated
+          digital campaigning.</p>
+        <a href="https://www.netmatters.co.uk/our-culture"><button class="btn btn-bg-culture">Our
+            Culture &nbsp;<i class="icn_devt fas fa-arrow-right"></i></button></a>
       </article>
     </section>
     <section class="latest standard">

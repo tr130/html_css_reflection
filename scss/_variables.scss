@@ -24,7 +24,6 @@ $themes: (
       color: $color;
       &:hover {
         color: darken($color, 10%);
-        color: white;
       }
     }
   } 
@@ -73,6 +72,22 @@ $themes: (
   }
 }
 
+@mixin dropdown($map) {
+  @each $theme, $color in $map {
+    &-item-#{$theme}:hover ~ &-sub-#{$theme} {
+      background-color: darken($color, 10%);
+      visibility: visible;
+    }
+    &-sub-#{$theme}:hover {
+      visibility: visible;
+      background-color: darken($color, 10%);
+    }
+    &-sub-#{$theme}:hover ~ &-item-#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+
 @mixin icntheme($map) {
   @each $theme, $color in $map {
     &_#{$theme} {
@@ -108,3 +123,4 @@ $breakpoints: (
     @content;
   }
 }
+
