@@ -54,8 +54,8 @@
         <a class="nav_list_item nav-item-cybs" href="https://www.netmatters.co.uk/cyber-security">
           <i class="icn_cybs fas fa-shield-alt"></i>
           <span>Cyber</span><span>Security</span></a>
-
-        
+      
+      
         <ul class="nav_list_item_sublist nav-sub-webd">
           <li class="nav_list_item_sublist_item"><a href="https://www.netmatters.co.uk/web-design/website-design"
               class="nav_list_item_sublist_link">stylish websites</a></li>
@@ -164,7 +164,7 @@
               class="nav_list_item_sublist_link">hacker prevention</a></li>
         </ul>
       </div>
-
+      
 
 
     </nav>
@@ -281,46 +281,58 @@
       </article>
     </section>
     <section class="latest standard">
-      <h4 class="latest_title">Latest</h4>
-      <hr class="latest_rule">
+      <h4 class="latest_title">latest</h4>
+      <div class="latest_rule"></div>
       <div class="latest_background">
-        <div class="latest_card color-webd">
-          <img class="latest_img">
-          <a href="#" class="latest_topiclink">Topic</a>
+        <div class="latest_card card latest-webd">
+          <img src="http://placeimg.com/455/263/tech" class="latest_img card-img-top">
+          <a href="https://www.netmatters.co.uk/news/web-design" class="latest_topiclink">news</a>
+          <div class="card-body">
           <a href="#" class="latest_titlelink">Article title</a>
           <p class="latest_firstlines">First lines of the article...</p>
-          <a class="uppercase" href="#">Read More</a>
+          <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
           <hr class="latest_article_rule">
           <div class="latest_byline">
-            <img class="latest_authorimg" src="" alt="author">
+            <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+            <div>
             <p class="latest_postedby">Posted by Joe Bloggs</p>
             <p class="latest_posteddate">1st April 2021</p>
+            </div>
+          </div>
           </div>
         </div>
-        <div class="latest_card color-besp">
-          <img class="latest_img">
-          <a href="#" class="latest_topiclink">Topic</a>
-          <a href="#" class="latest_titlelink">Article title</a>
-          <p class="latest_firstlines">First lines of the article...</p>
-          <a class="uppercase" href="#">Read More</a>
+        <div class="latest_card card latest-digm">
+          <img src="http://placeimg.com/455/263/tech" class="card-img-top latest_img">
+          <a href="https://www.netmatters.co.uk/news/digital-marketing" class="latest_topiclink">news</a>
+          <div class="card-body">
+          <a href="https://www.netmatters.co.uk/news/march-2021-notables" class="latest_titlelink">March 2021 Notables</a>
+          <p class="latest_firstlines">Every month we celebrate the most notable of employees here at Netmatters. Each department he...</p>
+          <a href="https://www.netmatters.co.uk/news/march-2021-notables"><button class="btn">Read more</button></a>
           <hr class="latest_article_rule">
           <div class="latest_byline">
-            <img class="latest_authorimg" src="" alt="author">
+            <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+            <div>
             <p class="latest_postedby">Posted by Joe Bloggs</p>
             <p class="latest_posteddate">1st April 2021</p>
+            </div>
+          </div>
           </div>
         </div>
-        <div class="latest_card color-webd">
-          <img class="latest_img">
-          <a href="#" class="latest_topiclink">Topic</a>
+        <div class="latest_card card latest-it">
+          <img src="http://placeimg.com/455/263/tech" class="card-img-top latest_img">
+          <a href="https://www.netmatters.co.uk/news/it-support" class="latest_topiclink">news</a>
+          <div class="card-body">
           <a href="#" class="latest_titlelink">Article title</a>
           <p class="latest_firstlines">First lines of the article...</p>
-          <a class="uppercase" href="#">Read More</a>
+          <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
           <hr class="latest_article_rule">
           <div class="latest_byline">
-            <img class="latest_authorimg" src="" alt="author">
+            <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+            <div>
             <p class="latest_postedby">Posted by Joe Bloggs</p>
             <p class="latest_posteddate">1st April 2021</p>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -416,6 +428,52 @@
     $(document).ready(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
+  </script>
+  <script>
+    const themes = {
+  'webd': '#926fb1',
+  'it': '#4183d7',
+  'tele': '#d64541',
+  'besp': '#67809f',
+  'digm': '#2ecc71',
+  'cybs': '#f62459',
+  'contact': '#999aa2',
+  'devt': '#926fb1',
+  'culture': '#ffffff',
+  'base': '#333645'
+    };
+    const navItems = document.querySelectorAll('.nav_list_item');
+    console.log(navItems);
+    navItems.forEach(function (navItem) {
+    navItem.addEventListener("mouseover", function (e) {
+      const classes = e.currentTarget.classList;
+      let id = classes[1].slice(9);
+      let sub = document.querySelector(`.nav-sub-${id}`);
+      let icon = navItem.childNodes[1];
+      navItem.style.backgroundColor = themes[id];
+      icon.style.color = 'white';
+      sub.style.visibility = "visible";
+      navItem.onmouseleave = function() {
+        sub.style.visibility = 'hidden';
+        navItem.style.backgroundColor = 'initial';
+        icon.style.color = themes[id];
+      }
+      sub.onmouseover = function() {
+        sub.style.visibility= "visible";
+        navItem.style.backgroundColor = themes[id];
+        let icon = navItem.childNodes[1];
+        console.log(icon);
+        icon.style.color = "white";
+      }
+      sub.onmouseleave = function() {
+        sub.style.visibility = 'hidden';
+        navItem.style.backgroundColor = 'initial';
+        let icon = navItem.childNodes[1];
+        console.log(icon);
+        icon.style.color = themes[id];
+      }
+    });
+  }); 
   </script>
 </body>
 

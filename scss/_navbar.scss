@@ -1,9 +1,9 @@
 .nav {
-
+  
   background-image: linear-gradient(#333645 100px, pink 100px);
     
     
-  @include dropdown($themes);
+  @include dropdown1($themes);
   
   &_list {
     display: grid;
@@ -82,3 +82,9 @@
   left: 100%;
   z-index: 2;
 } */
+
+#colorBlock {
+  width: 200px;
+  height: 200px;
+  color: red;
+}

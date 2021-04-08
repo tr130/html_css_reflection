@@ -1,0 +1,74 @@
+.latest {
+  @include latestcolor($themes);
+  position: relative; 
+
+  &_title {
+    font-variant: small-caps;
+    margin: 2rem 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  &_rule {
+    background-color: black;
+      width: 72px;
+      height: 5px;
+  }
+  &_background {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &-body {
+      padding: 2rem;
+    }
+  }
+
+  &_topiclink {
+    font-variant: small-caps;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    padding: 0.1rem 0.5rem;
+
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  &_titlelink {
+    font-weight: 700;
+  }
+
+  &_firstlines {
+    font-weight: 300;
+    font-size: .8rem;
+    line-height: 1.3rem;
+    padding-top: 1rem;
+  }
+  button {
+    font-size: 1.1rem;
+      padding: .5rem 1rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+  }
+  &_byline {
+    display: flex;
+  }
+  &_authorimg {
+    border-radius: 50%;
+  }
+  &_postedby {
+    font-weight: 700;
+  }
+  &_posteddate {
+    font-weight: 300;
+  }
+}

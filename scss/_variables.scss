@@ -88,10 +88,39 @@ $themes: (
   }
 }
 
+@mixin dropdown1($map) {
+  @each $theme, $color in $map {
+    &-sub-#{$theme} {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+
 @mixin icntheme($map) {
   @each $theme, $color in $map {
     &_#{$theme} {
       color: $color;
+    }
+  }
+}
+
+@mixin latestcolor($map) {
+  @each $theme, $color in $map {
+    &-#{$theme} {
+      .latest_topiclink {
+        background-color: $color;
+      }
+      button {
+        color: white;
+        background-color: $color;
+        &:hover {
+          background-color: darken($color, 10%);
+          color: white;
+        }
+      }
+      .latest_titlelink {
+      color: $color;
+      }
     }
   }
 }
