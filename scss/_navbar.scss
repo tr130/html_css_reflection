@@ -1,20 +1,31 @@
 .nav {
   
-  background-image: linear-gradient(#333645 100px, pink 100px);
-    
-    
-  @include dropdown1($themes);
-  
-  &_list {
+  background-image: linear-gradient(#333645 100px, transparent 100px);
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr minmax(95%, 850px) 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
     
+    &_list { grid-area: 1 / 2 / span 2 / span 1}
+    &_sub { 
+      width: 100%;
+      z-index: 10;
+      grid-area: 3 / 1 / span 1 / span 3;
+    }
+  //@include dropdown1($themes);
+  
+  &_list {
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     
-
-    &_item_sublist { grid-area: 3 / 1 / 4 / 7; }
+    grid-column-gap: 0px;
+    
     margin-bottom: 0 !important;
 
     .nav-item-cybs {
@@ -56,15 +67,26 @@
         z-index: 3;
         visibility: hidden;
         display: flex;
-        margin: 0 !important;
+        height: 100%;
         justify-content: space-around;
-        align-items: center;
-
+        align-items: stretch;
     
+        &_item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 1;
+        }
         a {
           color: white;
           text-transform: uppercase;
         }
+
+        &_item:hover {
+          background-color: #333645;
+        }
+
+        
       }
     }
   }

@@ -90,7 +90,7 @@ $themes: (
 
 @mixin dropdown1($map) {
   @each $theme, $color in $map {
-    &-sub-#{$theme} {
+    &-#{$theme} {
       background-color: darken($color, 10%);
     }
   }
