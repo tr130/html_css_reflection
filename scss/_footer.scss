@@ -1,11 +1,69 @@
-.asterisk {
-  color: map-get($map: $themes, $key: 'tele');
-}
+.footer {
+  &_upper {
+  background-color: #333645;
+  padding-bottom: 2rem;
+  }
+  &_title {
+    font-variant: small-caps;
+    margin: 2rem 0;
+  }
 
-.clients img, .partners img {
-  filter: grayscale(100);
-}
+  .contact, .aboutus, .website {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 
-.clients img:hover, .partners img:hover {
-  filter: grayscale(0);
+  &_container {
+    display:grid;
+    align-items: left;
+    line-height: 1.3rem;
+    color: white;
+    font-size: 0.8rem;
+
+    a {
+      color: white;
+    }
+
+    
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .social_container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .social-btn {
+    
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 0px;
+  }
+
+    .fa-facebook-f:hover {
+      background-color: #3b5998;
+    }
+
+    .fa-twitter:hover {
+      background-color: #00aced;
+    }
+
+    .fa-linkedin-in:hover {
+      background-color: #0077b5;
+    }
+  
+  .partners {
+    padding: 1rem 0;
+    
+    &_container {
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
 }

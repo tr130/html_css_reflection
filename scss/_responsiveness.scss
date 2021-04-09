@@ -7,6 +7,10 @@
     display: none;
   }
 
+  .latest_container {
+    grid-template-rows: repeat(3, 1fr);
+  }
+
 }
 
 @media screen and (max-width: 989px) {
@@ -16,8 +20,8 @@
   .topbar_btn_support {
     display: none !important;
   }
-  .nav {
-    display: none;
+  nav {
+    display: none !important;
   }
 }
 
@@ -39,6 +43,22 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  
+
+  .latest_container {
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: 1fr !important;
+
+    .card:last-child {
+      display: none;
+    }
+  }
+
+  .footer_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
 }
 
 @include media-med {
@@ -51,11 +71,16 @@
   .topbar_btn_support {
     display: inline-block;
   }
-  .nav {
+  nav {
     display: block;
+  }
+
+  .nav_sub {
+    font-size: 0.8rem;
   }
   .slider {
     margin-top: -50px !important;
+    text-align: left !important;
   }
 
   .services {
@@ -67,11 +92,34 @@
     }
   }
   
+  .latest_img {
+    transition: all 0.3s ease-in-out;
+  }
+  .latest_img:hover {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+
+  
+
+  .form-check-label {
+    margin-right: 1rem;
+  }
+
+  .form-check-input {
+    margin-top: 0.3rem !important;
+  }
+  
+  
 }
 
 @include media-lg {
   .standard {
     width: 1170px;
+  }
+
+  .nav_sub {
+    font-size: 1rem;
   }
 
   .intro_text_first, .intro_text_para {
@@ -85,4 +133,32 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+
+  .latest_container {
+    grid-template-columns:repeat(3, 1fr);
+
+    .card:last-child {
+      display: inline-block;
+    }
+  }
+
+  .clients {
+    padding: 1rem 0 !important;
+  
+  &_logo {
+    padding: 2rem !important;
+  }
+}
+  .footer_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .clients{
+    &_badge {
+      height: 150px !important;
+    }
+    &_info {
+      bottom: 166px !important;
+    }
+}
 }

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
   <link href="css/main.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
@@ -19,20 +20,20 @@
       <logo class="topbar_logo"><img src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="netmatters logo">
       </logo>
       <span class="topbar_btns">
-      <a href="https://support.netmatters.com/"><button class="topbar_btn_support btn btn-bg-it"><i
-            class="fas fa-mouse"></i> Support</button></a>
-      <a href="https://www.netmatters.co.uk/contact-us"><button class="topbar_btn_contact btn btn-bg-contact"><i
-            class="far fa-paper-plane"></i> Contact</button></a>
-      <a href="tel:01603704020"><i class="topbar_btn_phone fas fa-phone-alt"></i></a>
-      
-      <form class="example" action="action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit btn-bg-contact btn"><i class="fa fa-search"></i></button>
-      </form>
-      <button class="topbar_menu btn">
-        <i class="fas fa-bars fa-2x"></i><br>menu</button>
-      </button>
-    </span>
+        <a href="https://support.netmatters.com/"><button class="topbar_btn_support btn btn-bg-it"><i
+              class="fas fa-mouse"></i> Support</button></a>
+        <a href="https://www.netmatters.co.uk/contact-us"><button class="topbar_btn_contact btn btn-bg-contact"><i
+              class="far fa-paper-plane"></i> Contact</button></a>
+        <a href="tel:01603704020"><i class="topbar_btn_phone fas fa-phone-alt"></i></a>
+
+        <form class="example" action="action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit btn-bg-contact btn"><i class="fa fa-search"></i></button>
+        </form>
+        <button class="topbar_menu btn">
+          <i class="fas fa-bars fa-2x"></i><br>menu</button>
+
+      </span>
     </div>
     <nav class="nav">
       <div class="nav_list standard">
@@ -55,7 +56,7 @@
           <i class="icn_cybs fas fa-shield-alt"></i>
           <span>Cyber</span><span>Security</span></a>
       </div>
-      <div class="nav_sub"> 
+      <div class="nav_sub">
       </div>
     </nav>
   </header>
@@ -63,9 +64,17 @@
     <section class="slider color-webd">
       <div class="standard">
         <h1 class="slider_title">Web Design</h1>
-        <p class="slider_text">For businesses looking to make a strong and effective first impression.</p>
+        <p class="slider_text">For businesses looking to make a strong<br>and effective first impression.</p>
         <a href="https://www.netmatters.co.uk/web-design"><button class="slider_btn btn-bg-webd btn">Find out more <i
               class="icn_devt fas fa-arrow-right"></i></button></a>
+        <div class="slider_circles">
+          <span class="slider_circles_circle"></span>
+          <span class="slider_circles_circle"></span>
+          <span class="slider_circles_circle"></span>
+          <span class="slider_circles_circle"></span>
+          <span class="slider_circles_circle"></span>
+          <span class="slider_circles_circle"></span>
+        </div>
       </div>
     </section>
     <section class="services standard">
@@ -170,171 +179,239 @@
             Culture &nbsp;<i class="icn_devt fas fa-arrow-right"></i></button></a>
       </article>
     </section>
-    <section class="latest standard">
-      <h4 class="latest_title">latest</h4>
-      <div class="latest_rule"></div>
+    <section class="latest">
+      <div class="latest_header standard">
+        <h4 class="latest_title">latest</h4>
+        <div class="latest_rule"></div>
+      </div>
       <div class="latest_background">
-        <div class="latest_card card latest-webd">
-          <img src="http://placeimg.com/455/263/tech" class="latest_img card-img-top">
-          <a href="https://www.netmatters.co.uk/news/web-design" class="latest_topiclink">news</a>
-          <div class="card-body">
-          <a href="#" class="latest_titlelink">Article title</a>
-          <p class="latest_firstlines">First lines of the article...</p>
-          <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
-          <hr class="latest_article_rule">
-          <div class="latest_byline">
-            <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
-            <div>
-            <p class="latest_postedby">Posted by Joe Bloggs</p>
-            <p class="latest_posteddate">1st April 2021</p>
+        <div class="latest_container standard">
+          <div class="latest_card card latest-webd">
+            <div class="latest_img_container">
+              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
+                  src="http://placeimg.com/455/263/tech" class="latest_img card-img-top"></a>
+              <a href="https://www.netmatters.co.uk/news/web-design" class="latest_topiclink">news</a>
+            </div>
+            <div class="card-body">
+              <a href="#" class="latest_titlelink">Article title</a>
+              <p class="latest_firstlines">First lines of the article...</p>
+              <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
+              <div class="latest_byline">
+                <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+                <div>
+                  <p class="latest_postedby">Posted by Joe Bloggs</p>
+                  <p class="latest_posteddate">1st April 2021</p>
+                </div>
+              </div>
             </div>
           </div>
-          </div>
-        </div>
-        <div class="latest_card card latest-digm">
-          <img src="http://placeimg.com/455/263/tech" class="card-img-top latest_img">
-          <a href="https://www.netmatters.co.uk/news/digital-marketing" class="latest_topiclink">news</a>
-          <div class="card-body">
-          <a href="https://www.netmatters.co.uk/news/march-2021-notables" class="latest_titlelink">March 2021 Notables</a>
-          <p class="latest_firstlines">Every month we celebrate the most notable of employees here at Netmatters. Each department he...</p>
-          <a href="https://www.netmatters.co.uk/news/march-2021-notables"><button class="btn">Read more</button></a>
-          <hr class="latest_article_rule">
-          <div class="latest_byline">
-            <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
-            <div>
-            <p class="latest_postedby">Posted by Joe Bloggs</p>
-            <p class="latest_posteddate">1st April 2021</p>
+          <div class="latest_card card latest-digm">
+            <div class="latest_img_container">
+              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
+                  src="http://placeimg.com/455/263/tech" class="card-img-top latest_img"></a>
+              <a href="https://www.netmatters.co.uk/news/digital-marketing" class="latest_topiclink">news</a>
+            </div>
+            <div class="card-body">
+              <a href="https://www.netmatters.co.uk/news/march-2021-notables" class="latest_titlelink">March 2021
+                Notables</a>
+              <p class="latest_firstlines">Every month we celebrate the most notable of employees here at Netmatters.
+                Each
+                department he...</p>
+              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><button class="btn">Read more</button></a>
+              <div class="latest_byline">
+                <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+                <div>
+                  <p class="latest_postedby">Posted by Joe Bloggs</p>
+                  <p class="latest_posteddate">1st April 2021</p>
+                </div>
+              </div>
             </div>
           </div>
-          </div>
-        </div>
-        <div class="latest_card card latest-it">
-          <img src="http://placeimg.com/455/263/tech" class="card-img-top latest_img">
-          <a href="https://www.netmatters.co.uk/news/it-support" class="latest_topiclink">news</a>
-          <div class="card-body">
-          <a href="#" class="latest_titlelink">Article title</a>
-          <p class="latest_firstlines">First lines of the article...</p>
-          <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
-          <hr class="latest_article_rule">
-          <div class="latest_byline">
-            <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
-            <div>
-            <p class="latest_postedby">Posted by Joe Bloggs</p>
-            <p class="latest_posteddate">1st April 2021</p>
+          <div class="latest_card card latest-it">
+            <div class="latest_img_container">
+              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
+                  src="http://placeimg.com/455/263/tech" class="card-img-top latest_img"></a>
+              <a href="https://www.netmatters.co.uk/news/it-support" class="latest_topiclink">news</a>
             </div>
-          </div>
+            <div class="card-body">
+              <a href="#" class="latest_titlelink">Article title</a>
+              <p class="latest_firstlines">First lines of the article...</p>
+              <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
+              <div class="latest_byline">
+                <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+                <div>
+                  <p class="latest_postedby">Posted by Joe Bloggs</p>
+                  <p class="latest_posteddate">1st April 2021</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="clients standard">
-      <img data-toggle="tooltip" data-placement="top" title="Hooray!" class="clients_logo"
-        src="https://www.netmatters.co.uk/uploads/page/1/home-gZQR.png" alt="Busseys logo">
-      <a data-toggle="tooltip" data-placement="top" title="Hooray!" href=""><img class="clients_logo"
-          src="https://www.netmatters.co.uk/uploads/page/1/home-MjHw.png" alt="Crane Garden Buildings logo"></a>
-      <img data-toggle="tooltip" data-placement="top" title="Hooray!" class="clients_logo"
-        src="https://www.netmatters.co.uk/uploads/page/1/home-ukEL.png" alt="Beat logo">
-      <a data-toggle="tooltip" data-placement="top" title="Hooray!" href=""><img class="clients_logo"
-          src="https://www.netmatters.co.uk/uploads/page/1/home-kGn4.png" alt="Northern Diver logo"></a>
+    <section class="clients">
+      <div class="clients_container standard">
+        <div class="clients_badge">
+          <img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-gZQR.png" alt="Busseys logo">
+          <div class="clients_info">
+            <h3>Busseys</h3>
+            <div class="clients_info_rule"></div>One of the leading Ford dealerships in the UK.
+          </div>
+        </div>
+        <div class="clients_badge">
+          <a href=""><img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-MjHw.png"
+              alt="Crane Garden Buildings logo"></a>
+          <div class="clients_info">
+            <h3>Crane Garden Builders</h3>
+            <div class="clients_info_rule"></div>Leading manufacturer and supplier of high-end garden rooms,
+            summerhouses, workshops and sheds in the UK.
+          </div>
+        </div>
+        <div class="clients_badge">
+          <img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-ukEL.png" alt="Beat logo">
+          <div class="clients_info">
+            <h3>Beat</h3>
+            <div class="clients_info_rule"></div>The UK's eating disorder charity founded in 1989.
+          </div>
+        </div>
+        <div class="clients_badge">
+          <a href=""><img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-kGn4.png"
+              alt="Northern Diver logo"></a>
+          <div class="clients_info">
+            <h3>Northern Diver</h3>
+            <div class="clients_info_rule"></div>Global water based equipment manufacturers for sport, military, commercial and rescue businesses.
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="newsletter standard">
-      <h2>Email Newsletter Sign-Up</h2>
-      <form action="#" method="POST">
-        <label for="name">Your Name <span class="asterisk">*</span></label>
-        <input type="name" id="name" name="name" required>
-        <label for="email">Your Email <span class="asterisk">*</span></label>
-        <input type="email" id="email" name="email" required>
-        <input type="checkbox" name="marketing" value="true" id="marketing">
-        <label for="marketing">Please tick this box if you wish to receive marketing information from us. Please see our
-          <a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> for more information on how we use
-          your data.</label>
-        <input class="uppercase" type="submit" value="Subscribe">
-      </form>
+    <section class="newsletter">
+      <div class="newsletter_container standard">
+        <form action="#" method="POST" class="row">
+          <h2>Email Newsletter Sign-Up</h2>
+          <div class="form-group col-md-6">
+            <label for="name">Your Name <span class="asterisk">*</span></label>
+            <input type="name" id="name" name="name" class="form-control form-control-lg" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Your Email <span class="asterisk">*</span></label>
+            <input type="email" id="email" name="email" class="form-control form-control-lg" required>
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label" for="marketing">
+              <input class="form-check-input " type="checkbox" name="marketing" value="true" id="marketing">Please tick
+              this box if you wish to receive marketing information from us. Please see our
+              <a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> for more information on how we
+              use
+              your data.</label>
+          </div>
+          <input type="submit" class="btn btn-bg-base" value="Subscribe">
+        </form>
+      </div>
     </section>
   </main>
   <footer class="footer">
-    <section class="contact">
-      <h5 class="footer_title">Contact Us</h5>
-      <address class="footer_text">
-        11 Penfold Drive<br>
-        Wymondham<br>
-        Norfolk<br>
-        NR18 0WZ
-      </address>
-      Tel: <a href="tel:01603704020">01603 70 40 20</a>
-      Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a>
-    </section>
-    <section class="aboutus">
-      <h5 class="footer_title">About Netmatters</h5>
-      <ul>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/news">News</a></li>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/our-careers">Our Careers</a></li>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/team">Our Team</a></li>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/office-tour">Our Office Tour</a></li>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a>
-        </li>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/cookie-policy">Cookie Policy</a></li>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/terms-and-conditions">Terms &
-            Conditions</a></li>
-        <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/terms-and-conditions/uk-domains">UK
-            Domains</a></li>
-      </ul>
-    </section>
-    <section class="website">
-      <h5 class="footer_title">Website</h5>
-      <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/sitemap.xml">Sitemap</a></li>
-      <li>&copy; Copyright Netmatters Ltd. 2021</li>
-      <li>All rights reserved</li>
-    </section>
-    <section class="social">
-      <h5 class="footer_title">Social Media</h5>
-      <button class="social-btn fab fa-facebook-f"></button>
-      <button class="social-btn fab fa-twitter"></button>
-      <button class="social-btn fab fa-linkedin-in"></button>
-    </section>
+    <div class="footer_upper">
+      <div class="footer_container standard">
+        <section class="contact">
+          <h5 class="footer_title">contact us</h5>
+          <address class="footer_text">
+            11 Penfold Drive<br>
+            Wymondham<br>
+            Norfolk<br>
+            NR18 0WZ
+          </address>
+          Tel: <a href="tel:01603704020">01603 70 40 20</a><br>
+          Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a>
+        </section>
+        <section class="aboutus">
+          <h5 class="footer_title">about netmatters</h5>
+          <ul>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/news">News</a></li>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/our-careers">Our Careers</a></li>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/team">Our Team</a></li>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/office-tour">Our Office Tour</a>
+            </li>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/privacy-policy">Privacy
+                Policy</a>
+            </li>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/cookie-policy">Cookie Policy</a>
+            </li>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/terms-and-conditions">Terms &
+                Conditions</a></li>
+            <li><a class="aboutus_link footer_text"
+                href="https://www.netmatters.co.uk/terms-and-conditions/uk-domains">UK
+                Domains</a></li>
+          </ul>
+        </section>
+        <section class="website">
+          <h5 class="footer_title">website</h5>
+          <ul>
+            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/sitemap.xml">Sitemap</a></li>
+            <li>&copy; Copyright Netmatters Ltd. 2021</li>
+            <li>All rights reserved</li>
+          </ul>
+        </section>
+        <section class="social">
+          <h5 class="footer_title">social media</h5>
+          <div class="social_container">
+            <a class="social-btn btn fab fa-facebook-f fa-2x" href="https://en-gb.facebook.com/netmatters/"
+              target="_blank"></a>
+            <a class="social-btn btn fab fa-twitter fa-2x" href="https://twitter.com/netmattersltd" target="_blank"></a>
+            <a class="social-btn btn fab fa-linkedin-in fa-2x" href="https://www.linkedin.com/company/netmatters-ltd/"
+              target="_blank"></a>
+          </div>
+        </section>
+      </div>
+    </div>
     <section class="partners standard">
-      <img src="https://www.gstatic.com/partners/badge/images/PartnerBadge.png" alt="Google partner badge">
-      <img src="https://www.netmatters.co.uk/assets/images/accreditations/silver-microsoft-partner.jpg"
-        alt="Microsoft logo">
-      <img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg" alt="Future 50 badge">
-      <img src="https://www.netmatters.co.uk/assets/images/accreditations/qms.jpg" alt="QMS accreditation">
-      <img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
-        alt="Norfolk Carbon Charter">
-      <img src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
-        alt="Investing in Future Growth Winner">
-      <img src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.jpg"
-        alt="Princes Royal Training Award 2020">
-      <img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
-        alt="Skills of Tomorrow winner">
+      <div class="partners_container">
+        <img src="https://www.gstatic.com/partners/badge/images/PartnerBadge.png" alt="Google partner badge">
+        <img src="https://www.netmatters.co.uk/assets/images/accreditations/silver-microsoft-partner.jpg"
+          alt="Microsoft logo">
+        <img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg" alt="Future 50 badge">
+        <img src="https://www.netmatters.co.uk/assets/images/accreditations/qms.jpg" alt="QMS accreditation">
+        <img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
+          alt="Norfolk Carbon Charter">
+      </div>
+      <div class="partners_container">
+        <img src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
+          alt="Investing in Future Growth Winner">
+        <img src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.jpg"
+          alt="Princes Royal Training Award 2020">
+        <img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
+          alt="Skills of Tomorrow winner">
+      </div>
     </section>
+
   </footer>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+  </script>
+
   <script src="https://kit.fontawesome.com/6024042655.js" crossorigin="anonymous"></script>
   <script>
-    $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
   </script>
   <script>
     const themes = {
-  'webd': '#926fb1',
-  'it': '#4183d7',
-  'tele': '#d64541',
-  'besp': '#67809f',
-  'digm': '#2ecc71',
-  'cybs': '#f62459',
-  'contact': '#999aa2',
-  'devt': '#926fb1',
-  'culture': '#ffffff',
-  'base': '#333645'
+      'webd': '#926fb1',
+      'it': '#4183d7',
+      'tele': '#d64541',
+      'besp': '#67809f',
+      'digm': '#2ecc71',
+      'cybs': '#f62459',
+      'contact': '#999aa2',
+      'devt': '#926fb1',
+      'culture': '#ffffff',
+      'base': '#333645'
     };
     const navItems = document.querySelectorAll('.nav_list_item');
     const sub = document.querySelector('.nav_sub');
-    //let subContent = document.querySelector('.nav_list_item_sublist');
     const submenu = {
       'webd': [
         ["stylish websites", "https://www.netmatters.co.uk/web-design/website-design"],
@@ -389,60 +466,52 @@
 
 
     navItems.forEach(function (navItem) {
-    navItem.addEventListener("mouseenter", function (e) {
-      if (sub.childNodes.length > 0) {
-      sub.removeChild(sub.childNodes[0]) };
-      const classes = e.currentTarget.classList;
-      let id = classes[1].slice(9);
-      sub.style.visibility = "visible";
-      sub.style.backgroundColor = themes[id];
-      navItem.style.backgroundColor = themes[id];
-      let list = document.createElement("div");
-      list.classList.add("nav_list_item_sublist");
-      list.classList.add("standard");
-      sub.appendChild(list);
-      let subContent = document.querySelector('.nav_list_item_sublist');
-      subContent.style.visibility = "visible";
-      for (let i = 0; i < submenu[id].length; i++) {
-        let link = document.createElement("a");                 // Create a <li> node
-        link.classList.add("nav_list_item_sublist_item");
-        link.href = submenu[id][i][1];
-        link.innerText = submenu[id][i][0];                       // Append the text to <li>
-        subContent.appendChild(link); 
-      }
-      
-      let icon = navItem.childNodes[1];
-
-      icon.style.color = 'white';
-
-      sub.onmouseenter = function() {
-        sub.style.visibility= "visible";
-        subContent.style.visibility = 'visible';
-        console.log(id);
+      navItem.addEventListener("mouseenter", function (e) {
+        if (sub.childNodes.length > 0) {
+          sub.removeChild(sub.childNodes[0])
+        };
+        const classes = e.currentTarget.classList;
+        let id = classes[1].slice(9);
+        sub.style.visibility = "visible";
+        sub.style.backgroundColor = themes[id];
         navItem.style.backgroundColor = themes[id];
         let icon = navItem.childNodes[1];
-        console.log(icon);
-        icon.style.color = "white";
-      }
-      navItem.onmouseleave = function() {
+        icon.style.color = 'white';
+        let list = document.createElement("div");
+        sub.appendChild(list);
+        list.classList.add("nav_list_item_sublist");
+        list.classList.add("standard");
+        list.style.visibility = "visible";
+        for (let i = 0; i < submenu[id].length; i++) {
+          let link = document.createElement("a");
+          link.classList.add("nav_list_item_sublist_item");
+          link.href = submenu[id][i][1];
+          link.innerText = submenu[id][i][0];
+          list.appendChild(link);
+        }
 
-        sub.style.visibility = 'hidden';
-        subContent.style.visibility = 'hidden';
-        navItem.style.backgroundColor = 'initial';
-        icon.style.color = themes[id];
+        sub.onmouseenter = function () {
+          sub.style.visibility = "visible";
+          list.style.visibility = 'visible';
+          navItem.style.backgroundColor = themes[id];
+          icon.style.color = "white";
+        }
 
-      }
-      
-      sub.onmouseleave = function() {
-        sub.style.visibility = 'hidden';
-        subContent.style.visibility = 'hidden';
-        navItem.style.backgroundColor = 'initial';
-        let icon = navItem.childNodes[1];
-        console.log(icon);
-        icon.style.color = themes[id];
-      }
+        navItem.onmouseleave = function () {
+          sub.style.visibility = 'hidden';
+          list.style.visibility = 'hidden';
+          navItem.style.backgroundColor = 'initial';
+          icon.style.color = themes[id];
+        }
+
+        sub.onmouseleave = function () {
+          sub.style.visibility = 'hidden';
+          list.style.visibility = 'hidden';
+          navItem.style.backgroundColor = 'initial';
+          icon.style.color = themes[id];
+        }
+      });
     });
-  }); 
   </script>
 </body>
 

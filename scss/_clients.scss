@@ -1,0 +1,83 @@
+
+
+.clients img, .partners img {
+  filter: grayscale(100);
+}
+
+.clients img:hover, .partners img:hover {
+  filter: grayscale(0);
+}
+
+.clients {
+  background-image: linear-gradient(#eeeeee, #ffffff);
+  padding: 1.2rem 0;
+  &_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  }
+  &_badge {
+    flex-grow: 1;
+    display:flex;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    a {
+      display:flex
+    }
+    img {
+      align-self: center;
+      height: auto;
+      max-width: auto;
+    }
+    &:hover .clients_info {
+      visibility: visible;
+    }
+  }
+
+  &_info {
+    position: absolute;
+    visibility: hidden;
+    background: $base;
+    color: white;
+    font-size: 0.8rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    text-align: center;
+    bottom: 119px;
+    width: 250px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    &_rule {
+      background-color: white;
+      width: 30px;
+      height: 3px;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &:after {
+      content:"";
+      width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid $base;
+      position: absolute;
+      bottom:-29px;
+    }
+  }
+  
+  
+
+  &_logo {
+    padding: 1rem;
+    width: 100%;
+  }
+}

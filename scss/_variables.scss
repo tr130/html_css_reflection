@@ -8,7 +8,10 @@ $themes: (
   'contact': #999aa2,
   'devt': #926fb1,
   'culture': #ffffff,
+  'base': #333645,
 );
+
+$base: #333645;
 
 @mixin themes($map) {
   @each $theme, $color in $map {

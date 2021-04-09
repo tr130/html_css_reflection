@@ -1,0 +1,61 @@
+.newsletter {
+  background-color: #dddddd;
+
+  form {
+    padding: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $base;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-control-lg {
+      border-radius: 2px;
+      padding: 3px 0px 3px 3px;
+        margin: 5px 1px 12px 0px;
+      &:focus {
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        
+        border: 1px solid rgba(81, 203, 238, 1);
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      color: $base;
+      &:hover {
+        color: darken($base, 10%);
+      }
+    }
+
+    .form-check-label:hover {
+      cursor: pointer;
+    }
+    .form-check-input {
+      width: 2rem;
+      height: 2rem;
+      border: 3px solid $base;
+      background-color: transparent;
+      margin: 1rem 1rem 1rem 0;
+      
+      &:focus {
+        box-shadow: none;
+      }
+      &:checked {
+        background-color: $base;
+      }
+    }
+    .btn {
+      padding: 0.6rem;
+      margin: 1rem;
+      width: 8rem;
+    }
+  }
+}
+
+.asterisk {
+  color: map-get($map: $themes, $key: 'tele');
+}
