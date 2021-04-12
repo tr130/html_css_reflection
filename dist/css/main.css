@@ -406,6 +406,9 @@ template {
   .topbar_btn_support {
     display: inline-block;
   }
+  .topbar_search_input {
+    display: none !important;
+  }
   nav {
     display: block;
   }
@@ -444,6 +447,9 @@ template {
 @media screen and (min-width: 1260px) {
   .standard {
     width: 1170px;
+  }
+  .topbar_search_input {
+    display: inline-block !important;
   }
   .nav_sub {
     font-size: 1rem;
@@ -569,58 +575,107 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem auto;
+}
+
+.topbar_logo {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .topbar_menu {
   border: 2px solid black;
-  padding: 0.5rem !important;
-  font-size: 0.6rem !important;
+  padding: 0.1rem 0.7rem !important;
+  font-size: 0.8rem !important;
+  line-height: 1;
+  position: relative;
+}
+
+.topbar_menu_rule {
+  background-color: white;
+  width: 100%;
+  height: 2.5px;
+  position: relative;
+  top: 7.5px;
+}
+
+.topbar_menu_rule:before {
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 2.5px;
+  position: absolute;
+  bottom: 7.5px;
+  right: 0px;
+}
+
+.topbar_menu_rule:after {
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 2.5px;
+  position: absolute;
+  top: 7.5px;
+  right: 0px;
+}
+
+.topbar_menu p {
+  position: relative;
+  top: 20px;
 }
 
 .topbar_btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 1.3rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1rem 0;
 }
 
-form.example {
-  display: inline-block;
+.topbar_search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
-  width: 40%;
+  /* Style the submit button */
+  /* Clear floats */
 }
 
-form.example input[type=text] {
+.topbar_search_input {
   padding: 10px;
-  font-size: 17px;
   border: 1px solid grey;
   float: left;
-  width: 80%;
+  max-width: 16rem;
   background: #f1f1f1;
 }
 
-/* Style the submit button */
-form.example button {
+.topbar_search button {
+  background: #999aa2;
+  color: white;
   float: left;
-  width: 20%;
-  padding: 10px;
-  font-size: 17px;
   border: 1px solid grey;
   border-left: none;
   /* Prevent double borders */
   cursor: pointer;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 2px 2px 0;
+  padding: 1rem;
+  font-size: 23px;
 }
 
-/* Clear floats */
-form.example::after {
+.topbar_search button:hover {
+  background: #7e808a;
+}
+
+.topbar_search:after {
   content: "";
   clear: both;
   display: table;

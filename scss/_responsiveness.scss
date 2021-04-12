@@ -71,6 +71,9 @@
   .topbar_btn_support {
     display: inline-block;
   }
+  .topbar_search_input {
+    display:none !important;
+  }
   nav {
     display: block;
   }
@@ -117,7 +120,9 @@
   .standard {
     width: 1170px;
   }
-
+  .topbar_search_input {
+    display: inline-block !important;
+  }
   .nav_sub {
     font-size: 1rem;
   }
