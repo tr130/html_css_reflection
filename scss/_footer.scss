@@ -15,8 +15,8 @@
   }
 
   &_container {
-    display:grid;
-    align-items: left;
+   // display:grid;
+   // align-items: left;
     line-height: 1.3rem;
     color: white;
     font-size: 0.8rem;
@@ -64,6 +64,13 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+    }
+
+    .partner:hover .colored {
+      display: inline-block;
+    }
+    .partner:hover .greyscale {
+      display:none;
     }
   }
 }

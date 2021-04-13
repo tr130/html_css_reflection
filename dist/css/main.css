@@ -354,9 +354,11 @@ template {
   .topbar img {
     max-width: 65%;
   }
-  .latest_container {
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
+  #latest_1 {
+    padding-bottom: 1.5rem;
+  }
+  #latest_2 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -388,22 +390,39 @@ template {
   .topbar_search_xs {
     display: none !important;
   }
-  .services_upper {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+  #serv-tele, #serv-cybs {
+    padding-right: 0.75rem !important;
   }
-  .services_lower {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+  #serv-webd, #serv-devt {
+    padding-left: 0.75rem !important;
   }
-  .latest_container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 1fr !important;
-        grid-template-rows: 1fr !important;
+  /*  .services {
+    &_upper {
+      grid-template-columns: 1fr;
+    }
+    &_lower {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }*/
+  /*.latest_container {
+    //grid-template-columns:repeat(2, 1fr);
+    //grid-template-rows: 1fr !important;
+
+    .card:last-child {
+      display: none;
+    }
+  }*/
+  #small-buffer {
+    display: block !important;
   }
-  .latest_container .card:last-child {
-    display: none;
+  #latest_1 {
+    padding-right: .75rem !important;
+  }
+  #latest_2 {
+    padding-left: .75rem !important;
+  }
+  #latest_3 {
+    display: none !important;
   }
   .footer_container {
     -ms-grid-columns: (1fr)[2];
@@ -435,13 +454,25 @@ template {
     margin-top: -50px !important;
     text-align: left !important;
   }
-  .services_upper {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+  /*  .services {
+    &_upper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &_lower {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }*/
+  #serv-besp, #serv-it {
+    padding-right: 0.75rem !important;
   }
-  .services_lower {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+  #serv-it, #serv-digm {
+    padding-left: 0.75rem !important;
+  }
+  #small-buffer {
+    display: none !important;
+  }
+  #med-buffer {
+    display: block !important;
   }
   .latest_img {
     -webkit-transition: all 0.3s ease-in-out;
@@ -462,7 +493,7 @@ template {
 
 @media screen and (min-width: 1260px) {
   .standard {
-    width: 1170px;
+    width: 1200px;
   }
   .topbar_search {
     max-width: 90%;
@@ -473,23 +504,43 @@ template {
   .nav_sub {
     font-size: 1rem;
   }
+  #serv-webd {
+    padding-right: 0.75rem !important;
+  }
+  #serv-cybs {
+    padding-left: 0.75rem !important;
+  }
+  #med-buffer {
+    display: none !important;
+  }
   .intro_text_first, .intro_text_para {
     width: 570px;
   }
-  .services_upper {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+  /* .services {
+    &_upper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &_lower {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }*/
+  /* .latest_container {
+    //grid-template-columns:repeat(3, 1fr);
+
+    .card:last-child {
+      display: inline-block;
+    }
+  }*/
+  #latest_1 {
+    padding-right: 1rem !important;
   }
-  .services_lower {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+  #latest_2 {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
   }
-  .latest_container {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-  .latest_container .card:last-child {
-    display: inline-block;
+  #latest_3 {
+    display: inline-block !important;
+    padding-left: 1rem !important;
   }
   .clients {
     padding: 1rem 0 !important;
@@ -524,11 +575,6 @@ template {
 }
 
 .footer_container {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   line-height: 1.3rem;
   color: white;
   font-size: 0.8rem;
@@ -585,6 +631,14 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer .partners .partner:hover .colored {
+  display: inline-block;
+}
+
+.footer .partners .partner:hover .greyscale {
+  display: none;
 }
 
 .topbar {
@@ -765,50 +819,18 @@ template {
 }
 
 .nav {
-  background-image: linear-gradient(#333645 100px, transparent 100px);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-  -ms-grid-columns: 1fr minmax(95%, 850px) 1fr;
-      grid-template-columns: 1fr minmax(95%, 850px) 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  background-color: #333645;
   margin: 0;
   padding: 0;
 }
 
-.nav_list {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 2 / span 2 / span 1;
-}
-
 .nav_sub {
   width: 100%;
-  z-index: 10;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: 3 / 1 / span 1 / span 3;
+  height: 50px;
 }
 
 .nav_list {
   height: 100px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 0px;
   margin-bottom: 0 !important;
 }
 
@@ -934,22 +956,6 @@ template {
   background-color: #333645;
 }
 
-/* .nav_list_item_sublist:before {
-  content: "";
-  display: inline-block;
-  background-color: red;
-  position: absolute;
-  width: 100vw;
-  height: 50px;
-  left: 100%;
-  z-index: 2;
-} */
-#colorBlock {
-  width: 200px;
-  height: 200px;
-  color: red;
-}
-
 .slider {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.3))), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-sqvx.jpg);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-sqvx.jpg);
@@ -1000,46 +1006,25 @@ template {
 }
 
 .services {
-  display: -ms-grid;
-  display: grid;
   background: radial-gradient(#eeeeee, #ffffff);
   margin: 2rem auto;
 }
 
-.services_upper {
-  display: -ms-grid;
-  display: grid;
-  justify-items: stretch;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
-}
-
-.services_lower {
-  display: -ms-grid;
-  display: grid;
-  justify-items: stretch;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+.services .col-xs-12 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .services_item {
   border: 1px solid #dddddd;
   border-radius: 3px;
-  width: 100%;
-  padding: 2rem;
+  padding: 32px;
   margin: 1rem auto;
   text-align: center;
   color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
 }
 
 .services_item-webd {
@@ -1392,6 +1377,10 @@ template {
   color: #333645;
 }
 
+.services_item .card-body {
+  padding: 0 !important;
+}
+
 .services_item button {
   font-size: 1.1rem;
   padding: .5rem 1rem;
@@ -1415,8 +1404,12 @@ template {
   font-size: 0.8rem;
 }
 
-.icon-background {
-  color: pink;
+.services_item_text #small-buffer {
+  display: none;
+}
+
+.services_item_text #med-buffer {
+  display: none;
 }
 
 .intro {
@@ -1451,10 +1444,6 @@ template {
 
 .intro_text button:hover {
   color: #333645;
-}
-
-.latest {
-  position: relative;
 }
 
 .latest-webd .latest_topiclink {
@@ -1637,6 +1626,11 @@ template {
   color: #333645;
 }
 
+.latest #latest_1, .latest #latest_2, .latest #latest_3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .latest_title {
   font-variant: small-caps;
   margin: 2rem 0;
@@ -1658,11 +1652,6 @@ template {
 .latest_container {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  display: -ms-grid;
-  display: grid;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
-  row-gap: 2rem;
 }
 
 .latest .card {
@@ -1751,19 +1740,20 @@ template {
   margin-bottom: 0;
 }
 
-.clients img, .partners img {
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+/*.clients img, .partners img {
+  filter: grayscale(100);
 }
 
 .clients img:hover, .partners img:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  filter: grayscale(0);
+}*/
+.colored {
+  display: none;
 }
 
 .clients {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#ffffff));
-  background-image: linear-gradient(#eeeeee, #ffffff);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), color-stop(10%, #ffffff));
+  background-image: linear-gradient(#eeeeee, #ffffff 10%);
   padding: 1.2rem 0;
 }
 
@@ -1810,6 +1800,14 @@ template {
   visibility: visible;
 }
 
+.clients_badge:hover .greyscale {
+  display: none;
+}
+
+.clients_badge:hover .colored {
+  display: inline-block;
+}
+
 .clients_info {
   position: absolute;
   visibility: hidden;
@@ -1819,17 +1817,11 @@ template {
   padding: 1rem 1rem 1rem 1.5rem;
   text-align: center;
   bottom: 119px;
+  left: -300px;
+  right: -300px;
+  margin-left: auto;
+  margin-right: auto;
   width: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .clients_info h3 {
@@ -1840,8 +1832,8 @@ template {
   background-color: white;
   width: 30px;
   height: 3px;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
+  text-align: center;
 }
 
 .clients_info:after {
@@ -1853,6 +1845,10 @@ template {
   border-top: 30px solid #333645;
   position: absolute;
   bottom: -29px;
+  left: -300px;
+  right: -300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clients_logo {
@@ -1947,6 +1943,11 @@ body {
   max-width: 95%;
 }
 
+/*override bootstrap padding on containers
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}*/
 .btn {
   font-size: 1.1rem;
   padding: 1rem;

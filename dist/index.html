@@ -54,23 +54,23 @@
       </form>
     </div>
     <nav class="nav">
-      <div class="nav_list standard">
-        <a class="nav_list_item nav-item-webd" href="https://www.netmatters.co.uk/web-design">
+      <div class="nav_list standard row">
+        <a class="nav_list_item nav-item-webd col-md-2" href="https://www.netmatters.co.uk/web-design">
           <i class="icn_webd fas fa-code"></i>
           <span>Web</span><span>Design</span></a>
-        <a class="nav_list_item nav-item-it" href="https://www.netmatters.co.uk/it-support">
+        <a class="nav_list_item nav-item-it col-md-2" href="https://www.netmatters.co.uk/it-support">
           <i class="icn_it fas fa-desktop"></i>
           <span>IT</span><span>Support</span></a>
-        <a class="nav_list_item nav-item-tele" href="https://www.netmatters.co.uk/telecoms-services">
+        <a class="nav_list_item nav-item-tele col-md-2" href="https://www.netmatters.co.uk/telecoms-services">
           <i class="icn_tele fas fa-phone-alt"></i>
           <span>Telecoms</span><span>Services</span></a>
-        <a class="nav_list_item nav-item-besp" href="https://www.netmatters.co.uk/bespoke-software">
+        <a class="nav_list_item nav-item-besp col-md-2" href="https://www.netmatters.co.uk/bespoke-software">
           <i class="icn_besp fas fa-th"></i>
           <span>Bespoke</span><span>Software</span></a>
-        <a class="nav_list_item nav-item-digm" href="https://www.netmatters.co.uk/digital-marketing">
+        <a class="nav_list_item nav-item-digm col-md-2" href="https://www.netmatters.co.uk/digital-marketing">
           <i class="icn_digm fas fa-signal"></i>
           <span>Digital</span><span>Marketing</span></a>
-        <a class="nav_list_item nav-item-cybs" href="https://www.netmatters.co.uk/cyber-security">
+        <a class="nav_list_item nav-item-cybs col-md-2" href="https://www.netmatters.co.uk/cyber-security">
           <i class="icn_cybs fas fa-shield-alt"></i>
           <span>Cyber</span><span>Security</span></a>
       </div>
@@ -95,89 +95,120 @@
         </div>
       </div>
     </section>
-    <section class="services standard">
-      <div class="services_upper">
-        <a href="#" class="services_item services_item-besp">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fas fa-th fa-stack-1x fa-xs"></i>
-          </span>
-          <h3 class="services_item_title">Bespoke Software</h3>
-          <div class="services_item_rule"></div>
-          <p class="services_item_text">Tailored software solutions to improve business productivity and online profits.
-            Our expert team will ensure a software solution.</p>
-          <button class="btn">Read more</button>
-        </a>
-        <a href="#" class="services_item services_item-it">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fas fa-desktop fa-stack-1x fa-xs"></i>
-          </span>
-          <h3 class="services_item_title">IT Support</h3>
-          <div class="services_item_rule"></div>
-          <p class="services_item_text">Remotely managed IT services that are catered to your business's needs, add
-            value and reduce costs.</p>
-          <button class="btn">Read more</button>
-        </a>
+    <section class="services">
+      <div class="services_upper row standard">
+        <div class="col-xs-12 col-lg-4" id="serv-besp">
+          <a href="#" class="card services_item services_item-besp">
+            <div class="card-body"><span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-th fa-stack-1x fa-xs"></i>
+              </span>
+              <h3 class="services_item_title">Bespoke Software</h3>
+              <div class="services_item_rule"></div>
+              <p class="services_item_text">Tailored software solutions to improve business productivity and online
+                profits.
+                Our expert team will ensure a software solution.</p>
+              <button class="btn">Read more</button>
+            </div>
 
-        <a href="#" class="services_item services_item-digm">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fas fa-signal fa-stack-1x fa-xs"></i>
-          </span>
-          <h3 class="services_item_title">Digital Marketing</h3>
-          <div class="services_item_rule"></div>
-          <p class="services_item_text">Driving brand awareness and ROI through creative digital marketing campaigns. We
-            review and monitor online performances.</p>
-          <button class="btn">Read more</button>
-        </a>
+          </a>
+        </div>
+        <div class="col-xs-12 col-lg-4" id="serv-it">
+          <a href="#" class="card services_item services_item-it">
+            <div class="card-body"><span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-desktop fa-stack-1x fa-xs"></i>
+              </span>
+              <h3 class="services_item_title">IT Support</h3>
+              <div class="services_item_rule"></div>
+              <p class="services_item_text">Remotely managed IT services that are catered to your business's needs, add
+                value and reduce costs.<br id="med-buffer">&nbsp;</p>
+              <button class="btn">Read more</button>
+            </div>
+
+          </a>
+        </div>
+        <div class="col-xs-12 col-lg-4" id="serv-digm">
+          <a href="#" class="card services_item services_item-digm">
+            <div class="card-body"><span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-signal fa-stack-1x fa-xs"></i>
+              </span>
+              <h3 class="services_item_title">Digital Marketing</h3>
+              <div class="services_item_rule"></div>
+              <p class="services_item_text">Driving brand awareness and ROI through creative digital marketing
+                campaigns.
+                We
+                review and monitor online performances.</p>
+              <button class="btn">Read more</button>
+            </div>
+
+          </a>
+        </div>
       </div>
-      <div class="services_lower">
-        <a href="#" class="services_item services_item-tele">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fas fa-phone-alt fa-stack-1x fa-xs"></i>
-          </span>
-          <h3 class="services_item_title">Telecoms Services</h3>
-          <div class="services_item_rule"></div>
-          <p class="services_item_text">Stay connected with bespoke telecoms solutions when you need it most.</p>
-          <button class="btn">Read more</button>
-        </a>
+      <div class="services_lower row standard">
+        <div class="col-xs-12 col-md-6 col-xl-3" id="serv-tele">
+          <a href="#" class="card services_item services_item-tele">
+            <div class="card-body"><span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone-alt fa-stack-1x fa-xs"></i>
+              </span>
+              <h3 class="services_item_title">Telecoms Services</h3>
+              <div class="services_item_rule"></div>
+              <p class="services_item_text">Stay connected with bespoke telecoms solutions when you need it most.<br
+                  id="small-buffer">&nbsp;</p>
+              <button class="btn">Read more</button>
+            </div>
 
-        <a href="#" class="services_item services_item-webd">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fas fa-code fa-stack-1x fa-xs"></i>
-          </span>
-          <h3 class="services_item_title">Web Design</h3>
-          <div class="services_item_rule"></div>
-          <p class="services_item_text">User-centric design for businesses looking to make a lasting first impression.
-          </p>
-          <button class="btn">Read more</button>
-        </a>
+          </a></div>
 
-        <a href="#" class="services_item services_item-cybs">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fas fa-shield-alt fa-stack-1x fa-xs"></i>
-          </span>
-          <h3 class="services_item_title">Cyber Security</h3>
-          <div class="services_item_rule"></div>
-          <p class="services_item_text">Ensuring your online business stays secure 24/7, 365 days of the year.</p>
-          <button class="btn">Read more</button>
-        </a>
+        <div class="col-xs-12 col-md-6 col-xl-3" id="serv-webd">
+          <a href="#" class="card services_item services_item-webd">
+            <div class="card-body"><span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-xs"></i>
+              </span>
+              <h3 class="services_item_title">Web Design</h3>
+              <div class="services_item_rule"></div>
+              <p class="services_item_text">User-centric design for businesses looking to make a lasting first
+                impression.
+              </p>
+              <button class="btn">Read more</button>
+            </div>
 
-        <a href="#" class="services_item services_item-devt">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fas fa-graduation-cap fa-stack-1x fa-xs"></i>
-          </span>
-          <h3 class="services_item_title">Developer Training</h3>
-          <div class="services_item_rule"></div>
-          <p class="services_item_text">Have you considered a career in web development but you aren't sure where to
-            start?</p>
-          <button class="btn">Read more</button>
-        </a>
+          </a></div>
+
+        <div class="col-xs-12 col-md-6 col-xl-3" id="serv-cybs">
+          <a href="#" class="card services_item services_item-cybs">
+            <div class="card-body"><span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-shield-alt fa-stack-1x fa-xs"></i>
+              </span>
+              <h3 class="services_item_title">Cyber Security</h3>
+              <div class="services_item_rule"></div>
+              <p class="services_item_text">Ensuring your online business stays secure 24/7, 365 days of the year.<br
+                  id="small-buffer">&nbsp;</p>
+              <button class="btn">Read more</button>
+            </div>
+
+          </a></div>
+
+        <div class="col-xs-12 col-md-6 col-xl-3" id="serv-devt">
+          <a href="#" class="card services_item services_item-devt">
+            <div class="card-body">
+              <span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-graduation-cap fa-stack-1x fa-xs"></i>
+              </span>
+              <h3 class="services_item_title">Developer Training</h3>
+              <div class="services_item_rule"></div>
+
+              <p class="services_item_text">Have you considered a career in web development but you aren't sure where to
+                start?</p>
+              <button class="btn">Read more</button>
+            </div>
+          </a></div>
+
       </div>
     </section>
     <section class="intro">
@@ -203,82 +234,97 @@
         <div class="latest_rule"></div>
       </div>
       <div class="latest_background">
-        <div class="latest_container standard">
-          <div class="latest_card card latest-webd">
-            <div class="latest_img_container">
-              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
-                  src="http://placeimg.com/455/263/tech" class="latest_img card-img-top"></a>
-              <a href="https://www.netmatters.co.uk/news/web-design" class="latest_topiclink">news</a>
-            </div>
-            <div class="card-body">
-              <a href="#" class="latest_titlelink">Article title</a>
-              <p class="latest_firstlines">First lines of the article...</p>
-              <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
-              <div class="latest_byline">
-                <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
-                <div>
-                  <p class="latest_postedby">Posted by Joe Bloggs</p>
-                  <p class="latest_posteddate">1st April 2021</p>
+        <div class="latest_container row standard">
+          <div class="col-xs-12 col-md-6 col-xl-4" id="latest_1">
+            <div class="latest_card card latest-webd">
+              <div class="latest_img_container">
+                <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
+                    src="http://placeimg.com/455/263/tech" class="latest_img card-img-top"></a>
+                <a href="https://www.netmatters.co.uk/news/web-design" class="latest_topiclink">news</a>
+              </div>
+              <div class="card-body">
+                <a href="#" class="latest_titlelink">Article title</a>
+                <p class="latest_firstlines">First lines of the article...</p>
+                <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
+                <div class="latest_byline">
+                  <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+                  <div>
+                    <p class="latest_postedby">Posted by Joe Bloggs</p>
+                    <p class="latest_posteddate">1st April 2021</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="latest_card card latest-digm">
-            <div class="latest_img_container">
-              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
-                  src="http://placeimg.com/455/263/tech" class="card-img-top latest_img"></a>
-              <a href="https://www.netmatters.co.uk/news/digital-marketing" class="latest_topiclink">news</a>
-            </div>
-            <div class="card-body">
-              <a href="https://www.netmatters.co.uk/news/march-2021-notables" class="latest_titlelink">March 2021
-                Notables</a>
-              <p class="latest_firstlines">Every month we celebrate the most notable of employees here at Netmatters.
-                Each
-                department he...</p>
-              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><button class="btn">Read more</button></a>
-              <div class="latest_byline">
-                <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
-                <div>
-                  <p class="latest_postedby">Posted by Joe Bloggs</p>
-                  <p class="latest_posteddate">1st April 2021</p>
+
+          <div class="col-xs-12 col-md-6 col-xl-4" id="latest_2">
+            <div class="latest_card card latest-digm">
+              <div class="latest_img_container">
+                <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
+                    src="http://placeimg.com/455/263/tech" class="card-img-top latest_img"></a>
+                <a href="https://www.netmatters.co.uk/news/digital-marketing" class="latest_topiclink">news</a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.netmatters.co.uk/news/march-2021-notables" class="latest_titlelink">March 2021
+                  Notables</a>
+                <p class="latest_firstlines">Every month we celebrate the most notable of employees here at Netmatters.
+                  Each
+                  department he...</p>
+                <a href="https://www.netmatters.co.uk/news/march-2021-notables"><button class="btn">Read
+                    more</button></a>
+                <div class="latest_byline">
+                  <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+                  <div>
+                    <p class="latest_postedby">Posted by Joe Bloggs</p>
+                    <p class="latest_posteddate">1st April 2021</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="latest_card card latest-it">
-            <div class="latest_img_container">
-              <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
-                  src="http://placeimg.com/455/263/tech" class="card-img-top latest_img"></a>
-              <a href="https://www.netmatters.co.uk/news/it-support" class="latest_topiclink">news</a>
-            </div>
-            <div class="card-body">
-              <a href="#" class="latest_titlelink">Article title</a>
-              <p class="latest_firstlines">First lines of the article...</p>
-              <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
-              <div class="latest_byline">
-                <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
-                <div>
-                  <p class="latest_postedby">Posted by Joe Bloggs</p>
-                  <p class="latest_posteddate">1st April 2021</p>
+
+          <div class="col-xs-12 col-md-6 col-xl-4" id="latest_3">
+            <div class="latest_card card latest-it">
+              <div class="latest_img_container">
+                <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
+                    src="http://placeimg.com/455/263/tech" class="card-img-top latest_img"></a>
+                <a href="https://www.netmatters.co.uk/news/it-support" class="latest_topiclink">news</a>
+              </div>
+              <div class="card-body">
+                <a href="#" class="latest_titlelink">Article title</a>
+                <p class="latest_firstlines">First lines of the article...</p>
+                <a href="https://www.netmatters.co.uk/web-design"><button class="btn">Read more</button></a>
+                <div class="latest_byline">
+                  <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+                  <div>
+                    <p class="latest_postedby">Posted by Joe Bloggs</p>
+                    <p class="latest_posteddate">1st April 2021</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
     <section class="clients">
       <div class="clients_container standard">
         <div class="clients_badge">
-          <img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-gZQR.png" alt="Busseys logo">
+          <img class="clients_logo colored" src="https://www.netmatters.co.uk/uploads/page/1/home-gZQR.png"
+            alt="Busseys logo">
+          <img src="https://www.netmatters.co.uk/uploads/page/1/home-T5gi.jpg" alt="Busseys Logo"
+            class="clients_logo greyscale">
           <div class="clients_info">
             <h3>Busseys</h3>
             <div class="clients_info_rule"></div>One of the leading Ford dealerships in the UK.
           </div>
         </div>
         <div class="clients_badge">
-          <a href=""><img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-MjHw.png"
-              alt="Crane Garden Buildings logo"></a>
+          <a href=""><img class="clients_logo colored" src="https://www.netmatters.co.uk/uploads/page/1/home-MjHw.png"
+              alt="Crane Garden Buildings logo">
+            <img src="https://www.netmatters.co.uk/uploads/page/1/home-BsyK.jpg" alt="Crane Garden Building Logo"
+              class="clients_logo greyscale"></a>
           <div class="clients_info">
             <h3>Crane Garden Builders</h3>
             <div class="clients_info_rule"></div>Leading manufacturer and supplier of high-end garden rooms,
@@ -286,15 +332,20 @@
           </div>
         </div>
         <div class="clients_badge">
-          <img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-ukEL.png" alt="Beat logo">
+          <img class="clients_logo colored" src="https://www.netmatters.co.uk/uploads/page/1/home-ukEL.png"
+            alt="Beat logo">
+          <img src="https://www.netmatters.co.uk/uploads/page/1/home-RfLc.jpg" alt="Beat Logo"
+            class="clients_logo greyscale">
           <div class="clients_info">
             <h3>Beat</h3>
             <div class="clients_info_rule"></div>The UK's eating disorder charity founded in 1989.
           </div>
         </div>
         <div class="clients_badge">
-          <a href=""><img class="clients_logo" src="https://www.netmatters.co.uk/uploads/page/1/home-kGn4.png"
-              alt="Northern Diver logo"></a>
+          <a href=""><img class="clients_logo colored" src="https://www.netmatters.co.uk/uploads/page/1/home-kGn4.png"
+              alt="Northern Diver logo">
+            <img src="https://www.netmatters.co.uk/uploads/page/1/home-jHUl.jpg" alt="Northern Diver Logo"
+              class="clients_logo greyscale"></a>
           <div class="clients_info">
             <h3>Northern Diver</h3>
             <div class="clients_info_rule"></div>Global water based equipment manufacturers for sport, military,
@@ -329,9 +380,9 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="footer_upper">
-      <div class="footer_container standard">
-        <section class="contact">
+    <div class="footer_upper ">
+      <div class="footer_container row standard">
+        <section class="contact col-xs-12 col-md-6 col-xl-3">
           <h5 class="footer_title">contact us</h5>
           <address class="footer_text">
             11 Penfold Drive<br>
@@ -342,7 +393,7 @@
           Tel: <a href="tel:01603704020">01603 70 40 20</a><br>
           Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a>
         </section>
-        <section class="aboutus">
+        <section class="aboutus col-xs-12 col-md-6 col-xl-3">
           <h5 class="footer_title">about netmatters</h5>
           <ul>
             <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/news">News</a></li>
@@ -362,7 +413,7 @@
                 Domains</a></li>
           </ul>
         </section>
-        <section class="website">
+        <section class="website col-xs-12 col-md-6 col-xl-3">
           <h5 class="footer_title">website</h5>
           <ul>
             <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/sitemap.xml">Sitemap</a></li>
@@ -370,7 +421,7 @@
             <li>All rights reserved</li>
           </ul>
         </section>
-        <section class="social">
+        <section class="social col-xs-12 col-md-6 col-xl-3">
           <h5 class="footer_title">social media</h5>
           <div class="social_container">
             <a class="social-btn btn fab fa-facebook-f fa-2x" href="https://en-gb.facebook.com/netmatters/"
@@ -384,21 +435,27 @@
     </div>
     <section class="partners standard">
       <div class="partners_container">
-        <img src="https://www.gstatic.com/partners/badge/images/PartnerBadge.png" alt="Google partner badge">
-        <img src="https://www.netmatters.co.uk/assets/images/accreditations/silver-microsoft-partner.jpg"
-          alt="Microsoft logo">
-        <img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg" alt="Future 50 badge">
-        <img src="https://www.netmatters.co.uk/assets/images/accreditations/qms.jpg" alt="QMS accreditation">
-        <img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
-          alt="Norfolk Carbon Charter">
+        <div class="partner"><img src="https://www.gstatic.com/partners/badge/images/PartnerBadge.png"
+            alt="Google partner badge">
+        </div>
+        <div class="partner"><img
+            src="https://www.netmatters.co.uk/assets/images/accreditations/silver-microsoft-partner.jpg"
+            alt="Microsoft logo"></div>
+        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg"
+            alt="Future 50 badge" class="colored"><img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50-bw.jpg" alt="Further 50 Member" class="greyscale" /> </div> 
+          <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/qms.jpg" alt="QMS accreditation" class="colored">
+            <img src="https://www.netmatters.co.uk/assets/images/accreditations/qms-bw.jpg" alt="QMS" class="greyscale" /></div>
+        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
+          alt="Norfolk Carbon Charter" class="colored"><img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter-bw.jpg" alt="Norfolk Carbon Charter" class="greyscale" /></div>
       </div>
       <div class="partners_container">
-        <img src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
-          alt="Investing in Future Growth Winner">
-        <img src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.jpg"
-          alt="Princes Royal Training Award 2020">
-        <img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
-          alt="Skills of Tomorrow winner">
+        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
+          alt="Investing in Future Growth Winner" class="colored"><img src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth" class="greyscale" /></div>
+        
+        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.jpg"
+          alt="Princes Royal Training Award 2020" class="colored"><img src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training-bw.jpg" alt="Princess Royal Training" class="greyscale" /></div>
+        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
+          alt="Skills of Tomorrow winner" class="colored"><img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow-bw.jpg" alt="Skills of Tomorrow" class="greyscale" /></div>
       </div>
     </section>
 
@@ -482,9 +539,7 @@
       ]
     }
 
-
-
-    navItems.forEach(function (navItem) {
+    var setUp = function (navItem) {
       navItem.addEventListener("mouseenter", function (e) {
         if (sub.childNodes.length > 0) {
           sub.removeChild(sub.childNodes[0])
@@ -519,18 +574,21 @@
         navItem.onmouseleave = function () {
           sub.style.visibility = 'hidden';
           list.style.visibility = 'hidden';
-          navItem.style.backgroundColor = 'initial';
+          navItem.style.backgroundColor = 'transparent';
           icon.style.color = themes[id];
         }
 
         sub.onmouseleave = function () {
           sub.style.visibility = 'hidden';
           list.style.visibility = 'hidden';
-          navItem.style.backgroundColor = 'initial';
+          navItem.style.backgroundColor = 'transparent';
           icon.style.color = themes[id];
         }
-      });
-    });
+      })
+    }
+    for (let i = 0; i < navItems.length; i++) {
+      setUp(navItems[i])
+    }
   </script>
 </body>
 

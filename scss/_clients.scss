@@ -1,15 +1,20 @@
 
 
-.clients img, .partners img {
+/*.clients img, .partners img {
   filter: grayscale(100);
 }
 
 .clients img:hover, .partners img:hover {
   filter: grayscale(0);
+}*/
+.colored {
+  display:none;
 }
-
+  
 .clients {
-  background-image: linear-gradient(#eeeeee, #ffffff);
+
+  
+  background-image: linear-gradient(#eeeeee, #ffffff 10%);
   padding: 1.2rem 0;
   &_container {
   display: flex;
@@ -34,6 +39,12 @@
     &:hover .clients_info {
       visibility: visible;
     }
+    &:hover .greyscale {
+      display:none;
+    }
+    &:hover .colored {
+      display:inline-block;
+    }
   }
 
   &_info {
@@ -45,10 +56,14 @@
     padding: 1rem 1rem 1rem 1.5rem;
     text-align: center;
     bottom: 119px;
+    left:-300px;
+    right:-300px;
+    margin-left: auto;
+    margin-right: auto;
     width: 250px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
 
     h3 {
       font-size: 1.2rem;
@@ -58,8 +73,9 @@
       background-color: white;
       width: 30px;
       height: 3px;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
+      margin: 1rem auto;
+      text-align: center;
+      //margin-bottom: 1rem;
     }
 
     &:after {
@@ -71,6 +87,10 @@
     border-top: 30px solid $base;
       position: absolute;
       bottom:-29px;
+      left: -300px;
+      right: -300px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   

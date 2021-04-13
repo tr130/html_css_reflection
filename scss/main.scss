@@ -17,6 +17,12 @@ body {
   max-width: 95%;
 }
 
+/*override bootstrap padding on containers
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}*/
+
 .btn {
   font-size: 1.1rem;
   padding: 1rem;

@@ -1,30 +1,31 @@
 .nav {
-  
-  background-image: linear-gradient(#333645 100px, transparent 100px);
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr minmax(95%, 850px) 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    justify-content: center;
-    align-items: stretch;
+  //background-image: linear-gradient(#333645 110px, transparent 50px);
+  background-color: $base;
+   // display: grid;
+   // grid-template-rows: repeat(3, 1fr);
+   // grid-template-columns: 1fr minmax(95%, 850px) 1fr;
+   // grid-column-gap: 0px;
+   // grid-row-gap: 0px;
+   // justify-content: center;
+   // align-items: stretch;
     margin: 0;
     padding: 0;
     
-    &_list { grid-area: 1 / 2 / span 2 / span 1}
+    //&_list { grid-area: 1 / 2 / span 2 / span 1}
     &_sub { 
       width: 100%;
-      z-index: 10;
-      grid-area: 3 / 1 / span 1 / span 3;
+      height: 50px;
+      //z-index: 10;
+   //   grid-area: 3 / 1 / span 1 / span 3;
     }
   //@include dropdown1($themes);
   
   &_list {
     height: 100px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    //display: grid;
+   // grid-template-columns: repeat(6, 1fr);
     
-    grid-column-gap: 0px;
+   // grid-column-gap: 0px;
     
     margin-bottom: 0 !important;
 
@@ -90,23 +91,4 @@
       }
     }
   }
-}
-
-
-
-/* .nav_list_item_sublist:before {
-  content: "";
-  display: inline-block;
-  background-color: red;
-  position: absolute;
-  width: 100vw;
-  height: 50px;
-  left: 100%;
-  z-index: 2;
-} */
-
-#colorBlock {
-  width: 200px;
-  height: 200px;
-  color: red;
 }

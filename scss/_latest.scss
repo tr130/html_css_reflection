@@ -1,7 +1,12 @@
 .latest {
   
   @include latestcolor($themes);
-  position: relative; 
+  //position: relative; 
+
+  #latest_1, #latest_2, #latest_3 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &_title {
     font-variant: small-caps;
@@ -21,9 +26,9 @@
     
     padding-top: 3rem;
     padding-bottom: 3rem;
-    display: grid;
-    column-gap: 2rem;
-    row-gap: 2rem;
+  //  display: grid;
+  //  column-gap: 2rem;
+  //  row-gap: 2rem;
     
   }
 

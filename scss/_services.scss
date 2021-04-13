@@ -1,34 +1,41 @@
 .services {
-  display: grid;
+ // display: grid;
   background: radial-gradient(#eeeeee, #ffffff);
   margin: 2rem auto;
 
-  &_upper {
-    display: grid;
-    justify-items: stretch;
-    column-gap: 2rem;
+  .col-xs-12 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
+//  &_upper {
+   // display: grid;
+   // justify-items: stretch;
+   // column-gap: 2rem;
+ // }
 
-  &_lower {
-    display: grid;
-    justify-items: stretch;
-    column-gap: 2rem;
-  }
+ // &_lower {
+   // display: grid;
+   // justify-items: stretch;
+   // column-gap: 2rem;
+ // }
   
   &_item {
     border: 1px solid #dddddd;
     border-radius: 3px;
-    width: 100%;
-    padding: 2rem;
+    //width: 100%;
+    padding: 32px;
     margin: 1rem auto;
     text-align: center;
     color: black;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;*/
 
     @include switchthemes($themes);
 
+    .card-body {
+      padding: 0 !important;
+    }
     button {
       font-size: 1.1rem;
       padding: .5rem 1rem;
@@ -50,10 +57,13 @@
 
     &_text {
       font-size: 0.8rem;
+
+      #small-buffer {
+        display: none;
+      }
+      #med-buffer {
+        display: none;
+      }
     }
   }
-}
-
-.icon-background {
-  color: pink;
 }
