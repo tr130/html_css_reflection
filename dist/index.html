@@ -17,23 +17,41 @@
 <body>
   <header class="header">
     <div class="topbar standard">
-      <logo class="topbar_logo"><img src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="netmatters logo">
+      <img class="topbar_logo" src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="netmatters logo">
       </logo>
-      <span class="topbar_btns">
-        <a class="topbar_btn_support btn btn-bg-it" href="https://support.netmatters.com/"><i
-              class="fas fa-mouse"></i> Support</a>
+      <div class="topbar_btns">
+        <a class="topbar_btn_support btn btn-bg-it" href="https://support.netmatters.com/"><i class="fas fa-mouse"></i>
+          Support</a>
         <a class="topbar_btn_contact btn btn-bg-contact" href="https://www.netmatters.co.uk/contact-us"><i
-              class="far fa-paper-plane"></i> Contact</a>
-        <a class="topbar_btn_phone" href="tel:01603704020"><i class="fas fa-phone-alt"></i></a>
+            class="far fa-paper-plane"></i> Contact</a>
+        <a class="topbar_btn_phone btn" href="tel:01603704020"><i class="fas fa-phone-alt"></i></a>
 
         <form class="topbar_search" action="action_page.php">
           <input class="topbar_search_input" type="text" placeholder="Search.." name="search">
           <button type="submit btn"><i class="fa fa-search"></i></button>
         </form>
         <button class="topbar_menu btn btn-bg-base">
-          <div class="topbar_menu_rule"></div><p>menu</p></button>
+          <div class="topbar_menu_rule"></div>
+          <p>menu</p>
+        </button>
 
-      </span>
+      </div>
+
+
+    </div>
+    <div class="standard">
+      <!--form method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8" class="search-form ">
+        <input class="form-control search-bar" placeholder="Search..." id="search-input" name="keyword" type="text"
+          value=""><button type="submit" id="search-submit">
+          <span class="fa fa-search" aria-hidden="true"></span>
+        </button>
+
+      </form-->
+
+      <form class="topbar_search_xs" action="action_page.php">
+        <input class="topbar_search_xs_input" type="text" placeholder="Search.." name="search">
+        <button type="submit btn"><i class="fa fa-search"></i></button>
+      </form>
     </div>
     <nav class="nav">
       <div class="nav_list standard">
@@ -279,7 +297,8 @@
               alt="Northern Diver logo"></a>
           <div class="clients_info">
             <h3>Northern Diver</h3>
-            <div class="clients_info_rule"></div>Global water based equipment manufacturers for sport, military, commercial and rescue businesses.
+            <div class="clients_info_rule"></div>Global water based equipment manufacturers for sport, military,
+            commercial and rescue businesses.
           </div>
         </div>
       </div>

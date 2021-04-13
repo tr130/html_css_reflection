@@ -6,6 +6,13 @@
   .partners {
     display: none;
   }
+  .topbar_search {
+    display: none !important;
+  }
+
+  .topbar img {
+    max-width: 65%;
+  }
 
   .latest_container {
     grid-template-rows: repeat(3, 1fr);
@@ -20,6 +27,7 @@
   .topbar_btn_support {
     display: none !important;
   }
+  
   nav {
     display: none !important;
   }
@@ -33,7 +41,15 @@
   .topbar_btn_phone {
     display: none !important;
   }
-
+  .topbar_search {
+    max-width:60%;
+    &_input {
+      max-width: 70%;
+    }
+    &_xs {
+      display: none !important;
+    }
+  }
 
   .services {
     &_upper {
@@ -63,7 +79,7 @@
 
 @include media-med {
   .standard {
-    width: 850px;
+    width: 900px;
   }
   .topbar_btn_contact {
     display: inline-block;
@@ -73,6 +89,7 @@
   }
   .topbar_search_input {
     display:none !important;
+    max-width: 16rem;
   }
   nav {
     display: block;
@@ -120,9 +137,15 @@
   .standard {
     width: 1170px;
   }
-  .topbar_search_input {
-    display: inline-block !important;
+
+  .topbar_search {
+    max-width:90%;
+    &_input {
+      display: inline-block !important;
+//max-width: 70%;
+    }
   }
+  
   .nav_sub {
     font-size: 1rem;
   }

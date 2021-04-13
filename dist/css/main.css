@@ -348,6 +348,12 @@ template {
   .partners {
     display: none;
   }
+  .topbar_search {
+    display: none !important;
+  }
+  .topbar img {
+    max-width: 65%;
+  }
   .latest_container {
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
@@ -371,6 +377,15 @@ template {
     width: 700px;
   }
   .topbar_btn_phone {
+    display: none !important;
+  }
+  .topbar_search {
+    max-width: 60%;
+  }
+  .topbar_search_input {
+    max-width: 70%;
+  }
+  .topbar_search_xs {
     display: none !important;
   }
   .services_upper {
@@ -398,7 +413,7 @@ template {
 
 @media screen and (min-width: 990px) {
   .standard {
-    width: 850px;
+    width: 900px;
   }
   .topbar_btn_contact {
     display: inline-block;
@@ -408,6 +423,7 @@ template {
   }
   .topbar_search_input {
     display: none !important;
+    max-width: 16rem;
   }
   nav {
     display: block;
@@ -447,6 +463,9 @@ template {
 @media screen and (min-width: 1260px) {
   .standard {
     width: 1170px;
+  }
+  .topbar_search {
+    max-width: 90%;
   }
   .topbar_search_input {
     display: inline-block !important;
@@ -582,8 +601,16 @@ template {
 }
 
 .topbar_logo {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  left: 0;
+}
+
+.topbar_btn_phone {
+  font-size: 20px;
+  color: #333645;
+}
+
+.topbar_btn_contact, .topbar_btn_support {
+  height: 3.5rem;
 }
 
 .topbar_menu {
@@ -591,7 +618,7 @@ template {
   padding: 0.1rem 0.7rem !important;
   font-size: 0.8rem !important;
   line-height: 1;
-  position: relative;
+  height: 3.5rem;
 }
 
 .topbar_menu_rule {
@@ -631,14 +658,15 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1.3rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 1rem 0;
+  overflow-x: hidden;
 }
 
 .topbar_search {
@@ -646,6 +674,10 @@ template {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
+  height: 3.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* Style the submit button */
   /* Clear floats */
 }
@@ -654,11 +686,12 @@ template {
   padding: 10px;
   border: 1px solid grey;
   float: left;
-  max-width: 16rem;
+  height: 3.5rem;
   background: #f1f1f1;
 }
 
 .topbar_search button {
+  height: 3.5rem;
   background: #999aa2;
   color: white;
   float: left;
@@ -676,6 +709,56 @@ template {
 }
 
 .topbar_search:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.topbar_search_xs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 1rem 0;
+  height: 2.75rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Style the submit button */
+  /* Clear floats */
+}
+
+.topbar_search_xs_input {
+  height: 2.75rem;
+  padding: 10px;
+  border: 3px solid #cccccc;
+  border-radius: 2px 0 0 2px;
+  float: left;
+  border-right: none;
+  background: #eeeeee;
+  width: 100%;
+}
+
+.topbar_search_xs_input:focus {
+  outline: none;
+}
+
+.topbar_search_xs button {
+  display: inline;
+  background: #eeeeee;
+  color: #333645;
+  float: left;
+  border: 3px solid #cccccc;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  font-size: 23px;
+  margin-right: 0px;
+  height: 2.75rem;
+  padding-right: 10px;
+}
+
+.topbar_search_xs:after {
   content: "";
   clear: both;
   display: table;
