@@ -1,11 +1,22 @@
+$height: 3.5rem;
+
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   margin: 0.5rem auto;
 
   &_logo {
-    transform:scale(0.9);
+    left: 0;
+  }
+
+  &_btn_phone {
+    font-size: 20px;
+    color: $base;
+  }
+
+  &_btn_contact, &_btn_support {
+    height: $height;
   }
 
   &_menu {
@@ -13,15 +24,17 @@
     padding: 0.1rem 0.7rem !important;
     font-size: 0.8rem !important;
     line-height: 1;
-    position: relative;
+    height: $height;
+
     &_rule {
       background-color: white;
       width: 100%;
       height: 2.5px;
       position: relative;
       top: 7.5px;
+
       &:before {
-        content:"";
+        content: "";
         background-color: white;
         width: 100%;
         height: 2.5px;
@@ -29,8 +42,9 @@
         bottom: 7.5px;
         right: 0px;
       }
+
       &:after {
-        content:"";
+        content: "";
         background-color: white;
         width: 100%;
         height: 2.5px;
@@ -39,6 +53,7 @@
         right: 0px;
       }
     }
+
     p {
       position: relative;
       top: 20px;
@@ -47,48 +62,98 @@
 
   &_btns {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     gap: 1.3rem;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1rem 0;
+    overflow-x: hidden;
   }
 
   &_search {
-    display:flex;
+    display: flex;
     margin: 0;
-   // width: 40%;
-  
-  
-  &_input {
-    padding: 10px;
-    border: 1px solid grey;
-    float: left;
-    max-width: 16rem;
-    background: #f1f1f1;
-  }
-  
-  /* Style the submit button */
-  button {
-    background:#999aa2;
-    color:white;
-    float: left;
-    border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
-    cursor: pointer;
-    border-radius: 0 2px 2px 0;
-    padding: 1rem;
-    font-size: 23px;
-    &:hover {
-      background:darken(#999aa2,10%)
+    // width: 40%;
+    height: $height;
+    align-items: center;
+
+    &_input {
+      padding: 10px;
+      border: 1px solid grey;
+      float: left;
+      height: $height;
+      background: #f1f1f1;
+    }
+
+    /* Style the submit button */
+    button {
+      height: $height;
+      background: #999aa2;
+      color: white;
+      float: left;
+      border: 1px solid grey;
+      border-left: none;
+      /* Prevent double borders */
+      cursor: pointer;
+      border-radius: 0 2px 2px 0;
+      padding: 1rem;
+      font-size: 23px;
+
+      &:hover {
+        background: darken(#999aa2, 10%)
+      }
+    }
+
+    /* Clear floats */
+    &:after {
+      content: "";
+      clear: both;
+      display: table;
     }
   }
-  
-  /* Clear floats */
-  &:after {
-    content: "";
-    clear: both;
-    display: table;
+
+  &_search_xs {
+    display: flex;
+    margin: 0 0 1rem 0;
+    height: 2.75rem;
+    align-items: center;
+
+    &_input {
+      height: 2.75rem;
+      padding: 10px;
+      border: 3px solid #cccccc;
+      border-radius:2px 0 0 2px;
+      float: left;
+      border-right:none;
+      background: #eeeeee;
+      width:100%;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    /* Style the submit button */
+    button {
+      display:inline;
+      background: #eeeeee;
+      color: $base;
+      float: left;
+      border: 3px solid #cccccc;
+      border-left: none;
+      /* Prevent double borders */
+      cursor: pointer;
+      border-radius: 0 2px 2px 0;
+      font-size: 23px;
+      margin-right:0px;
+      height:2.75rem;
+      padding-right:10px;
+    }
+
+    /* Clear floats */
+    &:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
   }
-}
 }
 
