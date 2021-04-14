@@ -20,10 +20,10 @@
       <img class="topbar_logo" src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="netmatters logo">
       </logo>
       <div class="topbar_btns">
-        <a class="topbar_btn_support btn btn-bg-it" href="https://support.netmatters.com/"><i class="fas fa-mouse"></i>
-          Support</a>
-        <a class="topbar_btn_contact btn btn-bg-contact" href="https://www.netmatters.co.uk/contact-us"><i
-            class="far fa-paper-plane"></i> Contact</a>
+        <a class="topbar_btn_link" href="https://support.netmatters.com/"><button class="topbar_btn_support btn btn-bg-it"><i class="fas fa-mouse"></i>
+          Support</button></a>
+        <a class="topbar_btn_link" href="https://www.netmatters.co.uk/contact-us"><button class="topbar_btn_contact btn btn-bg-contact"><i
+            class="far fa-paper-plane"></i> Contact</button></a>
         <a class="topbar_btn_phone btn" href="tel:01603704020"><i class="fas fa-phone-alt"></i></a>
 
         <form class="topbar_search" action="action_page.php">
@@ -356,24 +356,29 @@
     </section>
     <section class="newsletter">
       <div class="newsletter_container standard">
-        <form action="#" method="POST" class="row">
+        <form action="#" method="POST">
           <h2>Email Newsletter Sign-Up</h2>
-          <div class="form-group col-md-6">
+          <div class="row">
+          <div id="form_name" class="form-group col-md-6">
             <label for="name">Your Name <span class="asterisk">*</span></label>
             <input type="name" id="name" name="name" class="form-control form-control-lg" required>
           </div>
-          <div class="form-group col-md-6">
+          <div id="form_email" class="form-group col-md-6">
             <label for="email">Your Email <span class="asterisk">*</span></label>
             <input type="email" id="email" name="email" class="form-control form-control-lg" required>
           </div>
-          <div class="form-group form-check">
-            <label class="form-check-label" for="marketing">
-              <input class="form-check-input " type="checkbox" name="marketing" value="true" id="marketing">Please tick
+        </div>
+          <div class="form-group">
+            <label class="form-check-label form_container" for="marketing">
+              Please tick
               this box if you wish to receive marketing information from us. Please see our
               <a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> for more information on how we
               use
-              your data.</label>
+              your data.<input type="checkbox" name="marketing" value="true" id="marketing">
+              <span class="form_checkmark"></span></label>
           </div>
+          
+
           <input type="submit" class="btn btn-bg-base" value="Subscribe">
         </form>
       </div>
@@ -424,10 +429,10 @@
         <section class="social col-xs-12 col-md-6 col-xl-3">
           <h5 class="footer_title">social media</h5>
           <div class="social_container">
-            <a class="social-btn btn fab fa-facebook-f fa-2x" href="https://en-gb.facebook.com/netmatters/"
+            <a class="social-btn btn fab fa-facebook-f fa-2x" id="social-fb" href="https://en-gb.facebook.com/netmatters/"
               target="_blank"></a>
-            <a class="social-btn btn fab fa-twitter fa-2x" href="https://twitter.com/netmattersltd" target="_blank"></a>
-            <a class="social-btn btn fab fa-linkedin-in fa-2x" href="https://www.linkedin.com/company/netmatters-ltd/"
+            <a class="social-btn btn fab fa-twitter fa-2x" id="social-twit" href="https://twitter.com/netmattersltd" target="_blank"></a>
+            <a class="social-btn btn fab fa-linkedin-in fa-2x" id="social-li" href="https://www.linkedin.com/company/netmatters-ltd/"
               target="_blank"></a>
           </div>
         </section>
@@ -481,11 +486,19 @@
       'besp': '#67809f',
       'digm': '#2ecc71',
       'cybs': '#f62459',
-      'contact': '#999aa2',
+     /* 'contact': '#999aa2',
       'devt': '#926fb1',
       'culture': '#ffffff',
-      'base': '#333645'
+      'base': '#333645' */
     };
+    const themesDarker = {
+      'webd': '#79539a',
+      'it': '#286abd',
+      'tele': '#bc2c28',
+      'besp': '#526781',
+      'digm': '#25a25a',
+      'cybs': '#de093f'
+    }
     const navItems = document.querySelectorAll('.nav_list_item');
     const sub = document.querySelector('.nav_sub');
     const submenu = {
@@ -547,7 +560,7 @@
         const classes = e.currentTarget.classList;
         let id = classes[1].slice(9);
         sub.style.visibility = "visible";
-        sub.style.backgroundColor = themes[id];
+        sub.style.backgroundColor = themesDarker[id];
         navItem.style.backgroundColor = themes[id];
         let icon = navItem.childNodes[1];
         icon.style.color = 'white';

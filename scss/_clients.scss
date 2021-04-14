@@ -1,49 +1,42 @@
-
-
-/*.clients img, .partners img {
-  filter: grayscale(100);
-}
-
-.clients img:hover, .partners img:hover {
-  filter: grayscale(0);
-}*/
-.colored {
-  display:none;
-}
-  
 .clients {
-
-  
   background-image: linear-gradient(#eeeeee, #ffffff 10%);
   padding: 1.2rem 0;
-  &_container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 
+  &_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
+
   &_badge {
     flex-grow: 1;
-    display:flex;
+    display: flex;
     justify-content: center;
     position: relative;
     height: 100px;
+
     a {
-      display:flex
+      display: flex
     }
+
     img {
       align-self: center;
       height: auto;
       max-width: auto;
+      padding: 1rem;
+      width: 100%;
     }
+
     &:hover .clients_info {
       visibility: visible;
     }
+
     &:hover .greyscale {
-      display:none;
+      display: none;
     }
+
     &:hover .colored {
-      display:inline-block;
+      display: inline-block;
     }
   }
 
@@ -56,14 +49,11 @@
     padding: 1rem 1rem 1rem 1.5rem;
     text-align: center;
     bottom: 119px;
-    left:-300px;
-    right:-300px;
+    left: -300px;
+    right: -300px;
     margin-left: auto;
     margin-right: auto;
-    width: 250px; 
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
+    width: 250px;
 
     h3 {
       font-size: 1.2rem;
@@ -75,29 +65,21 @@
       height: 3px;
       margin: 1rem auto;
       text-align: center;
-      //margin-bottom: 1rem;
     }
 
     &:after {
-      content:"";
+      content: "";
       width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 30px solid $base;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 30px solid $base;
       position: absolute;
-      bottom:-29px;
+      bottom: -29px;
       left: -300px;
       right: -300px;
       margin-left: auto;
       margin-right: auto;
     }
-  }
-  
-  
-
-  &_logo {
-    padding: 1rem;
-    width: 100%;
   }
 }

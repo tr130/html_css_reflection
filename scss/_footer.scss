@@ -1,22 +1,23 @@
+.contact,
+.aboutus,
+.website {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 .footer {
   &_upper {
-  background-color: #333645;
-  padding-bottom: 2rem;
+    background-color: #333645;
+    padding-bottom: 2rem;
   }
+
   &_title {
     font-variant: small-caps;
     margin: 2rem 0;
   }
 
-  .contact, .aboutus, .website {
-    a:hover {
-      text-decoration: underline;
-    }
-  }
-
   &_container {
-   // display:grid;
-   // align-items: left;
     line-height: 1.3rem;
     color: white;
     font-size: 0.8rem;
@@ -25,40 +26,67 @@
       color: white;
     }
 
-    
+    section {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
     ul {
       margin-bottom: 0;
     }
   }
 
-  .social_container {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    gap: 2rem;
+  .social {
+
+    &_container {
+      display: grid;
+      grid-template-columns: 1fr 1.5rem 1fr;
+      grid-template-rows: 1fr 1.5rem 1fr;
+
+      #social-fb {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &:hover {
+          background-color: #3b5998;
+        }
+      }
+
+      #social-twit {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &:hover {
+          background-color: #00aced;
+        }
+      }
+
+      #social-li {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        &:hover {
+          background-color: #0077b5;
+        }
+      }
+    }
+
+    &-btn {
+      background-color: rgba(0, 0, 0, 0.25);
+      color: white;
+      border-radius: 0px;
+    }
   }
-  .social-btn {
-    
-    background-color: rgba(0, 0, 0, 0.25);
-    color: white;
-    border-radius: 0px;
-  }
 
-    .fa-facebook-f:hover {
-      background-color: #3b5998;
-    }
-
-    .fa-twitter:hover {
-      background-color: #00aced;
-    }
-
-    .fa-linkedin-in:hover {
-      background-color: #0077b5;
-    }
-  
   .partners {
     padding: 1rem 0;
-    
+
     &_container {
       padding: 1rem 0;
       display: flex;
@@ -69,8 +97,9 @@
     .partner:hover .colored {
       display: inline-block;
     }
+
     .partner:hover .greyscale {
-      display:none;
+      display: none;
     }
   }
 }

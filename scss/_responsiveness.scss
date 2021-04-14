@@ -26,12 +26,6 @@
 }
 
 @media screen and (max-width: 989px) {
-  .topbar_btn_contact {
-    display: none !important;
-  }
-  .topbar_btn_support {
-    display: none !important;
-  }
   
   nav {
     display: none !important;
@@ -46,11 +40,15 @@
   .topbar_btn_phone {
     display: none !important;
   }
+
+  .topbar_logo {
+    width: 300px;
+  }
   .topbar_search {
-    max-width:60%;
-    &_input {
-      max-width: 70%;
-    }
+    //max-width:60%;
+   // &_input {
+   //   max-width: 70%;
+   // }
     &_xs {
       display: none !important;
     }
@@ -103,17 +101,22 @@
 
 @include media-med {
   .standard {
-    width: 900px;
+    width: 881px;
   }
-  .topbar_btn_contact {
-    display: inline-block;
+  .topbar_btn_link {
+    display: inline-block !important;
   }
-  .topbar_btn_support {
-    display: inline-block;
-  }
-  .topbar_search_input {
+
+  
+  .topbar_search {
+    width: 60px !important;
+    &_input {
     display:none !important;
-    max-width: 16rem;
+    }
+    button {
+      border-left: 1px solid grey !important;
+      border-radius: .25rem !important;
+    }
   }
   nav {
     display: block;
@@ -159,7 +162,13 @@
     opacity: 0.6;
   }
 
-  
+  #form_name {
+    padding-right: 0.75rem !important;
+  }
+
+  #form_email {
+    padding-left: 0.75rem !important;
+  }
 
   .form-check-label {
     margin-right: 1rem;
@@ -174,17 +183,26 @@
 
 @include media-lg {
   .standard {
-    width: 1200px;
+    width: 1128px;
   }
 
   .topbar_search {
-    max-width:90%;
+    width: 260px !important;
     &_input {
       display: inline-block !important;
-//max-width: 70%;
+      width: 200px !important;
+      }
+    button {
+      border-left: none !important;
+      border-radius: 0 .25rem .25rem 0 !important;
     }
+    
   }
   
+  .topbar_logo {
+    width: initial;
+  }
+
   .nav_sub {
     font-size: 1rem;
   }

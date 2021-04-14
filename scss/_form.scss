@@ -1,8 +1,12 @@
 .newsletter {
   background-color: #dddddd;
 
+  .asterisk {
+    color: map-get($map: $themes, $key: 'tele');
+  }
+
   form {
-    padding: 2rem;
+    padding: 2rem 0 !important;
     font-size: 0.9rem;
     font-weight: 700;
     color: $base;
@@ -15,10 +19,10 @@
     .form-control-lg {
       border-radius: 2px;
       padding: 3px 0px 3px 3px;
-        margin: 5px 1px 12px 0px;
+      margin: 5px 1px 12px 0px;
+
       &:focus {
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-        
         border: 1px solid rgba(81, 203, 238, 1);
       }
     }
@@ -26,36 +30,77 @@
     a {
       text-decoration: underline;
       color: $base;
+
       &:hover {
         color: darken($base, 10%);
       }
     }
 
-    .form-check-label:hover {
+    .form_container {
+      display: block;
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 12px;
       cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
-    .form-check-input {
-      width: 2rem;
+
+    .form_container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .form_checkmark {
+      position: absolute;
+      top: -100px;
+      bottom: -100px;
+      margin-top: auto;
+      margin-bottom: auto;
+      left: 0;
       height: 2rem;
+      width: 2rem;
       border: 3px solid $base;
-      background-color: transparent;
-      margin: 1rem 1rem 1rem 0;
-      
-      &:focus {
-        box-shadow: none;
-      }
-      &:checked {
-        background-color: $base;
+      border-radius: 2px;
+      background-color: #ddd;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
       }
     }
+
+    .form_container input:checked~.form_checkmark {
+      background-color: $base;
+    }
+
+    .form_container input:checked~.form_checkmark:after {
+      border: solid white;
+      border-width: 0 3px 3px 0;
+    }
+
+    .form_container .form_checkmark:after {
+      left: 10px;
+      top: 5px;
+      width: 7px;
+      height: 14px;
+      border: solid #ddd;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
     .btn {
       padding: 0.6rem;
-      margin: 1rem;
+      margin: 1rem 1rem 1rem 0;
       width: 8rem;
     }
   }
-}
-
-.asterisk {
-  color: map-get($map: $themes, $key: 'tele');
 }
