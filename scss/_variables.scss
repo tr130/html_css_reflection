@@ -128,7 +128,7 @@ $base: #333645;
 $breakpoints: ('xs': 766px,
   'sm': 767px,
   'med': 990px,
-  'lg': 1260px,
+  'lg': 1200px,
 );
 
 @mixin media-xs {
@@ -150,7 +150,7 @@ $breakpoints: ('xs': 766px,
 }
 
 @mixin media-lg {
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }

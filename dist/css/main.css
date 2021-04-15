@@ -389,7 +389,7 @@ template {
   #serv-devt {
     padding-left: 0.75rem !important;
   }
-  #small-buffer {
+  #small-buffer, #tele-buffer {
     display: block !important;
   }
   #latest_1 {
@@ -442,7 +442,7 @@ template {
   #serv-digm {
     padding-left: 0.75rem !important;
   }
-  #small-buffer {
+  #small-buffer, #tele-buffer {
     display: none !important;
   }
   #med-buffer {
@@ -470,9 +470,9 @@ template {
   }
 }
 
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 1200px) {
   .standard {
-    width: 1128px;
+    width: 1080px;
   }
   .topbar_search {
     width: 260px !important;
@@ -497,8 +497,8 @@ template {
   #serv-cybs {
     padding-left: 0.75rem !important;
   }
-  #med-buffer {
-    display: none !important;
+  #tele-buffer {
+    display: block !important;
   }
   .intro_text_first,
   .intro_text_para {

@@ -62,7 +62,7 @@
     padding-left: 0.75rem !important;
   }
 
-  #small-buffer {
+  #small-buffer, #tele-buffer {
     display: block !important;
   }
 
@@ -128,7 +128,7 @@
     padding-left: 0.75rem !important;
   }
 
-  #small-buffer {
+  #small-buffer, #tele-buffer {
     display: none !important;
   }
 
@@ -162,7 +162,7 @@
 
 @include media-lg {
   .standard {
-    width: 1128px;
+    width: 1080px;
   }
 
   .topbar_search {
@@ -196,8 +196,8 @@
     padding-left: 0.75rem !important;
   }
 
-  #med-buffer {
-    display: none !important;
+  #tele-buffer {
+    display: block !important;
   }
 
   .intro_text_first,
