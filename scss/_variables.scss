@@ -1,5 +1,4 @@
-$themes: (
-  'webd': #926fb1,
+$themes: ('webd': #926fb1,
   'it': #4183d7,
   'tele': #d64541,
   'besp': #67809f,
@@ -14,28 +13,36 @@ $themes: (
 $base: #333645;
 
 @mixin themes($map) {
-  @each $theme, $color in $map {
+
+  @each $theme,
+  $color in $map {
     &-bg-#{$theme} {
       color: white;
       background-color: $color;
+
       &:hover {
         background-color: darken($color, 10%);
         color: white;
       }
     }
+
     &-fg-#{$theme} {
       color: $color;
+
       &:hover {
         color: darken($color, 10%);
       }
     }
-  } 
+  }
 }
 
 @mixin switchthemes($map) {
-  @each $theme, $color in $map {
+
+  @each $theme,
+  $color in $map {
     &-#{$theme} {
       background-color: white;
+
       .fa-circle {
         color: $color;
       }
@@ -43,11 +50,13 @@ $base: #333645;
       .fa-stack-1x {
         color: white;
       }
+
       button {
         color: white;
         background-color: $color;
       }
     }
+
     &-#{$theme}:hover {
       background-color: $color;
       color: white;
@@ -55,10 +64,13 @@ $base: #333645;
       .fa-circle {
         color: white;
       }
-      button, .services_item_rule {
+
+      button,
+      .services_item_rule {
         background-color: white;
         color: $color;
       }
+
       .fa-stack-1x {
         color: $color;
       }
@@ -68,39 +80,19 @@ $base: #333645;
 
 
 @mixin hovertheme($map) {
-  @each $theme, $color in $map {
+
+  @each $theme,
+  $color in $map {
     &-#{$theme}:hover {
       background-color: $color;
     }
   }
 }
 
-@mixin dropdown($map) {
-  @each $theme, $color in $map {
-    &-item-#{$theme}:hover ~ &-sub-#{$theme} {
-      background-color: darken($color, 10%);
-      visibility: visible;
-    }
-    &-sub-#{$theme}:hover {
-      visibility: visible;
-      background-color: darken($color, 10%);
-    }
-    &-sub-#{$theme}:hover ~ &-item-#{$theme} {
-      background-color: $color;
-    }
-  }
-}
-
-@mixin dropdown1($map) {
-  @each $theme, $color in $map {
-    &-#{$theme} {
-      background-color: darken($color, 10%);
-    }
-  }
-}
-
 @mixin icntheme($map) {
-  @each $theme, $color in $map {
+
+  @each $theme,
+  $color in $map {
     &_#{$theme} {
       color: $color;
     }
@@ -108,31 +100,35 @@ $base: #333645;
 }
 
 @mixin latestcolor($map) {
-  @each $theme, $color in $map {
+
+  @each $theme,
+  $color in $map {
     &-#{$theme} {
       .latest_topiclink {
         background-color: $color;
       }
+
       button {
         color: white;
         background-color: $color;
+
         &:hover {
           background-color: darken($color, 10%);
           color: white;
         }
       }
+
       .latest_titlelink {
-      color: $color;
+        color: $color;
       }
     }
   }
 }
 
-$breakpoints: (
-  'xs': 766px, 
+$breakpoints: ('xs': 766px,
   'sm': 767px,
- 'med': 990px,
-  'lg': 1260px,  
+  'med': 990px,
+  'lg': 1260px,
 );
 
 @mixin media-xs {
@@ -140,19 +136,21 @@ $breakpoints: (
     @content;
   }
 }
+
 @mixin media-sm {
   @media screen and (min-width: 767px) {
     @content;
   }
 }
+
 @mixin media-med {
   @media screen and (min-width: 990px) {
     @content;
   }
 }
+
 @mixin media-lg {
   @media screen and (min-width: 1260px) {
     @content;
   }
 }
-

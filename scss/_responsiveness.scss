@@ -3,9 +3,11 @@
   .clients {
     display: none;
   }
+
   .partners {
     display: none;
   }
+
   .topbar_search {
     display: none !important;
   }
@@ -14,19 +16,17 @@
     max-width: 65%;
   }
 
- // .latest_container {
- //   grid-template-rows: repeat(3, 1fr);
- // }
   #latest_1 {
     padding-bottom: 1.5rem;
   }
+
   #latest_2 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media screen and (max-width: 989px) {
-  
+
   nav {
     display: none !important;
   }
@@ -37,49 +37,31 @@
     width: 700px;
   }
 
-  .topbar_btn_phone {
-    display: none !important;
-  }
+  .topbar {
+    &_btn_phone {
+      display: none !important;
+    }
 
-  .topbar_logo {
-    width: 300px;
-  }
-  .topbar_search {
-    //max-width:60%;
-   // &_input {
-   //   max-width: 70%;
-   // }
-    &_xs {
+    &_logo {
+      width: 300px;
+    }
+
+    &_search_xs {
       display: none !important;
     }
   }
 
-  #serv-tele, #serv-cybs {
+
+  #serv-tele,
+  #serv-cybs {
     padding-right: 0.75rem !important;
   }
 
-  #serv-webd, #serv-devt {
+  #serv-webd,
+  #serv-devt {
     padding-left: 0.75rem !important;
   }
-/*  .services {
-    &_upper {
-      grid-template-columns: 1fr;
-    }
-    &_lower {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }*/
 
-  
-
-  /*.latest_container {
-    //grid-template-columns:repeat(2, 1fr);
-    //grid-template-rows: 1fr !important;
-
-    .card:last-child {
-      display: none;
-    }
-  }*/
   #small-buffer {
     display: block !important;
   }
@@ -87,37 +69,42 @@
   #latest_1 {
     padding-right: .75rem !important;
   }
+
   #latest_2 {
     padding-left: .75rem !important;
   }
+
   #latest_3 {
     display: none !important;
   }
+
   .footer_container {
     grid-template-columns: repeat(2, 1fr);
   }
-  
 }
 
 @include media-med {
   .standard {
     width: 881px;
   }
+
   .topbar_btn_link {
     display: inline-block !important;
   }
 
-  
   .topbar_search {
     width: 60px !important;
+
     &_input {
-    display:none !important;
+      display: none !important;
     }
+
     button {
       border-left: 1px solid grey !important;
       border-radius: .25rem !important;
     }
   }
+
   nav {
     display: block;
   }
@@ -125,41 +112,43 @@
   .nav_sub {
     font-size: 0.8rem;
   }
+
   .slider {
     margin-top: -50px !important;
     text-align: left !important;
   }
 
-/*  .services {
-    &_upper {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    &_lower {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }*/
-
-  #serv-besp, #serv-it {
+  #serv-besp,
+  #serv-it {
     padding-right: 0.75rem !important;
   }
 
-  #serv-it, #serv-digm {
+  #serv-it,
+  #serv-digm {
     padding-left: 0.75rem !important;
   }
+
   #small-buffer {
-    display:none !important;
+    display: none !important;
   }
 
   #med-buffer {
-    display:block !important;
+    display: block !important;
+  }
+
+  .intro {
+    background-image: url("https://www.netmatters.co.uk/assets/images/branded.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
 
   .latest_img {
     transition: all 0.3s ease-in-out;
-  }
-  .latest_img:hover {
-    transform: scale(1.2);
-    opacity: 0.6;
+
+    &:hover {
+      transform: scale(1.2);
+      opacity: 0.6;
+    }
   }
 
   #form_name {
@@ -169,16 +158,6 @@
   #form_email {
     padding-left: 0.75rem !important;
   }
-
-  .form-check-label {
-    margin-right: 1rem;
-  }
-
-  .form-check-input {
-    margin-top: 0.3rem !important;
-  }
-  
-  
 }
 
 @include media-lg {
@@ -188,17 +167,19 @@
 
   .topbar_search {
     width: 260px !important;
+
     &_input {
       display: inline-block !important;
       width: 200px !important;
-      }
+    }
+
     button {
       border-left: none !important;
       border-radius: 0 .25rem .25rem 0 !important;
     }
-    
+
   }
-  
+
   .topbar_logo {
     width: initial;
   }
@@ -219,25 +200,10 @@
     display: none !important;
   }
 
-  .intro_text_first, .intro_text_para {
+  .intro_text_first,
+  .intro_text_para {
     width: 570px;
   }
- /* .services {
-    &_upper {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    &_lower {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }*/
-
- /* .latest_container {
-    //grid-template-columns:repeat(3, 1fr);
-
-    .card:last-child {
-      display: inline-block;
-    }
-  }*/
 
   #latest_1 {
     padding-right: 1rem !important;
@@ -246,7 +212,7 @@
   #latest_2 {
     padding-left: .5rem !important;
     padding-right: .5rem !important;
-    
+
   }
 
   #latest_3 {
@@ -256,21 +222,21 @@
 
   .clients {
     padding: 1rem 0 !important;
-  
-  &_logo {
-    padding: 2rem !important;
-  }
-}
-  .footer_container {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
-  .clients{
+    &_logo {
+      padding: 2rem !important;
+    }
+
     &_badge {
       height: 150px !important;
     }
+
     &_info {
       bottom: 166px !important;
     }
-}
+  }
+
+  .footer_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

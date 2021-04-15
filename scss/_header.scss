@@ -1,6 +1,4 @@
 $height: 3.5rem;
-$tb_input_width: 120px;
-$tb_button_width: 60px;
 
 .topbar {
   display: flex;
@@ -20,13 +18,15 @@ $tb_button_width: 60px;
   &_btn_link {
     display: none;
   }
-  .topbar_btn_contact, .topbar_btn_support {
+
+  .topbar_btn_contact,
+  .topbar_btn_support {
     height: $height;
     margin-right: 1.5rem;
   }
 
   &_menu {
-    display:inline;
+    display: inline;
     border: 2px solid black;
     padding: 0.1rem 0.7rem !important;
     margin-right: -1rem !important;
@@ -71,19 +71,15 @@ $tb_button_width: 60px;
   &_btns {
     display: flex;
     align-items: center;
-    //gap: 1.3rem;
     justify-content: flex-end;
     padding: 1rem 1rem;
     overflow-x: hidden;
   }
 
   &_search {
-   // display: flex;
     margin-right: 1.5rem;
     width: 180px;
-    // width: 40%;
     height: $height;
-   // align-items: center;
 
     &_input {
       padding: 10px;
@@ -95,12 +91,10 @@ $tb_button_width: 60px;
 
       &:focus {
         box-shadow: 0 0 5px rgb(81, 227, 238);
-        
         border: 1px solid rgba(81, 203, 238, 1);
       }
     }
 
-    /* Style the submit button */
     button {
       height: $height;
       background: #999aa2;
@@ -108,19 +102,17 @@ $tb_button_width: 60px;
       float: left;
       border: 1px solid grey;
       border-left: none;
-      /* Prevent double borders */
       cursor: pointer;
       border-radius: 0 .25rem .25rem 0;
       padding: 1rem;
       font-size: 23px;
-      width: $tb_button_width;
+      width: 60px;
 
       &:hover {
         background: darken(#999aa2, 10%)
       }
     }
 
-    /* Clear floats */
     &:after {
       content: "";
       clear: both;
@@ -138,34 +130,32 @@ $tb_button_width: 60px;
       height: 2.75rem;
       padding: 10px;
       border: 3px solid #cccccc;
-      border-radius:2px 0 0 2px;
+      border-radius: 2px 0 0 2px;
       float: left;
-      border-right:none;
+      border-right: none;
       background: #eeeeee;
-      width:100%;
+      width: 100%;
+
       &:focus {
         outline: none;
       }
     }
 
-    /* Style the submit button */
     button {
-      display:inline;
+      display: inline;
       background: #eeeeee;
       color: $base;
       float: left;
       border: 3px solid #cccccc;
       border-left: none;
-      /* Prevent double borders */
       cursor: pointer;
       border-radius: 0 2px 2px 0;
       font-size: 23px;
-      margin-right:0px;
-      height:2.75rem;
-      padding-right:10px;
+      margin-right: 0px;
+      height: 2.75rem;
+      padding-right: 10px;
     }
 
-    /* Clear floats */
     &:after {
       content: "";
       clear: both;
@@ -173,4 +163,3 @@ $tb_button_width: 60px;
     }
   }
 }
-

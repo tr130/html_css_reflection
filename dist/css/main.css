@@ -381,28 +381,14 @@ template {
   .topbar_search_xs {
     display: none !important;
   }
-  #serv-tele, #serv-cybs {
+  #serv-tele,
+  #serv-cybs {
     padding-right: 0.75rem !important;
   }
-  #serv-webd, #serv-devt {
+  #serv-webd,
+  #serv-devt {
     padding-left: 0.75rem !important;
   }
-  /*  .services {
-    &_upper {
-      grid-template-columns: 1fr;
-    }
-    &_lower {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }*/
-  /*.latest_container {
-    //grid-template-columns:repeat(2, 1fr);
-    //grid-template-rows: 1fr !important;
-
-    .card:last-child {
-      display: none;
-    }
-  }*/
   #small-buffer {
     display: block !important;
   }
@@ -448,18 +434,12 @@ template {
     margin-top: -50px !important;
     text-align: left !important;
   }
-  /*  .services {
-    &_upper {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    &_lower {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }*/
-  #serv-besp, #serv-it {
+  #serv-besp,
+  #serv-it {
     padding-right: 0.75rem !important;
   }
-  #serv-it, #serv-digm {
+  #serv-it,
+  #serv-digm {
     padding-left: 0.75rem !important;
   }
   #small-buffer {
@@ -467,6 +447,11 @@ template {
   }
   #med-buffer {
     display: block !important;
+  }
+  .intro {
+    background-image: url("https://www.netmatters.co.uk/assets/images/branded.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
   .latest_img {
     -webkit-transition: all 0.3s ease-in-out;
@@ -482,12 +467,6 @@ template {
   }
   #form_email {
     padding-left: 0.75rem !important;
-  }
-  .form-check-label {
-    margin-right: 1rem;
-  }
-  .form-check-input {
-    margin-top: 0.3rem !important;
   }
 }
 
@@ -521,24 +500,10 @@ template {
   #med-buffer {
     display: none !important;
   }
-  .intro_text_first, .intro_text_para {
+  .intro_text_first,
+  .intro_text_para {
     width: 570px;
   }
-  /* .services {
-    &_upper {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    &_lower {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }*/
-  /* .latest_container {
-    //grid-template-columns:repeat(3, 1fr);
-
-    .card:last-child {
-      display: inline-block;
-    }
-  }*/
   #latest_1 {
     padding-right: 1rem !important;
   }
@@ -556,129 +521,16 @@ template {
   .clients_logo {
     padding: 2rem !important;
   }
-  .footer_container {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-  }
   .clients_badge {
     height: 150px !important;
   }
   .clients_info {
     bottom: 166px !important;
   }
-}
-
-.contact a:hover,
-.aboutus a:hover,
-.website a:hover {
-  text-decoration: underline;
-}
-
-.footer_upper {
-  background-color: #333645;
-  padding-bottom: 2rem;
-}
-
-.footer_title {
-  font-variant: small-caps;
-  margin: 2rem 0;
-}
-
-.footer_container {
-  line-height: 1.3rem;
-  color: white;
-  font-size: 0.8rem;
-}
-
-.footer_container a {
-  color: white;
-}
-
-.footer_container section {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.footer_container ul {
-  margin-bottom: 0;
-}
-
-.footer .social_container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1.5rem 1fr;
-      grid-template-columns: 1fr 1.5rem 1fr;
-  -ms-grid-rows: 1fr 1.5rem 1fr;
-      grid-template-rows: 1fr 1.5rem 1fr;
-}
-
-.footer .social_container #social-fb {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 2;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.footer .social_container #social-fb:hover {
-  background-color: #3b5998;
-}
-
-.footer .social_container #social-twit {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 4;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.footer .social_container #social-twit:hover {
-  background-color: #00aced;
-}
-
-.footer .social_container #social-li {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 2;
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-.footer .social_container #social-li:hover {
-  background-color: #0077b5;
-}
-
-.footer .social-btn {
-  background-color: rgba(0, 0, 0, 0.25);
-  color: white;
-  border-radius: 0px;
-}
-
-.footer .partners {
-  padding: 1rem 0;
-}
-
-.footer .partners_container {
-  padding: 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .partners .partner:hover .colored {
-  display: inline-block;
-}
-
-.footer .partners .partner:hover .greyscale {
-  display: none;
+  .footer_container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .topbar {
@@ -707,7 +559,8 @@ template {
   display: none;
 }
 
-.topbar .topbar_btn_contact, .topbar .topbar_btn_support {
+.topbar .topbar_btn_contact,
+.topbar .topbar_btn_support {
   height: 3.5rem;
   margin-right: 1.5rem;
 }
@@ -773,8 +626,6 @@ template {
   margin-right: 1.5rem;
   width: 180px;
   height: 3.5rem;
-  /* Style the submit button */
-  /* Clear floats */
 }
 
 .topbar_search_input {
@@ -799,7 +650,6 @@ template {
   float: left;
   border: 1px solid grey;
   border-left: none;
-  /* Prevent double borders */
   cursor: pointer;
   border-radius: 0 .25rem .25rem 0;
   padding: 1rem;
@@ -826,8 +676,6 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* Style the submit button */
-  /* Clear floats */
 }
 
 .topbar_search_xs_input {
@@ -852,7 +700,6 @@ template {
   float: left;
   border: 3px solid #cccccc;
   border-left: none;
-  /* Prevent double borders */
   cursor: pointer;
   border-radius: 0 2px 2px 0;
   font-size: 23px;
@@ -905,8 +752,6 @@ template {
 
 .nav_list {
   height: 100px;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
   margin-bottom: 0 !important;
 }
 
@@ -1084,7 +929,8 @@ template {
 
 .services {
   background: radial-gradient(#eeeeee, #ffffff);
-  margin: 2rem auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .services .col-xs-12 {
@@ -1099,9 +945,6 @@ template {
   margin: 1rem auto;
   text-align: center;
   color: black;
-  /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
 }
 
 .services_item-webd {
@@ -1130,7 +973,8 @@ template {
   color: white;
 }
 
-.services_item-webd:hover button, .services_item-webd:hover .services_item_rule {
+.services_item-webd:hover button,
+.services_item-webd:hover .services_item_rule {
   background-color: white;
   color: #926fb1;
 }
@@ -1165,7 +1009,8 @@ template {
   color: white;
 }
 
-.services_item-it:hover button, .services_item-it:hover .services_item_rule {
+.services_item-it:hover button,
+.services_item-it:hover .services_item_rule {
   background-color: white;
   color: #4183d7;
 }
@@ -1200,7 +1045,8 @@ template {
   color: white;
 }
 
-.services_item-tele:hover button, .services_item-tele:hover .services_item_rule {
+.services_item-tele:hover button,
+.services_item-tele:hover .services_item_rule {
   background-color: white;
   color: #d64541;
 }
@@ -1235,7 +1081,8 @@ template {
   color: white;
 }
 
-.services_item-besp:hover button, .services_item-besp:hover .services_item_rule {
+.services_item-besp:hover button,
+.services_item-besp:hover .services_item_rule {
   background-color: white;
   color: #67809f;
 }
@@ -1270,7 +1117,8 @@ template {
   color: white;
 }
 
-.services_item-digm:hover button, .services_item-digm:hover .services_item_rule {
+.services_item-digm:hover button,
+.services_item-digm:hover .services_item_rule {
   background-color: white;
   color: #2ecc71;
 }
@@ -1305,7 +1153,8 @@ template {
   color: white;
 }
 
-.services_item-cybs:hover button, .services_item-cybs:hover .services_item_rule {
+.services_item-cybs:hover button,
+.services_item-cybs:hover .services_item_rule {
   background-color: white;
   color: #f62459;
 }
@@ -1340,7 +1189,8 @@ template {
   color: white;
 }
 
-.services_item-contact:hover button, .services_item-contact:hover .services_item_rule {
+.services_item-contact:hover button,
+.services_item-contact:hover .services_item_rule {
   background-color: white;
   color: #999aa2;
 }
@@ -1375,7 +1225,8 @@ template {
   color: white;
 }
 
-.services_item-devt:hover button, .services_item-devt:hover .services_item_rule {
+.services_item-devt:hover button,
+.services_item-devt:hover .services_item_rule {
   background-color: white;
   color: #926fb1;
 }
@@ -1410,7 +1261,8 @@ template {
   color: white;
 }
 
-.services_item-culture:hover button, .services_item-culture:hover .services_item_rule {
+.services_item-culture:hover button,
+.services_item-culture:hover .services_item_rule {
   background-color: white;
   color: #ffffff;
 }
@@ -1445,7 +1297,8 @@ template {
   color: white;
 }
 
-.services_item-base:hover button, .services_item-base:hover .services_item_rule {
+.services_item-base:hover button,
+.services_item-base:hover .services_item_rule {
   background-color: white;
   color: #333645;
 }
@@ -1703,7 +1556,9 @@ template {
   color: #333645;
 }
 
-.latest #latest_1, .latest #latest_2, .latest #latest_3 {
+.latest #latest_1,
+.latest #latest_2,
+.latest #latest_3 {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1941,8 +1796,10 @@ template {
 
 .newsletter form .form-control-lg {
   border-radius: 2px;
-  padding: 3px 0px 3px 3px;
   margin: 5px 1px 12px 0px;
+  font-size: 0.9rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .newsletter form .form-control-lg:focus {
@@ -2026,6 +1883,119 @@ template {
   width: 8rem;
 }
 
+.contact a:hover,
+.aboutus a:hover,
+.website a:hover {
+  text-decoration: underline;
+}
+
+.footer_upper {
+  background-color: #333645;
+  padding-bottom: 2rem;
+}
+
+.footer_title {
+  font-variant: small-caps;
+  margin: 2rem 0;
+}
+
+.footer_container {
+  line-height: 1.3rem;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.footer_container a {
+  color: white;
+}
+
+.footer_container section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.footer_container ul {
+  margin-bottom: 0;
+}
+
+.footer .social-btn {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  border-radius: 0px;
+}
+
+.footer .social_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5rem 1fr;
+      grid-template-columns: 1fr 1.5rem 1fr;
+  -ms-grid-rows: 1fr 1.5rem 1fr;
+      grid-template-rows: 1fr 1.5rem 1fr;
+}
+
+.footer .social_container #social-fb {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.footer .social_container #social-fb:hover {
+  background-color: #3b5998;
+}
+
+.footer .social_container #social-twit {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.footer .social_container #social-twit:hover {
+  background-color: #00aced;
+}
+
+.footer .social_container #social-li {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.footer .social_container #social-li:hover {
+  background-color: #0077b5;
+}
+
+.footer .partners {
+  padding: 1rem 0;
+}
+
+.footer .partners_container {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .partners .partner:hover .colored {
+  display: inline-block;
+}
+
+.footer .partners .partner:hover .greyscale {
+  display: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2045,11 +2015,6 @@ body {
   max-width: 95%;
 }
 
-/*override bootstrap padding on containers
-.container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}*/
 .btn {
   font-size: 1.1rem;
   padding: 1rem;
@@ -2416,46 +2381,6 @@ body {
 
 .icn-fg-base:hover {
   color: #1d1f28;
-}
-
-.color-webd:hover {
-  background-color: #926fb1;
-}
-
-.color-it:hover {
-  background-color: #4183d7;
-}
-
-.color-tele:hover {
-  background-color: #d64541;
-}
-
-.color-besp:hover {
-  background-color: #67809f;
-}
-
-.color-digm:hover {
-  background-color: #2ecc71;
-}
-
-.color-cybs:hover {
-  background-color: #f62459;
-}
-
-.color-contact:hover {
-  background-color: #999aa2;
-}
-
-.color-devt:hover {
-  background-color: #926fb1;
-}
-
-.color-culture:hover {
-  background-color: #ffffff;
-}
-
-.color-base:hover {
-  background-color: #333645;
 }
 
 .nav-item-webd:hover {

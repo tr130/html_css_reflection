@@ -1,9 +1,10 @@
 .latest {
-  
-  @include latestcolor($themes);
-  //position: relative; 
 
-  #latest_1, #latest_2, #latest_3 {
+  @include latestcolor($themes);
+
+  #latest_1,
+  #latest_2,
+  #latest_3 {
     padding-left: 0;
     padding-right: 0;
   }
@@ -14,27 +15,24 @@
     font-weight: 700;
     font-size: 1.6rem;
   }
+
   &_rule {
     background-color: black;
-      width: 72px;
-      height: 5px;
+    width: 72px;
+    height: 5px;
   }
+
   &_background {
     background-image: linear-gradient(#dddddd, #ffffff);
   }
+
   &_container {
-    
     padding-top: 3rem;
     padding-bottom: 3rem;
-  //  display: grid;
-  //  column-gap: 2rem;
-  //  row-gap: 2rem;
-    
   }
 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
 
     &-body {
       padding: 2rem;
@@ -73,31 +71,37 @@
     padding-top: 1rem;
     min-height: 4.9rem;
   }
+
   button {
     font-size: 1.1rem;
-      padding: .5rem 1rem;
-      margin-top: auto;
-      margin-bottom: 0.8rem;
+    padding: .5rem 1rem;
+    margin-top: auto;
+    margin-bottom: 0.8rem;
   }
+
   &_article_rule {
-    margin-top:1rem;
+    margin-top: 1rem;
   }
+
   &_byline {
     border-top: 1px solid gray;
     padding-top: 1rem;
     display: flex;
     align-items: center;
   }
+
   &_authorimg {
     border-radius: 50%;
     width: 50px;
     height: 50px;
     margin-right: 20px;
   }
+
   &_postedby {
     font-weight: 700;
     margin-bottom: 0;
   }
+
   &_posteddate {
     font-weight: 300;
     margin-bottom: 0;
