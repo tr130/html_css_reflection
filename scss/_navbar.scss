@@ -80,11 +80,11 @@
           
           &:not(:first-child):before {
             content: "";
-            padding-left: 30px;
+            padding-left: 20px;
           }
           &:not(:last-child):after {
             content: "-";
-            padding-left: 30px;
+            padding-left: 20px;
           }
         }
 

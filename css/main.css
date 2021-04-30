@@ -802,12 +802,12 @@ template {
 
 .nav_list_item_sublist_item:not(:first-child):before {
   content: "";
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .nav_list_item_sublist_item:not(:last-child):after {
   content: "-";
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .nav_list_item_sublist a {
