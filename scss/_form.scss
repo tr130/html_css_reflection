@@ -6,7 +6,7 @@
   }
 
   form {
-    padding: 2rem 0 !important;
+    padding: 2rem !important;
     font-size: 0.9rem;
     font-weight: 700;
     color: $base;
@@ -97,6 +97,11 @@
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
+    }
+
+    .form-check-label {
+      line-height: 2;
+      font-weight: 700;
     }
 
     .btn {

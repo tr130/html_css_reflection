@@ -11,10 +11,11 @@
   &_item {
     border: 1px solid #dddddd;
     border-radius: 3px;
-    padding: 32px;
+    padding: 1.75rem;
     margin: 1rem auto;
     text-align: center;
     color: black;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
 
     @include switchthemes($themes);
 
@@ -22,9 +23,9 @@
       padding: 0 !important;
     }
 
-    button {
+    &_btn {
       font-size: 1.1rem;
-      padding: .5rem 1rem;
+      padding: .5rem 1rem !important;
       margin-top: auto;
     }
 
@@ -44,7 +45,7 @@
     &_text {
       font-size: 0.8rem;
 
-      #small-buffer {
+      .small-buffer {
         display: none;
       }
 

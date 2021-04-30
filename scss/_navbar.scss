@@ -21,6 +21,8 @@
   &_list {
     height: 100px;
     margin-bottom: 0 !important;
+    border-left: 1px solid hsla(0,0%,100%,.1);
+    border-right: 1px solid rgba(0,0,0,.25);
 
     .nav-item-cybs {
       border-right: 1px rgba(128, 128, 128, 0.568) groove;
@@ -36,14 +38,15 @@
       text-align: center;
       color: white;
       text-transform: uppercase;
-      border-left: 1px rgba(128, 128, 128, 0.568) groove;
+      border-right: 1px solid hsla(0,0%,100%,.1);
+      border-left: 1px solid rgba(0,0,0,.25);
 
       .icn {
         @include icntheme($themes);
       }
 
       i {
-        margin-top: 1rem;
+        margin-top: 1.2rem;
         margin-bottom: 0.5rem;
       }
 
@@ -53,8 +56,8 @@
       }
 
       span:last-child {
+        box-sizing: content-box;
         font-size: 1.2rem;
-        margin-bottom: 1rem;
       }
 
       &:hover i,
@@ -67,23 +70,27 @@
         visibility: hidden;
         display: flex;
         height: 100%;
-        justify-content: space-around;
+        justify-content: left;
         align-items: stretch;
 
         &_item {
           display: flex;
           align-items: center;
-          justify-content: center;
-          flex-grow: 1;
+          justify-content: left;
+          
+          &:not(:first-child):before {
+            content: "";
+            padding-left: 30px;
+          }
+          &:not(:last-child):after {
+            content: "-";
+            padding-left: 30px;
+          }
         }
 
         a {
           color: white;
           text-transform: uppercase;
-        }
-
-        &_item:hover {
-          background-color: #333645;
         }
       }
     }

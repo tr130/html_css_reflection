@@ -28,7 +28,7 @@ $height: 3.5rem;
   &_menu {
     display: inline;
     border: 2px solid black;
-    padding: 0.1rem 0.7rem !important;
+    padding: 0.7rem 0.7rem !important;
     margin-right: -1rem !important;
     font-size: 0.8rem !important;
     line-height: 1;
@@ -38,33 +38,8 @@ $height: 3.5rem;
       background-color: white;
       width: 100%;
       height: 2.5px;
-      position: relative;
       top: 7.5px;
-
-      &:before {
-        content: "";
-        background-color: white;
-        width: 100%;
-        height: 2.5px;
-        position: absolute;
-        bottom: 7.5px;
-        right: 0px;
-      }
-
-      &:after {
-        content: "";
-        background-color: white;
-        width: 100%;
-        height: 2.5px;
-        position: absolute;
-        top: 7.5px;
-        right: 0px;
-      }
-    }
-
-    p {
-      position: relative;
-      top: 20px;
+      margin-bottom: 0.3rem;
     }
   }
 
@@ -78,20 +53,24 @@ $height: 3.5rem;
 
   &_search {
     margin-right: 1.5rem;
-    width: 180px;
+    width: 260px;
     height: $height;
 
     &_input {
-      padding: 10px;
-      border: 1px solid grey;
+      padding: 19px;
+      border: 1px solid #ccc;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
       float: left;
       height: $height;
-      background: #f1f1f1;
-      width: 120px;
+      background: #ffffff;
+      width: 200px;
+      font-size: 0.9rem;
+      color: #333;
 
       &:focus {
-        box-shadow: 0 0 5px rgb(81, 227, 238);
-        border: 1px solid rgba(81, 203, 238, 1);
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
       }
     }
 
@@ -133,7 +112,7 @@ $height: 3.5rem;
       border-radius: 2px 0 0 2px;
       float: left;
       border-right: none;
-      background: #eeeeee;
+      background: #e5e5e5;
       width: 100%;
 
       &:focus {

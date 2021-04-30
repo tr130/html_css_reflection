@@ -352,7 +352,11 @@ template {
     display: none !important;
   }
   .topbar img {
-    max-width: 65%;
+    max-width: 100%;
+  }
+  .topbar_logo_link {
+    -ms-flex-negative: 3;
+        flex-shrink: 3;
   }
   #latest_1 {
     padding-bottom: 1.5rem;
@@ -389,7 +393,7 @@ template {
   #serv-devt {
     padding-left: 0.75rem !important;
   }
-  #small-buffer, #tele-buffer {
+  .small-buffer, #tele-buffer {
     display: block !important;
   }
   #latest_1 {
@@ -442,7 +446,7 @@ template {
   #serv-digm {
     padding-left: 0.75rem !important;
   }
-  #small-buffer, #tele-buffer {
+  .small-buffer, #tele-buffer {
     display: none !important;
   }
   #med-buffer {
@@ -451,7 +455,8 @@ template {
   .intro {
     background-image: url("https://www.netmatters.co.uk/assets/images/branded.png") !important;
     background-repeat: no-repeat !important;
-    background-size: cover !important;
+    background-position: 100% !important;
+    background-size: auto 100% !important;
   }
   .latest_img {
     -webkit-transition: all 0.3s ease-in-out;
@@ -470,9 +475,9 @@ template {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1260px) {
   .standard {
-    width: 1080px;
+    width: 1137px;
   }
   .topbar_search {
     width: 260px !important;
@@ -497,8 +502,20 @@ template {
   #serv-cybs {
     padding-left: 0.75rem !important;
   }
-  #tele-buffer {
-    display: block !important;
+  #med-buffer {
+    display: none !important;
+  }
+  .my-col-xl-3 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 25%;
+  }
+  .my-col-xl-4 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 33.3333333333%;
   }
   .intro_text_first,
   .intro_text_para {
@@ -568,7 +585,7 @@ template {
 .topbar_menu {
   display: inline;
   border: 2px solid black;
-  padding: 0.1rem 0.7rem !important;
+  padding: 0.7rem 0.7rem !important;
   margin-right: -1rem !important;
   font-size: 0.8rem !important;
   line-height: 1;
@@ -579,33 +596,8 @@ template {
   background-color: white;
   width: 100%;
   height: 2.5px;
-  position: relative;
   top: 7.5px;
-}
-
-.topbar_menu_rule:before {
-  content: "";
-  background-color: white;
-  width: 100%;
-  height: 2.5px;
-  position: absolute;
-  bottom: 7.5px;
-  right: 0px;
-}
-
-.topbar_menu_rule:after {
-  content: "";
-  background-color: white;
-  width: 100%;
-  height: 2.5px;
-  position: absolute;
-  top: 7.5px;
-  right: 0px;
-}
-
-.topbar_menu p {
-  position: relative;
-  top: 20px;
+  margin-bottom: 0.3rem;
 }
 
 .topbar_btns {
@@ -624,23 +616,28 @@ template {
 
 .topbar_search {
   margin-right: 1.5rem;
-  width: 180px;
+  width: 260px;
   height: 3.5rem;
 }
 
 .topbar_search_input {
-  padding: 10px;
-  border: 1px solid grey;
+  padding: 19px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   float: left;
   height: 3.5rem;
-  background: #f1f1f1;
-  width: 120px;
+  background: #ffffff;
+  width: 200px;
+  font-size: 0.9rem;
+  color: #333;
 }
 
 .topbar_search_input:focus {
-  -webkit-box-shadow: 0 0 5px #51e3ee;
-          box-shadow: 0 0 5px #51e3ee;
-  border: 1px solid #51cbee;
+  border-color: #5bc0de;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 .topbar_search button {
@@ -685,7 +682,7 @@ template {
   border-radius: 2px 0 0 2px;
   float: left;
   border-right: none;
-  background: #eeeeee;
+  background: #e5e5e5;
   width: 100%;
 }
 
@@ -753,6 +750,8 @@ template {
 .nav_list {
   height: 100px;
   margin-bottom: 0 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .nav_list .nav-item-cybs {
@@ -777,7 +776,8 @@ template {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  border-left: 1px rgba(128, 128, 128, 0.568) groove;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .nav_list_item .icn_webd {
@@ -821,7 +821,7 @@ template {
 }
 
 .nav_list_item i {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -831,8 +831,9 @@ template {
 }
 
 .nav_list_item span:last-child {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
 }
 
 .nav_list_item:hover i, .nav_list_item:hover {
@@ -846,8 +847,9 @@ template {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -860,21 +862,24 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.nav_list_item_sublist_item:not(:first-child):before {
+  content: "";
+  padding-left: 30px;
+}
+
+.nav_list_item_sublist_item:not(:last-child):after {
+  content: "-";
+  padding-left: 30px;
 }
 
 .nav_list_item_sublist a {
   color: white;
   text-transform: uppercase;
-}
-
-.nav_list_item_sublist_item:hover {
-  background-color: #333645;
 }
 
 .slider {
@@ -883,7 +888,8 @@ template {
   padding: 6rem 0 3.1rem 0;
   text-align: center;
   color: white;
-  border-top: 0.5px solid #eeeeee;
+  border-top: 0.5px solid #bbbbbb;
+  height: 32rem;
 }
 
 .slider_title {
@@ -941,10 +947,12 @@ template {
 .services_item {
   border: 1px solid #dddddd;
   border-radius: 3px;
-  padding: 32px;
+  padding: 1.75rem;
   margin: 1rem auto;
   text-align: center;
   color: black;
+  -webkit-box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 }
 
 .services_item-webd {
@@ -959,7 +967,7 @@ template {
   color: white;
 }
 
-.services_item-webd button {
+.services_item-webd .btn {
   color: white;
   background-color: #926fb1;
 }
@@ -973,7 +981,7 @@ template {
   color: white;
 }
 
-.services_item-webd:hover button,
+.services_item-webd:hover .btn,
 .services_item-webd:hover .services_item_rule {
   background-color: white;
   color: #926fb1;
@@ -995,7 +1003,7 @@ template {
   color: white;
 }
 
-.services_item-it button {
+.services_item-it .btn {
   color: white;
   background-color: #4183d7;
 }
@@ -1009,7 +1017,7 @@ template {
   color: white;
 }
 
-.services_item-it:hover button,
+.services_item-it:hover .btn,
 .services_item-it:hover .services_item_rule {
   background-color: white;
   color: #4183d7;
@@ -1031,7 +1039,7 @@ template {
   color: white;
 }
 
-.services_item-tele button {
+.services_item-tele .btn {
   color: white;
   background-color: #d64541;
 }
@@ -1045,7 +1053,7 @@ template {
   color: white;
 }
 
-.services_item-tele:hover button,
+.services_item-tele:hover .btn,
 .services_item-tele:hover .services_item_rule {
   background-color: white;
   color: #d64541;
@@ -1067,7 +1075,7 @@ template {
   color: white;
 }
 
-.services_item-besp button {
+.services_item-besp .btn {
   color: white;
   background-color: #67809f;
 }
@@ -1081,7 +1089,7 @@ template {
   color: white;
 }
 
-.services_item-besp:hover button,
+.services_item-besp:hover .btn,
 .services_item-besp:hover .services_item_rule {
   background-color: white;
   color: #67809f;
@@ -1103,7 +1111,7 @@ template {
   color: white;
 }
 
-.services_item-digm button {
+.services_item-digm .btn {
   color: white;
   background-color: #2ecc71;
 }
@@ -1117,7 +1125,7 @@ template {
   color: white;
 }
 
-.services_item-digm:hover button,
+.services_item-digm:hover .btn,
 .services_item-digm:hover .services_item_rule {
   background-color: white;
   color: #2ecc71;
@@ -1139,7 +1147,7 @@ template {
   color: white;
 }
 
-.services_item-cybs button {
+.services_item-cybs .btn {
   color: white;
   background-color: #f62459;
 }
@@ -1153,7 +1161,7 @@ template {
   color: white;
 }
 
-.services_item-cybs:hover button,
+.services_item-cybs:hover .btn,
 .services_item-cybs:hover .services_item_rule {
   background-color: white;
   color: #f62459;
@@ -1175,7 +1183,7 @@ template {
   color: white;
 }
 
-.services_item-contact button {
+.services_item-contact .btn {
   color: white;
   background-color: #999aa2;
 }
@@ -1189,7 +1197,7 @@ template {
   color: white;
 }
 
-.services_item-contact:hover button,
+.services_item-contact:hover .btn,
 .services_item-contact:hover .services_item_rule {
   background-color: white;
   color: #999aa2;
@@ -1211,7 +1219,7 @@ template {
   color: white;
 }
 
-.services_item-devt button {
+.services_item-devt .btn {
   color: white;
   background-color: #926fb1;
 }
@@ -1225,7 +1233,7 @@ template {
   color: white;
 }
 
-.services_item-devt:hover button,
+.services_item-devt:hover .btn,
 .services_item-devt:hover .services_item_rule {
   background-color: white;
   color: #926fb1;
@@ -1247,7 +1255,7 @@ template {
   color: white;
 }
 
-.services_item-culture button {
+.services_item-culture .btn {
   color: white;
   background-color: #ffffff;
 }
@@ -1261,7 +1269,7 @@ template {
   color: white;
 }
 
-.services_item-culture:hover button,
+.services_item-culture:hover .btn,
 .services_item-culture:hover .services_item_rule {
   background-color: white;
   color: #ffffff;
@@ -1283,7 +1291,7 @@ template {
   color: white;
 }
 
-.services_item-base button {
+.services_item-base .btn {
   color: white;
   background-color: #333645;
 }
@@ -1297,7 +1305,7 @@ template {
   color: white;
 }
 
-.services_item-base:hover button,
+.services_item-base:hover .btn,
 .services_item-base:hover .services_item_rule {
   background-color: white;
   color: #333645;
@@ -1311,9 +1319,9 @@ template {
   padding: 0 !important;
 }
 
-.services_item button {
+.services_item_btn {
   font-size: 1.1rem;
-  padding: .5rem 1rem;
+  padding: .5rem 1rem !important;
   margin-top: auto;
 }
 
@@ -1334,7 +1342,7 @@ template {
   font-size: 0.8rem;
 }
 
-.services_item_text #small-buffer {
+.services_item_text .small-buffer {
   display: none;
 }
 
@@ -1366,13 +1374,13 @@ template {
   font-weight: 300;
 }
 
-.intro_text button {
+.intro_text .btn {
   color: #333645;
   margin-top: 1rem;
   padding: 0.6rem 1rem;
 }
 
-.intro_text button:hover {
+.intro_text .btn:hover {
   color: #333645;
 }
 
@@ -1380,12 +1388,12 @@ template {
   background-color: #926fb1;
 }
 
-.latest-webd button {
+.latest-webd .latest_btn {
   color: white;
   background-color: #926fb1;
 }
 
-.latest-webd button:hover {
+.latest-webd .latest_btn:hover {
   background-color: #79539a;
   color: white;
 }
@@ -1398,12 +1406,12 @@ template {
   background-color: #4183d7;
 }
 
-.latest-it button {
+.latest-it .latest_btn {
   color: white;
   background-color: #4183d7;
 }
 
-.latest-it button:hover {
+.latest-it .latest_btn:hover {
   background-color: #286abd;
   color: white;
 }
@@ -1416,12 +1424,12 @@ template {
   background-color: #d64541;
 }
 
-.latest-tele button {
+.latest-tele .latest_btn {
   color: white;
   background-color: #d64541;
 }
 
-.latest-tele button:hover {
+.latest-tele .latest_btn:hover {
   background-color: #bc2c28;
   color: white;
 }
@@ -1434,12 +1442,12 @@ template {
   background-color: #67809f;
 }
 
-.latest-besp button {
+.latest-besp .latest_btn {
   color: white;
   background-color: #67809f;
 }
 
-.latest-besp button:hover {
+.latest-besp .latest_btn:hover {
   background-color: #526781;
   color: white;
 }
@@ -1452,12 +1460,12 @@ template {
   background-color: #2ecc71;
 }
 
-.latest-digm button {
+.latest-digm .latest_btn {
   color: white;
   background-color: #2ecc71;
 }
 
-.latest-digm button:hover {
+.latest-digm .latest_btn:hover {
   background-color: #25a25a;
   color: white;
 }
@@ -1470,12 +1478,12 @@ template {
   background-color: #f62459;
 }
 
-.latest-cybs button {
+.latest-cybs .latest_btn {
   color: white;
   background-color: #f62459;
 }
 
-.latest-cybs button:hover {
+.latest-cybs .latest_btn:hover {
   background-color: #de093f;
   color: white;
 }
@@ -1488,12 +1496,12 @@ template {
   background-color: #999aa2;
 }
 
-.latest-contact button {
+.latest-contact .latest_btn {
   color: white;
   background-color: #999aa2;
 }
 
-.latest-contact button:hover {
+.latest-contact .latest_btn:hover {
   background-color: #7e808a;
   color: white;
 }
@@ -1506,12 +1514,12 @@ template {
   background-color: #926fb1;
 }
 
-.latest-devt button {
+.latest-devt .latest_btn {
   color: white;
   background-color: #926fb1;
 }
 
-.latest-devt button:hover {
+.latest-devt .latest_btn:hover {
   background-color: #79539a;
   color: white;
 }
@@ -1524,12 +1532,12 @@ template {
   background-color: #ffffff;
 }
 
-.latest-culture button {
+.latest-culture .latest_btn {
   color: white;
   background-color: #ffffff;
 }
 
-.latest-culture button:hover {
+.latest-culture .latest_btn:hover {
   background-color: #e6e6e6;
   color: white;
 }
@@ -1542,12 +1550,12 @@ template {
   background-color: #333645;
 }
 
-.latest-base button {
+.latest-base .latest_btn {
   color: white;
   background-color: #333645;
 }
 
-.latest-base button:hover {
+.latest-base .latest_btn:hover {
   background-color: #1d1f28;
   color: white;
 }
@@ -1577,18 +1585,12 @@ template {
 }
 
 .latest_background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#ffffff));
-  background-image: linear-gradient(#dddddd, #ffffff);
+  background-image: linear-gradient(#eeeeee, #ffffff 16px);
 }
 
 .latest_container {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.latest .card {
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .latest .card-body {
@@ -1600,6 +1602,11 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .latest_img_container {
@@ -1613,7 +1620,8 @@ template {
   position: absolute;
   right: 0;
   top: 1rem;
-  padding: 0.1rem 0.5rem;
+  padding: 0.2rem 0.5rem;
+  line-height: 1;
 }
 
 .latest_topiclink:hover {
@@ -1622,7 +1630,12 @@ template {
 }
 
 .latest_titlelink {
+  font-size: 0.9rem;
   font-weight: 700;
+}
+
+.latest_titlelink:hover {
+  text-decoration: underline;
 }
 
 .latest_firstlines {
@@ -1631,13 +1644,14 @@ template {
   line-height: 1.3rem;
   padding-top: 1rem;
   min-height: 4.9rem;
+  max-width: 100%;
 }
 
-.latest button {
+.latest_btn {
   font-size: 1.1rem;
-  padding: .5rem 1rem;
-  margin-top: auto;
-  margin-bottom: 0.8rem;
+  padding: .5rem 1rem !important;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .latest_article_rule {
@@ -1645,7 +1659,7 @@ template {
 }
 
 .latest_byline {
-  border-top: 1px solid gray;
+  border-top: 1px solid #cccccc;
   padding-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1653,6 +1667,8 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.85rem;
+  width: 100%;
 }
 
 .latest_authorimg {
@@ -1783,7 +1799,7 @@ template {
 }
 
 .newsletter form {
-  padding: 2rem 0 !important;
+  padding: 2rem !important;
   font-size: 0.9rem;
   font-weight: 700;
   color: #333645;
@@ -1875,6 +1891,11 @@ template {
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.newsletter form .form-check-label {
+  line-height: 2;
+  font-weight: 700;
 }
 
 .newsletter form .btn {

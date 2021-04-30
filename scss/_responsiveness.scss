@@ -13,7 +13,11 @@
   }
 
   .topbar img {
-    max-width: 65%;
+    max-width: 100%;
+  }
+
+  .topbar_logo_link {
+    flex-shrink: 3;
   }
 
   #latest_1 {
@@ -62,7 +66,7 @@
     padding-left: 0.75rem !important;
   }
 
-  #small-buffer, #tele-buffer {
+  .small-buffer, #tele-buffer {
     display: block !important;
   }
 
@@ -128,7 +132,7 @@
     padding-left: 0.75rem !important;
   }
 
-  #small-buffer, #tele-buffer {
+  .small-buffer, #tele-buffer {
     display: none !important;
   }
 
@@ -139,7 +143,8 @@
   .intro {
     background-image: url("https://www.netmatters.co.uk/assets/images/branded.png") !important;
     background-repeat: no-repeat !important;
-    background-size: cover !important;
+    background-position: 100% !important;
+    background-size: auto 100% !important;
   }
 
   .latest_img {
@@ -162,7 +167,7 @@
 
 @include media-lg {
   .standard {
-    width: 1080px;
+    width: 1137px;
   }
 
   .topbar_search {
@@ -196,8 +201,18 @@
     padding-left: 0.75rem !important;
   }
 
-  #tele-buffer {
-    display: block !important;
+  #med-buffer {
+    display: none !important;
+  }
+
+  .my-col-xl-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .my-col-xl-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
   }
 
   .intro_text_first,
