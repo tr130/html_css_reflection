@@ -691,7 +691,7 @@ template {
 
 .nav {
   background-color: #333645;
-  display: grid;
+  display: grid !important;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 1fr minmax(95%, 850px) 1fr;
   justify-content: center;
@@ -708,6 +708,7 @@ template {
   width: 100%;
   height: 50px;
   grid-area: 3 / 1 / span 1 / span 3;
+  z-index: 1000;
 }
 
 .nav_list {
@@ -1844,45 +1845,28 @@ template {
   margin-bottom: 0;
 }
 
+.footer .social-holder {
+  padding-bottom: 1.5rem;
+}
+
 .footer .social-btn {
   background-color: rgba(0, 0, 0, 0.25);
   color: white;
   border-radius: 0px;
+  width: 100%;
 }
 
 .footer .social_container {
-  display: grid;
-  grid-template-columns: 1fr 1.5rem 1fr;
-  grid-template-rows: 1fr 1.5rem 1fr;
-}
-
-.footer .social_container #social-fb {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .footer .social_container #social-fb:hover {
   background-color: #3b5998;
 }
 
-.footer .social_container #social-twit {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
 .footer .social_container #social-twit:hover {
   background-color: #00aced;
-}
-
-.footer .social_container #social-li {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
 }
 
 .footer .social_container #social-li:hover {
