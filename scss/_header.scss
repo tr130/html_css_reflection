@@ -1,5 +1,15 @@
 $height: 3.5rem;
 
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.topbar-and-nav {
+  flex: 0 1 auto;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -27,7 +37,6 @@ $height: 3.5rem;
 
   &_menu {
     display: inline;
-    border: 2px solid black;
     padding: 0.7rem 0.7rem !important;
     margin-right: -1rem !important;
     font-size: 0.8rem !important;
