@@ -38,9 +38,6 @@
 
   .social {
 
-    &-holder {
-      padding-bottom: 1.5rem;
-    }
     &-btn {
       background-color: rgba(0, 0, 0, 0.25);
       color: white;
@@ -63,6 +60,7 @@
         //grid-column-end: 2;
         //grid-row-start: 1;
         //grid-row-end: 2;
+        padding: 0 0.75rem 0.75rem 0.75rem!important;
 
         &:hover {
           background-color: #3b5998;
@@ -74,6 +72,7 @@
         //grid-column-end: 4;
         //grid-row-start: 1;
         //grid-row-end: 2;
+        padding: 0 0.75rem 0.75rem 0.75rem!important;
 
         &:hover {
           background-color: #00aced;
@@ -85,6 +84,7 @@
         //grid-column-end: 2;
         //grid-row-start: 3;
         //grid-row-end: 4;
+        padding: 0.75rem 0.75rem 0.75rem 0.75rem!important;
 
         &:hover {
           background-color: #0077b5;

@@ -689,7 +689,7 @@ template {
   display: table;
 }
 
-.nav {
+.nav_bar_container {
   background-color: #333645;
   display: grid !important;
   grid-template-rows: repeat(3, 1fr);
@@ -1845,10 +1845,6 @@ template {
   margin-bottom: 0;
 }
 
-.footer .social-holder {
-  padding-bottom: 1.5rem;
-}
-
 .footer .social-btn {
   background-color: rgba(0, 0, 0, 0.25);
   color: white;
@@ -1861,12 +1857,24 @@ template {
   padding-right: 0 !important;
 }
 
+.footer .social_container #social-fb {
+  padding: 0 0.75rem 0.75rem 0.75rem !important;
+}
+
 .footer .social_container #social-fb:hover {
   background-color: #3b5998;
 }
 
+.footer .social_container #social-twit {
+  padding: 0 0.75rem 0.75rem 0.75rem !important;
+}
+
 .footer .social_container #social-twit:hover {
   background-color: #00aced;
+}
+
+.footer .social_container #social-li {
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem !important;
 }
 
 .footer .social_container #social-li:hover {

@@ -1,4 +1,5 @@
 .nav {
+  &_bar_container {
   background-color: $base;
   display: grid !important;
   grid-template-rows: repeat(3, 1fr);
@@ -7,6 +8,7 @@
   align-items: stretch;
   margin: 0;
   padding: 0;
+  }
 
   &_list {
     grid-area: 1 / 2 / span 2 / span 1
