@@ -472,12 +472,6 @@
 
   <script src="https://kit.fontawesome.com/6024042655.js" crossorigin="anonymous"></script>
   <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
-  <script>
     const themes = {
       'webd': '#926fb1',
       'it': '#4183d7',
@@ -547,7 +541,77 @@
       ]
     }
 
-    var setUp = function (navItem) {
+    const nav = document.querySelector('.nav_bar_container');
+
+    nav.addEventListener("mouseover", function(e) {
+      if (e.target.classList[0] == 'nav_list_item') {
+        if (sub.childNodes.length > 0) {
+          sub.removeChild(sub.childNodes[0])
+        };
+
+        const navItem = e.target;
+        //get category
+        const classes = navItem.classList;
+        let id = classes[1].slice(9);
+
+        //show the sublist container
+        sub.style.visibility = "visible";
+
+        //set colors based on category
+        sub.style.backgroundColor = themesDarker[id];
+        navItem.style.backgroundColor = themes[id];
+        let icon = navItem.childNodes[1];
+        icon.style.color = 'white';
+
+        //generate sublist for category
+        let list = document.createElement("div");
+        sub.appendChild(list);
+        list.classList.add("nav_list_item_sublist");
+        list.classList.add("standard");
+        list.style.visibility = "visible";
+
+        //generate sublist links for category and append
+        for (let i = 0; i < submenu[id].length; i++) {
+          let link = document.createElement("a");
+          link.classList.add("nav_list_item_sublist_item");
+          link.href = submenu[id][i][1];
+          link.innerText = submenu[id][i][0];
+          list.appendChild(link);
+        }
+        
+        //keep sublist visible when mouse on sublist
+        sub.onmouseenter = function () {
+          sub.style.visibility = "visible";
+          list.style.visibility = "visible";
+          navItem.style.backgroundColor = themes[id];
+          icon.style.color = "white";
+        } 
+
+        //hide sublist and revert colors when user moves mouse away
+        navItem.onmouseleave = function () {
+          sub.style.visibility = 'hidden';
+          list.style.visibility = 'hidden';
+          navItem.style.backgroundColor = 'transparent';
+          icon.style.color = themes[id];
+        }
+
+        sub.onmouseleave = function () {
+          sub.style.visibility = 'hidden';
+          list.style.visibility = 'hidden';
+          navItem.style.backgroundColor = 'transparent';
+          icon.style.color = themes[id];
+        }
+      };
+    })
+/*
+    nav.addEventListener("mouseout", function(e) {
+      sub.style.visibility = 'hidden';
+          list.style.visibility = 'hidden';
+          navItem.style.backgroundColor = 'transparent';
+          icon.style.color = themes[id];
+    })
+
+    const setUp = function (navItem) {
       navItem.addEventListener("mouseenter", function (e) {
         //clear sublist container
         if (sub.childNodes.length > 0) {
@@ -586,7 +650,7 @@
         //keep sublist visible when mouse on sublist
         sub.onmouseenter = function () {
           sub.style.visibility = "visible";
-          list.style.visibility = 'visible';
+          list.style.visibility = "visible";
           navItem.style.backgroundColor = themes[id];
           icon.style.color = "white";
         }
@@ -609,7 +673,7 @@
     }
     for (let i = 0; i < navItems.length; i++) {
       setUp(navItems[i])
-    }
+    } */
   </script>
 </body>
 
