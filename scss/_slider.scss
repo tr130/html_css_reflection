@@ -24,26 +24,5 @@
   &_btn {
     font-size: 1.2rem;
   }
-  /*
-  &_circles {
-    display: grid;
-    grid-template-columns: repeat(6, 20px);
-    column-gap: 12px;
-    margin-top: 4rem;
-    justify-content: center;
 
-    &_circle {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: lighten($base, 50%);
-      opacity: 40%;
-
-      &:hover {
-        background-color: lighten($base, 10%);
-        opacity: 100%;
-        cursor: pointer;
-      }
-    }
-  } */
 }
