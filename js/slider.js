@@ -1,11 +1,12 @@
 var slider = document.getElementById('slider'),
     sliderItems = document.getElementById('items'),
-    prev = document.getElementById('prev'),
-    next = document.getElementById('next');
+    controls = document.getElementsByClassName('slider_controls')[0]
+    controlButtons = document.getElementsByClassName('slider_control');
 
-slide(slider, sliderItems, prev, next);
 
-function slide(wrapper, items, prev, next) {
+slide(slider, sliderItems);
+
+function slide(wrapper, items) {
   var posX1 = 0,
       posX2 = 0,
       posInitial,
@@ -13,14 +14,16 @@ function slide(wrapper, items, prev, next) {
       threshold = 100,
       slides = items.getElementsByClassName('slide'),
       slidesLength = slides.length,
-      slideSize = items.getElementsByClassName('slide')[0].offsetWidth,
       firstSlide = slides[0],
       lastSlide = slides[slidesLength - 1],
       cloneFirst = firstSlide.cloneNode(true),
       cloneLast = lastSlide.cloneNode(true),
       index = 0,
-      allowShift = true;
-  
+      allowShift = true
+      autoplay = true;
+      console.log(slides.length);
+
+      const totalButtons = controlButtons.length;
   // Clone first and last slide
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
@@ -35,11 +38,46 @@ function slide(wrapper, items, prev, next) {
   items.addEventListener('touchmove', dragAction);
   
   // Click events
-  prev.addEventListener('click', function () { shiftSlide(-1) });
-  next.addEventListener('click', function () { shiftSlide(1) });
+  //prev.addEventListener('click', function () { shiftSlide(-1) });
+  //next.addEventListener('click', function () { shiftSlide(1) });
   
   // Transition events
   items.addEventListener('transitionend', checkIndex);
+
+  window.addEventListener('resize', function() {
+    if (items.offsetLeft % window.innerWidth) {
+      items.style.left = -(index * window.innerWidth) + "px";
+    }
+  });
+
+  controls.addEventListener('click', function(e) {
+    if (e.target.className === 'slider_control') {
+      autoplay = false;
+      items.classList.add('shifting');
+      items.style.left = -(e.target.id * window.innerWidth) + "px";
+      index = parseInt(e.target.id); 
+      setActiveButton(index);
+    }
+  })
+
+  function setActiveButton(index) {
+    console.log(`index: ${index}`);
+    
+    for (let i = 0; i < totalButtons; i++) {
+      controlButtons[i].classList.remove('active');
+    }
+    console.log(`targetbutton: ${(index + (totalButtons - 1)) % totalButtons}`)
+    controlButtons[(index + (totalButtons - 1)) % totalButtons].classList.add('active');
+  }
+
+  setInterval( function() {
+    if (autoplay) {
+      shiftSlide(1)
+    }
+    else {
+      autoplay = true;
+    }
+  }, 4000);
   
   function dragStart (e) {
     e = e || window.event;
@@ -70,11 +108,15 @@ function slide(wrapper, items, prev, next) {
   
   function dragEnd (e) {
     posFinal = items.offsetLeft;
+    console.log(`posInitial: ${posInitial}`);
     if (posFinal - posInitial < -threshold) {
+      console.log('first');
       shiftSlide(1, 'drag');
     } else if (posFinal - posInitial > threshold) {
+      console.log('second');
       shiftSlide(-1, 'drag');
     } else {
+      console.log('third');
       items.style.left = (posInitial) + "px";
     }
 
@@ -87,30 +129,33 @@ function slide(wrapper, items, prev, next) {
     
     if (allowShift) {
       if (!action) { posInitial = items.offsetLeft; }
-
       if (dir == 1) {
-        items.style.left = (posInitial - slideSize) + "px";
+        items.style.left = (posInitial - window.innerWidth) + "px";
         index++;      
       } else if (dir == -1) {
-        items.style.left = (posInitial + slideSize) + "px";
+        items.style.left = (posInitial + window.innerWidth) + "px";
         index--;      
       }
+      setActiveButton(index);
     };
     
+    console.log(`index: ${index}`);
+    console.log(`items.offsetLeft: ${items.offsetLeft}`);
+    console.log(`items.style.left: ${items.style.left}`);
     allowShift = false;
   }
     
   function checkIndex (){
     items.classList.remove('shifting');
 
-    if (index == -1) {
-      items.style.left = -(slidesLength * slideSize) + "px";
-      index = slidesLength - 1;
+    if (index === 0) {
+      items.style.left = -(slidesLength * window.innerWidth) + "px";
+      index = slidesLength;
     }
 
-    if (index == slidesLength) {
-      items.style.left = -(1 * slideSize) + "px";
-      index = 0;
+    if (index === slidesLength + 1) {
+      items.style.left = -(1 * window.innerWidth) + "px";
+      index = 1;
     }
     
     allowShift = true;

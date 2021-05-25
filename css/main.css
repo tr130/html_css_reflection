@@ -825,10 +825,6 @@ template {
   text-transform: uppercase;
 }
 
-.slick-list {
-  height: 100% !important;
-}
-
 .slider {
   text-align: center;
   color: white;
@@ -849,6 +845,26 @@ template {
 }
 
 .slider_slide-webd {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg);
+  background-position: center;
+}
+
+.slider_slide-cybs {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-lQs1.jpg);
+  background-position: center;
+}
+
+.slider_slide-it {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-57sJ.jpg);
+  background-position: center;
+}
+
+.slider_slide-tele {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-5yqm.jpg);
+  background-position: center;
+}
+
+.slider_slide-besp {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-sqvx.jpg);
   background-position: center;
 }
@@ -880,12 +896,13 @@ template {
 .wrapper {
   overflow: hidden;
   position: relative;
+  width: 100vw;
   z-index: 1;
   height: 100%;
 }
 
 #items {
-  width: 10000px;
+  width: 20000px;
   position: relative;
   top: 0;
   left: 0px;
@@ -908,16 +925,29 @@ template {
   position: relative;
 }
 
-.control {
+.slider_controls {
   position: absolute;
-  top: 50%;
-  width: 40px;
-  height: 40px;
+  top: 94%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.slider_control {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 8px;
   background: #fff;
-  border-radius: 20px;
+  opacity: 60%;
+  border-radius: 50%;
   margin-top: -20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-  z-index: 2;
+}
+
+.active {
+  background: red;
 }
 
 .prev,
