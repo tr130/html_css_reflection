@@ -910,7 +910,7 @@ template {
 }
 
 #items.shifting {
-  transition: left .2s ease-out;
+  transition: left .4s ease-out;
 }
 
 .slide {
@@ -943,11 +943,22 @@ template {
   opacity: 60%;
   border-radius: 50%;
   margin-top: -20px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .active {
-  background: red;
+  opacity: 100%;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
 .prev,

@@ -28,9 +28,13 @@ function slide(wrapper, items) {
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
   wrapper.classList.add('loaded');
+  items.style.left = (0 - window.innerWidth) + "px";
+  index++; 
+  setActiveButton(index);
   
   // Mouse and Touch events
   items.onmousedown = dragStart;
+
   
   // Touch events
   items.addEventListener('touchstart', dragStart);
@@ -80,6 +84,9 @@ function slide(wrapper, items) {
   }, 4000);
   
   function dragStart (e) {
+    if(allowShift) {
+    console.log('go')
+    autoplay = false;
     e = e || window.event;
     e.preventDefault();
     posInitial = items.offsetLeft;
@@ -91,6 +98,7 @@ function slide(wrapper, items) {
       document.onmouseup = dragEnd;
       document.onmousemove = dragAction;
     }
+  }
   }
 
   function dragAction (e) {
@@ -126,7 +134,7 @@ function slide(wrapper, items) {
   
   function shiftSlide(dir, action) {
     items.classList.add('shifting');
-    
+    autoplay = false;
     if (allowShift) {
       if (!action) { posInitial = items.offsetLeft; }
       if (dir == 1) {
@@ -135,6 +143,9 @@ function slide(wrapper, items) {
       } else if (dir == -1) {
         items.style.left = (posInitial + window.innerWidth) + "px";
         index--;      
+      }
+      if (items.offsetLeft % window.innerWidth) {
+        items.style.left = -(index * window.innerWidth) + "px";
       }
       setActiveButton(index);
     };
