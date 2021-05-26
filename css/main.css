@@ -432,6 +432,9 @@ template {
     margin-top: -50px !important;
     text-align: left !important;
   }
+  .sidebar_mobile {
+    display: none;
+  }
   #serv-besp,
   #serv-it {
     padding-right: 0.75rem !important;
@@ -541,6 +544,7 @@ template {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  position: relative;
 }
 
 .topbar-and-nav {
@@ -586,8 +590,23 @@ template {
   background-color: white;
   width: 100%;
   height: 2.5px;
-  top: 7.5px;
   margin-bottom: 0.3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.topbar_menu .open-middle {
+  transform: rotate(720deg);
+  background: transparent;
+}
+
+.topbar_menu .open-top {
+  width: 30px;
+  transform: rotate(45deg) translate(6px, 0px);
+}
+
+.topbar_menu .open-bottom {
+  width: 30px;
+  transform: rotate(-45deg) translate(10px, -5px);
 }
 
 .topbar_btns {
@@ -716,10 +735,6 @@ template {
   margin-bottom: 0 !important;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.nav_list .nav-item-cybs {
-  border-right: 1px rgba(128, 128, 128, 0.568) groove;
 }
 
 .nav_list_item {
@@ -896,7 +911,6 @@ template {
 .wrapper {
   overflow: hidden;
   position: relative;
-  width: 100vw;
   z-index: 1;
   height: 100%;
 }
@@ -1927,6 +1941,10 @@ template {
   text-decoration: underline;
 }
 
+.footer {
+  position: relative;
+}
+
 .footer_upper {
   background-color: #333645;
   padding-bottom: 2rem;
@@ -2011,6 +2029,167 @@ template {
   display: none;
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  height: 100%;
+  background: #333645;
+  width: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebar ul {
+  margin-bottom: 0 !important;
+}
+
+.sidebar_list:hover .sidebar_list_item {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar_list_item:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar_list_item {
+  background: #333645;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 1.25rem;
+  padding: 19px 0 18px;
+  border-radius: 3px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.2rem;
+}
+
+.sidebar_list_item .icn_webd {
+  color: #926fb1;
+}
+
+.sidebar_list_item .icn_it {
+  color: #4183d7;
+}
+
+.sidebar_list_item .icn_tele {
+  color: #d64541;
+}
+
+.sidebar_list_item .icn_besp {
+  color: #67809f;
+}
+
+.sidebar_list_item .icn_digm {
+  color: #2ecc71;
+}
+
+.sidebar_list_item .icn_cybs {
+  color: #f62459;
+}
+
+.sidebar_list_item .icn_contact {
+  color: #999aa2;
+}
+
+.sidebar_list_item .icn_devt {
+  color: #926fb1;
+}
+
+.sidebar_list_item .icn_culture {
+  color: #ffffff;
+}
+
+.sidebar_list_item .icn_base {
+  color: #333645;
+}
+
+.sidebar_list_item i {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar_list_item span {
+  font-size: 0.6rem;
+  margin: 0 auto;
+}
+
+.sidebar_list_item span:last-child {
+  box-sizing: content-box;
+  font-size: 1.2rem;
+}
+
+.sidebar_list_lower:hover .sidebar_list_lower_item {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar_list_lower_item {
+  background: #333645;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  margin-top: 0;
+  padding: 19px 0 18px 21px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+}
+
+.sidebar_sublist, .sidebar_sublist_lower {
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.sidebar_sublist li, .sidebar_sublist_lower li {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar_sublist li a, .sidebar_sublist_lower li a {
+  color: white;
+  width: 100%;
+}
+
+.sidebar_sublist li a::after, .sidebar_sublist_lower li a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+.sidebar_sublist_lower {
+  margin-top: 0;
+}
+
+.sidebar_sublist_lower li {
+  padding: 10px 21px;
+  text-align: left;
+}
+
+.sidebar_sublist_lower li a {
+  font-size: 0.875rem;
+}
+
+.sidebar_sublist_lower li a::before {
+  content: "\BB";
+  padding-right: 15px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -2021,6 +2200,10 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   letter-spacing: .4px;
+}
+
+main {
+  position: relative;
 }
 
 .standard {

@@ -65,12 +65,10 @@ function slide(wrapper, items) {
   })
 
   function setActiveButton(index) {
-    console.log(`index: ${index}`);
     
     for (let i = 0; i < totalButtons; i++) {
       controlButtons[i].classList.remove('active');
     }
-    console.log(`targetbutton: ${(index + (totalButtons - 1)) % totalButtons}`)
     controlButtons[(index + (totalButtons - 1)) % totalButtons].classList.add('active');
   }
 
@@ -85,7 +83,6 @@ function slide(wrapper, items) {
   
   function dragStart (e) {
     if(allowShift) {
-    console.log('go')
     autoplay = false;
     e = e || window.event;
     e.preventDefault();
@@ -116,15 +113,11 @@ function slide(wrapper, items) {
   
   function dragEnd (e) {
     posFinal = items.offsetLeft;
-    console.log(`posInitial: ${posInitial}`);
     if (posFinal - posInitial < -threshold) {
-      console.log('first');
       shiftSlide(1, 'drag');
     } else if (posFinal - posInitial > threshold) {
-      console.log('second');
       shiftSlide(-1, 'drag');
     } else {
-      console.log('third');
       items.style.left = (posInitial) + "px";
     }
 
@@ -150,9 +143,9 @@ function slide(wrapper, items) {
       setActiveButton(index);
     };
     
-    console.log(`index: ${index}`);
-    console.log(`items.offsetLeft: ${items.offsetLeft}`);
-    console.log(`items.style.left: ${items.style.left}`);
+    //console.log(`index: ${index}`);
+    //console.log(`items.offsetLeft: ${items.offsetLeft}`);
+    //console.log(`items.style.left: ${items.style.left}`);
     allowShift = false;
   }
     
