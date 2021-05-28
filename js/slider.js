@@ -21,15 +21,12 @@ function slide(wrapper, items) {
       index = 0,
       allowShift = true
       autoplay = true;
-      console.log(slides.length);
 
       const totalButtons = controlButtons.length;
 
   for (let i = 0; i < slides.length; i++) {
-    //console.log(slides[i]);
     slides[i].style.width = window.innerWidth + "px";
   }
-  console.log(`offset: ${items.offsetLeft}`);
 
   // Clone first and last slide
   items.appendChild(cloneFirst);
@@ -57,7 +54,6 @@ function slide(wrapper, items) {
 
   window.addEventListener('resize', function() {
     for (let i = 0; i < slides.length; i++) {
-      //console.log(slides[i]);
       slides[i].style.width = window.innerWidth + "px";
     }
   
@@ -155,9 +151,6 @@ function slide(wrapper, items) {
       setActiveButton(index);
     };
     
-    //console.log(`index: ${index}`);
-    //console.log(`items.offsetLeft: ${items.offsetLeft}`);
-    //console.log(`items.style.left: ${items.style.left}`);
     allowShift = false;
   }
     

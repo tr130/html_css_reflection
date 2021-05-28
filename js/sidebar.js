@@ -17,11 +17,11 @@ function openNav() {
     sidebarMobile.style.padding = "0 21px";
   }
 
-  sidebar.style.width = `${width}px`;
+  sidebar.style.width = width + 'px';
   
-  main.style.left = `-${width}px`;
-  header.style.left = `-${width}px`;
-  footer.style.left = `-${width}px`;
+  main.style.left = 0 - width + 'px';
+  header.style.left = 0 - width + 'px';
+  footer.style.left = 0 - width + 'px';
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
   menuRules[0].classList.add('open-top');
