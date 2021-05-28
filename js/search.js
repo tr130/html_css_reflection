@@ -39,3 +39,21 @@ searchButton.addEventListener('click', function(e) {
     }
   }
 })
+
+window.addEventListener('resize', function() {
+  if(window.innerWidth >= 1260) {
+  supportButton.style.opacity = '';
+  contactButton.style.opacity = '';
+  searchInput.style.opacity = '';
+  supportButton.style.display = '';
+      contactButton.style.display = '';
+      searchForm.style.width = '';
+        searchInput.style.display = '';
+  } else if (window.innerWidth < 1260) {
+  searchInput.style.opacity = '';
+  supportButton.style.display = '';
+      contactButton.style.display = '';
+      searchForm.style.width = '';
+        searchInput.style.display = '';
+  }
+})

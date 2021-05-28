@@ -479,11 +479,12 @@ template {
     width: 1137px;
   }
   .topbar_search {
-    width: 260px;
+    width: 265px;
   }
   .topbar_search_input {
     display: inline-block !important;
     width: 200px !important;
+    opacity: 1;
   }
   .topbar_search button {
     border-left: none !important;
