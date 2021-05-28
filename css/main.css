@@ -365,6 +365,9 @@ template {
   nav {
     display: none !important;
   }
+  .topbar_btn_link {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -410,13 +413,14 @@ template {
     width: 881px;
   }
   .topbar_btn_link {
-    display: inline-block !important;
+    display: inline-block;
   }
   .topbar_search {
-    width: 60px !important;
+    width: 60px;
   }
   .topbar_search_input {
-    display: none !important;
+    display: none;
+    opacity: 0;
   }
   .topbar_search button {
     border-left: 1px solid grey !important;
@@ -475,7 +479,7 @@ template {
     width: 1137px;
   }
   .topbar_search {
-    width: 260px !important;
+    width: 260px;
   }
   .topbar_search_input {
     display: inline-block !important;
@@ -629,14 +633,11 @@ template {
   color: #333645;
 }
 
-.topbar_btn_link {
-  display: none;
-}
-
 .topbar .topbar_btn_contact,
 .topbar .topbar_btn_support {
   height: 3.5rem;
   margin-right: 1.5rem;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .topbar_menu {
@@ -681,7 +682,6 @@ template {
 
 .topbar_search {
   margin-right: 1.5rem;
-  width: 260px;
   height: 3.5rem;
 }
 
@@ -695,6 +695,7 @@ template {
   width: 200px;
   font-size: 0.9rem;
   color: #333;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .topbar_search_input:focus {
@@ -999,6 +1000,7 @@ template {
   justify-content: center;
   transition: all 1s;
   position: relative;
+  background-size: cover;
 }
 
 .slider_controls {

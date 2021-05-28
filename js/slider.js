@@ -1,28 +1,31 @@
-var //slider = document.getElementById('slider'),
-    sliderItems = document.getElementById('items'),
-    controls = document.getElementsByClassName('slider_controls')[0]
-    controlButtons = document.getElementsByClassName('slider_control');
+/* This is an adapted version of the slider found here:
+https://medium.com/@claudiaconceic/infinite-plain-javascript-slider-click-and-touch-events-540c8bd174f2 */
+
+const sliderItems = document.getElementById('items'),
+    controls = document.getElementsByClassName('slider_controls')[0],
+    controlButtons = document.getElementsByClassName('slider_control'),
+    slider = document.querySelector(".slider");
 
 
 slide(slider, sliderItems);
 
 function slide(wrapper, items) {
-  var posX1 = 0,
+  let posX1 = 0,
       posX2 = 0,
       posInitial,
       posFinal,
-      threshold = 100,
+      index = 0,
+      allowShift = true
+      autoplay = true;
+
+  const threshold = 100,
       slides = items.getElementsByClassName('slide'),
       slidesLength = slides.length,
       firstSlide = slides[0],
       lastSlide = slides[slidesLength - 1],
       cloneFirst = firstSlide.cloneNode(true),
       cloneLast = lastSlide.cloneNode(true),
-      index = 0,
-      allowShift = true
-      autoplay = true;
-
-      const totalButtons = controlButtons.length;
+      totalButtons = controlButtons.length;
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.width = window.innerWidth + "px";
@@ -39,15 +42,10 @@ function slide(wrapper, items) {
   // Mouse and Touch events
   items.onmousedown = dragStart;
 
-  
   // Touch events
   items.addEventListener('touchstart', dragStart);
   items.addEventListener('touchend', dragEnd);
   items.addEventListener('touchmove', dragAction);
-  
-  // Click events
-  //prev.addEventListener('click', function () { shiftSlide(-1) });
-  //next.addEventListener('click', function () { shiftSlide(1) });
   
   // Transition events
   items.addEventListener('transitionend', checkIndex);
@@ -70,10 +68,9 @@ function slide(wrapper, items) {
       index = parseInt(e.target.id); 
       setActiveButton(index);
     }
-  })
+  });
 
   function setActiveButton(index) {
-    
     for (let i = 0; i < totalButtons; i++) {
       controlButtons[i].classList.remove('active');
     }

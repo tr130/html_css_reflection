@@ -53,10 +53,9 @@ function closeNav() {
 
   setTimeout(function() {
     main.removeEventListener('click', closeNav);
-  header.removeEventListener('click', closeNav);
-footer.removeEventListener('click', closeNav);
+    header.removeEventListener('click', closeNav);
+    footer.removeEventListener('click', closeNav);
   }, 10);
 } 
-
 
 menuButton.addEventListener('click', openNav);

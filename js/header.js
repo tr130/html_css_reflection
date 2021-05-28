@@ -1,70 +1,62 @@
+const navbar = document.querySelector(".topbar-and-nav");
+const banner = document.querySelector(".slider");
 let lastScrollY = window.pageYOffset;
 let scrolling = false;
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {
-  scrolling = true;
-};
-
-// Get the navbar
-const navbar = document.querySelector(".topbar-and-nav");
-const slider = document.querySelector(".slider");
-
-navbar.style.top = 0 - navbar.offsetHeight + 'px';
-
 let sticky = navbar.offsetHeight;
+navbar.style.top = 0 - sticky + 'px';
 
-// Get the offset position of the navbar
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   sticky = navbar.offsetHeight;
 })
 
-setInterval(function() {
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-if (scrolling && window.pageYOffset >= sticky) {
-   scrolling = false;
+window.onscroll = function () {
+  scrolling = true;
+};
 
-  if (window.pageYOffset < lastScrollY) {
-    if (navbar.style.position === 'static') {
-      navbar.style.top = 0 - navbar.offsetHeight + 'px';
-    }
-    if (navbar.style.position === 'static') {
-    navbar.style.position = 'fixed';
-    navbar.style.top = 0 - navbar.offsetHeight + 'px';
-    
-    
-    //navbar.style.transition = 'all 2s ease-in-out';
-      setTimeout(function() {
-        navbar.style.top = '0px';
-        //navbar.style.transition = '';
-        if (window.innerWidth > 990) {
-        slider.style.marginTop = navbar.offsetHeight - 50 + 'px';
-        } else {
-          slider.style.marginTop = navbar.offsetHeight + 'px';
-        }
-      }, 10);
-    
-    }
-  } else {
-    navbar.style.top = 0 - navbar.offsetHeight + 'px';
-    if (window.innerWidth > 990) { 
-      slider.style.marginTop = '-50px';
+setInterval(function () {
+
+  if (scrolling && window.pageYOffset >= sticky) {
+    scrolling = false;
+
+    if (window.pageYOffset < lastScrollY) {
+      if (navbar.style.position === 'static') {
+        navbar.style.top = 0 - sticky + 'px';
+      }
+      if (navbar.style.position === 'static') {
+        navbar.style.position = 'fixed';
+        navbar.style.top = 0 - sticky + 'px';
+
+        setTimeout(function () {
+          navbar.style.top = '0px';
+          if (window.innerWidth > 990) {
+            banner.style.marginTop = sticky - 50 + 'px';
+          } else {
+            banner.style.marginTop = sticky + 'px';
+          }
+        }, 10);
+
+      }
     } else {
-      slider.style.marginTop = '0px';
+      navbar.style.top = 0 - sticky + 'px';
+      if (window.innerWidth > 990) {
+        banner.style.marginTop = '-50px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+
+      setTimeout(function () {
+        navbar.style.position = 'static'
+      }, 210);
     }
 
+  } else if (scrolling && window.pageYOffset === 0) {
+    navbar.style.position = 'static';
+    if (window.innerWidth > 900) {
+      banner.style.marginTop = '-50px';
+    } else {
+      banner.style.marginTop = '0px';
+    }
 
-    setTimeout(function() {navbar.style.position = 'static'}, 210);
   }
-  
-} else if (scrolling && window.pageYOffset === 0) {
-  navbar.style.position = 'static';
-  if (window.innerWidth > 900) {
-    slider.style.marginTop = '-50px';
-    } else {
-      slider.style.marginTop = '0px';
-    }
-
-}
-lastScrollY = window.pageYOffset;
+  lastScrollY = window.pageYOffset;
 }, 250);

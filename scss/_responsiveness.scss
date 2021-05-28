@@ -35,6 +35,10 @@
     display: none !important;
   }
 
+  .topbar_btn_link {
+    display: none;
+  }
+
 }
 
 @include media-sm {
@@ -94,14 +98,15 @@
   }
 
   .topbar_btn_link {
-    display: inline-block !important;
+    display: inline-block;
   }
 
   .topbar_search {
-    width: 60px !important;
+    width: 60px;
 
     &_input {
-      display: none !important;
+      display: none;
+      opacity: 0;
     }
 
     button {
@@ -176,7 +181,7 @@
   }
 
   .topbar_search {
-    width: 260px !important;
+    width: 260px;
 
     &_input {
       display: inline-block !important;

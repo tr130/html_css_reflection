@@ -33,14 +33,11 @@ $height: 3.5rem;
     color: $base;
   }
 
-  &_btn_link {
-    display: none;
-  }
-
   .topbar_btn_contact,
   .topbar_btn_support {
     height: $height;
     margin-right: 1.5rem;
+    transition: opacity 0.5s ease-in-out;
   }
 
   &_menu {
@@ -85,7 +82,6 @@ $height: 3.5rem;
 
   &_search {
     margin-right: 1.5rem;
-    width: 260px;
     height: $height;
 
     &_input {
@@ -98,6 +94,7 @@ $height: 3.5rem;
       width: 200px;
       font-size: 0.9rem;
       color: #333;
+      transition: opacity 0.5s ease-in-out;
 
       &:focus {
         border-color: #5bc0de;
