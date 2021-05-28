@@ -5,10 +5,16 @@ $height: 3.5rem;
   flex-direction: column;
   height: 100vh;
   position: relative;
+  //top: 0;
 }
 
 .topbar-and-nav {
   flex: 0 1 auto;
+  background-image: linear-gradient(white 168px, transparent 168px);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  z-index: 10;
+  //top: -200px;
 }
 
 .topbar {
@@ -16,6 +22,7 @@ $height: 3.5rem;
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem auto;
+  background-color: white;
 
   &_logo {
     left: 0;

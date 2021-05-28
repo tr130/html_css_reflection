@@ -1,4 +1,4 @@
-var slider = document.getElementById('slider'),
+var //slider = document.getElementById('slider'),
     sliderItems = document.getElementById('items'),
     controls = document.getElementsByClassName('slider_controls')[0]
     controlButtons = document.getElementsByClassName('slider_control');
@@ -24,6 +24,13 @@ function slide(wrapper, items) {
       console.log(slides.length);
 
       const totalButtons = controlButtons.length;
+
+  for (let i = 0; i < slides.length; i++) {
+    //console.log(slides[i]);
+    slides[i].style.width = window.innerWidth + "px";
+  }
+  console.log(`offset: ${items.offsetLeft}`);
+
   // Clone first and last slide
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
@@ -49,6 +56,11 @@ function slide(wrapper, items) {
   items.addEventListener('transitionend', checkIndex);
 
   window.addEventListener('resize', function() {
+    for (let i = 0; i < slides.length; i++) {
+      //console.log(slides[i]);
+      slides[i].style.width = window.innerWidth + "px";
+    }
+  
     if (items.offsetLeft % window.innerWidth) {
       items.style.left = -(index * window.innerWidth) + "px";
     }
