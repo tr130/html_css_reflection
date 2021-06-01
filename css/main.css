@@ -2055,7 +2055,7 @@ template {
   padding: 0 0.75rem 0.75rem 0.75rem !important;
 }
 
-.footer .social_container #social-fb:hover {
+.footer .social_container #social-fb:hover a {
   background-color: #3b5998;
 }
 
@@ -2063,7 +2063,7 @@ template {
   padding: 0 0.75rem 0.75rem 0.75rem !important;
 }
 
-.footer .social_container #social-twit:hover {
+.footer .social_container #social-twit:hover a {
   background-color: #00aced;
 }
 
@@ -2071,7 +2071,7 @@ template {
   padding: 0.75rem 0.75rem 0.75rem 0.75rem !important;
 }
 
-.footer .social_container #social-li:hover {
+.footer .social_container #social-li:hover a {
   background-color: #0077b5;
 }
 
