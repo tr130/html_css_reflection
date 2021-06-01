@@ -50,4 +50,7 @@ window.addEventListener('resize', function() {
       searchForm.style.width = '';
         searchInput.style.display = '';
   }
+  if (window.innerWidth >= 1260 && /MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    searchForm.style.width = '280px';
+  }
 })
