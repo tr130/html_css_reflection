@@ -1,4 +1,4 @@
-@import 'normalize', 'variables', 'responsiveness', 'header', 'navbar', 'slider', 'services', 'intro', 'latest', 'clients', 'form', 'footer';
+@import 'normalize', 'variables', 'responsiveness', 'cookies', 'header', 'navbar', 'slider', 'services', 'intro', 'latest', 'clients', 'form', 'footer', 'sidebar';
 
 * {
   box-sizing: border-box;
@@ -10,6 +10,10 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   letter-spacing: .4px;
+}
+
+main {
+  position: relative;
 }
 
 .standard {

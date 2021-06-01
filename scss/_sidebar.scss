@@ -1,0 +1,135 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  height: 100%;
+  background: #333645;
+  width: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  ul {
+    margin-bottom: 0 !important;
+  }
+
+  &_list {
+
+    &:hover .sidebar_list_item {
+      color: white;
+      background-color: hsla(0, 0%, 100%, .05);
+    }
+
+    &_item:hover {
+      color: white;
+      background-color: hsla(0, 0%, 100%, .05);
+    }
+
+    &_item {
+      background: #333645;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      margin-top: 1.25rem;
+      padding: 19px 0 18px;
+      border-radius: 3px;
+      outline: 1px solid rgba(0, 0, 0, .25);
+      border: 1px solid hsla(0, 0%, 100%, .1);
+      font-size: 1.2rem;
+
+      
+
+      .icn {
+        @include icntheme($themes);
+      }
+
+      i {
+        //margin-top: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      span {
+        font-size: 0.6rem;
+        margin: 0 auto;
+      }
+
+      span:last-child {
+        box-sizing: content-box;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &_list_lower {
+
+
+    &:hover .sidebar_list_lower_item {
+      color: white;
+      background-color: hsla(0, 0%, 100%, .05);
+    }
+
+    &_item {
+      background: #333645;
+      color: white;
+      text-transform: uppercase;
+      display: flex;
+      margin-top: 0;
+      padding: 19px 0 18px 21px;
+      border-bottom: 1px solid rgba(0, 0, 0, .25);
+      border-top: 1px solid hsla(0, 0%, 100%, .1);
+      font-size: 1rem;
+    }
+  }
+
+  &_sublist {
+    background-color: rgba(0, 0, 0, .25);
+    margin-top: 1.25rem;
+    text-transform: uppercase;
+    color: white;
+
+    li {
+      position: relative;
+      border-top: 1px solid hsla(0,0%,100%,.1);
+      border-bottom: 1px solid rgba(0,0,0,.25);
+      padding: 10px;
+      text-align: center;
+
+      
+      
+
+      a {
+        color: white;
+        width: 100%;
+
+        &::after {position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          content: "";}
+      }
+    }
+  }
+
+  &_sublist_lower {
+    @extend .sidebar_sublist;
+    margin-top: 0;
+
+    li {
+      padding: 10px 21px;
+      text-align: left;
+      a {
+        font-size: 0.875rem;
+
+        &::before {
+          content: "\BB";
+padding-right: 15px;
+        }
+      }
+    }
+  }
+}

@@ -4,10 +4,17 @@ $height: 3.5rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  position: relative;
+  //top: 0;
 }
 
 .topbar-and-nav {
   flex: 0 1 auto;
+  background-image: linear-gradient(white 168px, transparent 168px);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  z-index: 10;
+  //top: -200px;
 }
 
 .topbar {
@@ -15,6 +22,7 @@ $height: 3.5rem;
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem auto;
+  background-color: white;
 
   &_logo {
     left: 0;
@@ -25,14 +33,11 @@ $height: 3.5rem;
     color: $base;
   }
 
-  &_btn_link {
-    display: none;
-  }
-
   .topbar_btn_contact,
   .topbar_btn_support {
     height: $height;
     margin-right: 1.5rem;
+    transition: opacity 0.5s ease-in-out;
   }
 
   &_menu {
@@ -47,9 +52,24 @@ $height: 3.5rem;
       background-color: white;
       width: 100%;
       height: 2.5px;
-      top: 7.5px;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.3rem; 
+      transition: all 0.5s ease-in-out;
     }
+
+    .open-middle {
+      transform: rotate(720deg);
+      background: transparent;
+    }
+
+      .open-top {
+        width:30px;
+        transform: rotate(45deg) translate(6px, 0px);
+      }
+
+      .open-bottom {
+        width: 30px;
+        transform: rotate(-45deg) translate(10px, -5px);
+      }
   }
 
   &_btns {
@@ -62,7 +82,6 @@ $height: 3.5rem;
 
   &_search {
     margin-right: 1.5rem;
-    width: 260px;
     height: $height;
 
     &_input {
@@ -75,6 +94,7 @@ $height: 3.5rem;
       width: 200px;
       font-size: 0.9rem;
       color: #333;
+      transition: opacity 0.5s ease-in-out;
 
       &:focus {
         border-color: #5bc0de;
