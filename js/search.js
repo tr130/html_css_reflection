@@ -49,8 +49,11 @@ window.addEventListener('resize', function() {
       contactButton.style.display = '';
       searchForm.style.width = '';
         searchInput.style.display = '';
+searchVisible = false;
   }
   if (window.innerWidth >= 1260 && /MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
     searchForm.style.width = '280px';
+  } else if (window.innerWidth < 1260 && /MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    searchForm.style.width = '';
   }
 })
