@@ -95,6 +95,8 @@ background-position: center;
   //width: 100vw;
   z-index: 1;
   height: 100%;
+
+
 }
 
 #items {
@@ -103,6 +105,8 @@ background-position: center;
   top: 0;
   left: 0px;
   height: 100%;
+
+
 }
 
 #items.shifting {
@@ -112,7 +116,6 @@ background-position: center;
 .slide {
   width: 100vw;
   height: 100%;
-  cursor: pointer;
   float: left;
   display: flex;
   flex-direction: column;
@@ -120,6 +123,8 @@ background-position: center;
   transition: all 1s;
   position: relative;
   background-size: cover;
+
+
 }
 
 .slider_controls {
@@ -138,10 +143,11 @@ background-position: center;
   background: #fff;
   opacity: 60%;
   border-radius: 50%;
-  //padding: 5px;
-  
-  
   margin-top: -20px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .active {

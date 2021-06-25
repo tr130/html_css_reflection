@@ -92,6 +92,7 @@ function slide(wrapper, items) {
     e = e || window.event;
     e.preventDefault();
     posInitial = items.offsetLeft;
+    items.style.cursor = 'pointer';
     
     if (e.type == 'touchstart') {
       posX1 = e.touches[0].clientX;
@@ -118,6 +119,7 @@ function slide(wrapper, items) {
   
   function dragEnd (e) {
     posFinal = items.offsetLeft;
+    items.style.cursor = 'default';
     if (posFinal - posInitial < -threshold) {
       shiftSlide(1, 'drag');
     } else if (posFinal - posInitial > threshold) {

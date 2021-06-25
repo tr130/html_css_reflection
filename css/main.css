@@ -659,7 +659,6 @@ template {
 }
 
 .topbar_menu .open-middle {
-  transform: rotate(720deg);
   background: transparent;
 }
 
@@ -994,7 +993,6 @@ template {
 .slide {
   width: 100vw;
   height: 100%;
-  cursor: pointer;
   float: left;
   display: flex;
   flex-direction: column;
@@ -1022,6 +1020,10 @@ template {
   opacity: 60%;
   border-radius: 50%;
   margin-top: -20px;
+}
+
+.slider_control:hover {
+  cursor: pointer;
 }
 
 .active {
@@ -2101,9 +2103,11 @@ template {
   z-index: 9;
   height: 100%;
   background: #333645;
-  width: 0;
+  width: 350px;
+  right: -350px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  transition: 0.3s all ease-in-out;
 }
 
 .sidebar ul {
@@ -2253,6 +2257,44 @@ template {
 .sidebar_sublist_lower li a::before {
   content: "\BB";
   padding-right: 15px;
+}
+
+body {
+  transition: 0.3s all ease-in-out;
+}
+
+#mainpage {
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  left: 0;
+}
+
+.shifted_left {
+  background-color: black;
+  overflow: hidden;
+}
+
+.shifted_left #mainpage {
+  left: -350px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.shifted_left .sidebar {
+  right: 0;
+}
+
+@media only screen and (max-width: 990px) {
+  .sidebar {
+    width: 275px;
+    right: -275px;
+  }
+  .sidebar_mobile {
+    padding: 0 21px;
+  }
+  .shifted_left #mainpage {
+    left: -275px;
+  }
 }
 
 * {
