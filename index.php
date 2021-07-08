@@ -1,83 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--script>
-    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-      document.write(
-        'This website is incompatible with Internet Explorer. Click <a href="microsoft-edge:https://netmatters.henry-golding.netmatters-scs.co.uk">here</a> to open the page in Microsoft Edge.'
-      );
-    }
-  </script-->
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
-</head>
+<?php include('inc/head.php') ?>
 
 <body>
   <div id="mainpage">
   <header class="header">
-    <div class="topbar-and-nav">
-      <div class="topbar standard">
-        <a class="topbar_logo_link" href="https://www.netmatters.co.uk/"><img class="topbar_logo"
-            src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="netmatters logo"></a>
-        <div class="topbar_btns">
-          <a class="topbar_btn_link topbar_btn_support btn btn-bg-it" href="https://support.netmatters.com/"><i
-              class="fas fa-mouse"></i>
-            Support</a>
-          <a class="topbar_btn_link topbar_btn_contact btn btn-bg-contact"
-            href="https://www.netmatters.co.uk/contact-us"><i class="far fa-paper-plane"></i> Contact</a>
-          <a class="topbar_btn_phone btn" href="tel:01603704020"><i class="fas fa-phone-alt"></i></a>
-          <form class="topbar_search" method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8">
-            <input class="topbar_search_input" type="text" placeholder="Search..." name="keyword">
-            <button id="search_button" type="submit"><i class="fa fa-search"></i></button>
-          </form>
-          <div class="topbar_menu btn btn-bg-base">
-            <div class="topbar_menu_rule"></div>
-            <div class="topbar_menu_rule"></div>
-            <div class="topbar_menu_rule"></div>
-            <p>menu</p>
-          </div>
-        </div>
-      </div>
-      <div class="standard">
-        <form class="topbar_search_xs" method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8">
-          <input class="topbar_search_xs_input" type="text" placeholder="Search..." name="keyword">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      <nav class="nav_bar_container">
-        <div class="nav_list standard row">
-          <a class="nav_list_item nav-item-webd col-md-2" href="https://www.netmatters.co.uk/web-design">
-            <i class="icn_webd fas fa-code"></i>
-            <span>Web</span><span>Design</span></a>
-          <a class="nav_list_item nav-item-it col-md-2" href="https://www.netmatters.co.uk/it-support">
-            <i class="icn_it fas fa-desktop"></i>
-            <span>IT</span><span>Support</span></a>
-          <a class="nav_list_item nav-item-tele col-md-2" href="https://www.netmatters.co.uk/telecoms-services">
-            <i class="icn_tele fas fa-phone-alt"></i>
-            <span>Telecoms</span><span>Services</span></a>
-          <a class="nav_list_item nav-item-besp col-md-2" href="https://www.netmatters.co.uk/bespoke-software">
-            <i class="icn_besp fas fa-th"></i>
-            <span>Bespoke</span><span>Software</span></a>
-          <a class="nav_list_item nav-item-digm col-md-2" href="https://www.netmatters.co.uk/digital-marketing">
-            <i class="icn_digm fas fa-signal"></i>
-            <span>Digital</span><span>Marketing</span></a>
-          <a class="nav_list_item nav-item-cybs col-md-2" href="https://www.netmatters.co.uk/cyber-security">
-            <i class="icn_cybs fas fa-shield-alt"></i>
-            <span>Cyber</span><span>Security</span></a>
-        </div>
-        <div class="nav_sub">
-        </div>
-      </nav>
-    </div>
+    <?php include('inc/topbar.php') ?>
     <div id="slider" class="slider">
       <div class="wrapper">
         <div class="items" id="items">
@@ -285,23 +211,23 @@
       <div class="latest_background">
         <div class="latest_container row standard">
           <div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_1">
-            <div class="latest_card card latest-webd">
+            <div class="latest_card card latest-digm">
               <div class="latest_img_container">
-                <a href="https://www.netmatters.co.uk/news/rob-becomes-a-netmatters-director"><img
-                    src="http://placeimg.com/455/263/tech" class="latest_img card-img-top" alt="New director"></a>
-                <a href="https://www.netmatters.co.uk/news/web-design" class="latest_topiclink">news</a>
+                <a href="https://www.netmatters.co.uk/digital-marketing-consultant"><img
+                    src="digital-marketing-consultant-2LLW.jpg" class="latest_img card-img-top" alt="New director"></a>
+                <a href="https://www.netmatters.co.uk/our-careers/digital-marketing" class="latest_topiclink">careers</a>
               </div>
               <div class="card-body">
-                <a href="#" class="latest_titlelink">Rob Becomes a Director</a>
-                <p class="latest_firstlines">Netmatters is constantly evolving and day-by-day it continues to grow in
-                  every aspect. Despit...</p>
+                <a href="#" class="latest_titlelink">Digital Marketing Consultant</a>
+                <p class="latest_firstlines">Salary Range £28,000 - £34,000 per annum + Bonus Hours 40 hours per week, 
+                Monday - Friday Location W...</p>
                 <a class="btn latest_btn"
-                  href="https://www.netmatters.co.uk/news/rob-becomes-a-netmatters-director">Read more</a>
+                  href="https://www.netmatters.co.uk/digital-marketing-consultant">Read more</a>
                 <div class="latest_byline">
-                  <img class="latest_authorimg" src="http://placeimg.com/80/80/people" alt="author">
+                  <img class="latest_authorimg" src="lydia-whitney-u5hO.jpg" alt="author">
                   <div>
-                    <p class="latest_postedby">Posted by Netmatters Ltd</p>
-                    <p class="latest_posteddate">1st April 2021</p>
+                    <p class="latest_postedby">Posted by Lydia Whitney</p>
+                    <p class="latest_posteddate">8th July 2021</p>
                   </div>
                 </div>
               </div>
@@ -435,104 +361,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer_upper ">
-      <div class="footer_container row standard">
-        <section class="contact col-xs-12 col-md-6 col-xl-3">
-          <h5 class="footer_title">contact us</h5>
-          <address class="footer_text">
-            11 Penfold Drive<br>
-            Wymondham<br>
-            Norfolk<br>
-            NR18 0WZ
-          </address>
-          Tel: <a href="tel:01603704020">01603 70 40 20</a><br>
-          Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a>
-        </section>
-        <section class="aboutus col-xs-12 col-md-6 col-xl-3">
-          <h5 class="footer_title">about netmatters</h5>
-          <ul>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/news">News</a></li>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/our-careers">Our Careers</a></li>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/team">Our Team</a></li>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/office-tour">Our Office Tour</a>
-            </li>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/privacy-policy">Privacy
-                Policy</a>
-            </li>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/cookie-policy">Cookie Policy</a>
-            </li>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/terms-and-conditions">Terms &
-                Conditions</a></li>
-            <li><a class="aboutus_link footer_text"
-                href="https://www.netmatters.co.uk/terms-and-conditions/uk-domains">UK
-                Domains</a></li>
-          </ul>
-        </section>
-        <section class="website col-xs-12 col-md-6 col-xl-3">
-          <h5 class="footer_title">website</h5>
-          <ul>
-            <li><a class="aboutus_link footer_text" href="https://www.netmatters.co.uk/sitemap.xml">Sitemap</a></li>
-            <li>&copy; Copyright Netmatters Ltd. 2021</li>
-            <li>All rights reserved</li>
-          </ul>
-        </section>
-        <section class="social col-xs-12 col-md-6 col-xl-3">
-          <h5 class="footer_title">social media</h5>
-          <div class="social_container container row">
-            <div class="col-6" id="social-fb"><a class="social-btn btn fab fa-facebook-f fa-2x"
-                href="https://en-gb.facebook.com/netmatters/" target="_blank"></a></div>
-            <div class="col-6" id="social-twit"><a class="social-btn btn fab fa-twitter fa-2x"
-                href="https://twitter.com/netmattersltd" target="_blank"></a></div>
-            <div class="col-6" id="social-li"><a class="social-btn btn fab fa-linkedin-in fa-2x"
-                href="https://www.linkedin.com/company/netmatters-ltd/" target="_blank"></a></div>
-
-          </div>
-        </section>
-      </div>
-    </div>
-    <section class="partners standard">
-      <div class="partners_container">
-        <div class="partner"><img src="https://www.gstatic.com/partners/badge/images/PartnerBadge.png"
-            alt="Google partner badge">
-        </div>
-        <div class="partner"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/silver-microsoft-partner.jpg"
-            alt="Microsoft logo"></div>
-        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg"
-            alt="Future 50 badge" class="colored"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/future-50-bw.jpg" alt="Further 50 Member"
-            class="greyscale" /> </div>
-        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/qms.jpg"
-            alt="QMS accreditation" class="colored">
-          <img src="https://www.netmatters.co.uk/assets/images/accreditations/qms-bw.jpg" alt="QMS" class="greyscale" />
-        </div>
-        <div class="partner"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
-            alt="Norfolk Carbon Charter" class="colored"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter-bw.jpg"
-            alt="Norfolk Carbon Charter" class="greyscale" /></div>
-      </div>
-      <div class="partners_container">
-        <div class="partner"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
-            alt="Investing in Future Growth Winner" class="colored"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth-bw.jpg"
-            alt="Investing in Future Growth" class="greyscale" /></div>
-
-        <div class="partner"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.jpg"
-            alt="Princes Royal Training Award 2020" class="colored"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training-bw.jpg"
-            alt="Princess Royal Training" class="greyscale" /></div>
-        <div class="partner"><img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
-            alt="Skills of Tomorrow winner" class="colored"><img
-            src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow-bw.jpg"
-            alt="Skills of Tomorrow" class="greyscale" /></div>
-      </div>
-    </section>
-
-  </footer>
+  <?php include('inc/footer.php') ?>
 
 </div>
 

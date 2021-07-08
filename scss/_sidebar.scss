@@ -148,7 +148,7 @@ body {
 
 .shifted_left {
   background-color: black;
-  overflow: hidden;
+  overflow: hidden !important;
   #mainpage {
     left: -350px;
     opacity: 0.5;
