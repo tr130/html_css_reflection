@@ -1755,6 +1755,7 @@ template {
 .latest_titlelink {
   font-size: 0.9rem;
   font-weight: 700;
+  min-height: 3rem;
 }
 
 .latest_titlelink:hover {
@@ -2271,7 +2272,7 @@ body {
 
 .shifted_left {
   background-color: black;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .shifted_left #mainpage {

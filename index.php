@@ -210,11 +210,12 @@
       </div>
       <div class="latest_background">
         <div class="latest_container row standard">
-          <div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_1">
+        <?php include('inc/latest.php'); ?>
+          <!--div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_1">
             <div class="latest_card card latest-digm">
               <div class="latest_img_container">
                 <a href="https://www.netmatters.co.uk/digital-marketing-consultant"><img
-                    src="digital-marketing-consultant-2LLW.jpg" class="latest_img card-img-top" alt="New director"></a>
+                    src="img/digital-marketing-consultant-2LLW.jpg" class="latest_img card-img-top" alt="New director"></a>
                 <a href="https://www.netmatters.co.uk/our-careers/digital-marketing" class="latest_topiclink">careers</a>
               </div>
               <div class="card-body">
@@ -224,7 +225,7 @@
                 <a class="btn latest_btn"
                   href="https://www.netmatters.co.uk/digital-marketing-consultant">Read more</a>
                 <div class="latest_byline">
-                  <img class="latest_authorimg" src="lydia-whitney-u5hO.jpg" alt="author">
+                  <img class="latest_authorimg" src="img/lydia-whitney-u5hO.jpg" alt="author">
                   <div>
                     <p class="latest_postedby">Posted by Lydia Whitney</p>
                     <p class="latest_posteddate">8th July 2021</p>
@@ -280,7 +281,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div -->
         </div>
       </div>
     </section>
