@@ -1,4 +1,7 @@
-<?php include('inc/head.php') ?>
+<?php 
+  session_start();
+  include('inc/head.php') 
+?>
 
 <body>
   <div id="mainpage">
@@ -333,18 +336,33 @@
         </div>
       </div>
     </section>
-    <section class="newsletter">
+    <section id="newsletter" class="newsletter">
       <div class="newsletter_container standard">
-        <form action="#" method="POST">
+        <form action="inc/newsletter.php" method="POST">
+        <?php 
+          if (!empty($_SESSION["error"])) {
+            foreach($_SESSION["error"] as $error) {
+              echo '<div class="alert alert-danger" role="alert">' . $error . '</div>';
+            }
+            unset($_SESSION["error"]);
+          } elseif ($_SESSION["success"]) {
+            echo '<div class="alert alert-success" role="alert">' . $_SESSION["success"] . '</div>';
+            unset($_SESSION["success"]);
+          }
+        ?>
           <h2>Email Newsletter Sign-Up</h2>
           <div class="row">
             <div id="form_name" class="form-group col-lg-6">
               <label for="name">Your Name <span class="asterisk">*</span></label>
-              <input type="text" id="name" name="name" class="form-control form-control-lg" required>
+              <input type="text" id="name" name="name" class="form-control form-control-lg" value="<?php if ($_SESSION["name"]) {
+                echo $_SESSION["name"];
+              } ?>" required>
             </div>
             <div id="form_email" class="form-group col-lg-6">
               <label for="email">Your Email <span class="asterisk">*</span></label>
-              <input type="email" id="email" name="email" class="form-control form-control-lg" required>
+              <input type="email" id="email" name="email" class="form-control form-control-lg" value="<?php if ($_SESSION["email"]) {
+                echo $_SESSION["email"];
+              } ?>"required>
             </div>
           </div>
           <div class="form-group">
