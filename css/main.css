@@ -2278,6 +2278,7 @@ body {
 .shifted_left #mainpage {
   left: -350px;
   opacity: 0.5;
+  pointer-events: none;
   cursor: pointer;
 }
 

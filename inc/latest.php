@@ -9,6 +9,7 @@ catch(Exception $e) {
 }
 
 foreach($posts as $post) {
+  $date = DateTime::createFromFormat('Y-m-d', $post['posted_date']);
   $output = '<div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_' . $post['id'];
   $output .= '"> <div class="latest_card card latest-' . $post['color'];
   $output .= '"> <div class="latest_img_container">';
@@ -20,7 +21,7 @@ foreach($posts as $post) {
   $output .= '<a class="btn latest_btn" href="' . $post['link'] . '">Read more</a>';
   $output .= '<div class="latest_byline"><img class="latest_authorimg" src="img/' . $post['author_img'] . '" alt="author">';
   $output .= '<div><p class="latest_postedby">' . $post['posted_by'] . '</p>';
-  $output .= '<p class="latest_posteddate">' . $post['posted_date'] . '</p></div></div></div></div></div>';
+  $output .= '<p class="latest_posteddate">' . $date->format('jS F Y') . '</p></div></div></div></div></div>';
 
   echo $output;
 }

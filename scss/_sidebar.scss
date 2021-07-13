@@ -152,6 +152,7 @@ body {
   #mainpage {
     left: -350px;
     opacity: 0.5;
+    pointer-events: none;
     cursor: pointer;
   }
   .sidebar {

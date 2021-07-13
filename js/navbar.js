@@ -69,7 +69,7 @@ const submenu = {
 
 const nav = document.querySelector('.nav_bar_container');
 
-nav.addEventListener("mouseover", function (e) {
+function showSublist(e) {
   if (e.target.classList[0] == 'nav_list_item') {
     if (sub.childNodes.length > 0) {
       sub.removeChild(sub.childNodes[0])
@@ -128,4 +128,6 @@ nav.addEventListener("mouseover", function (e) {
       icon.style.color = themes[id];
     }
   };
-})
+}
+
+nav.addEventListener("mouseover", showSublist)
