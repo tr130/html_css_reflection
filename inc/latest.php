@@ -22,6 +22,5 @@ foreach($posts as $post) {
   $output .= '<div class="latest_byline"><img class="latest_authorimg" src="img/' . $post['author_img'] . '" alt="author">';
   $output .= '<div><p class="latest_postedby">' . $post['posted_by'] . '</p>';
   $output .= '<p class="latest_posteddate">' . $date->format('jS F Y') . '</p></div></div></div></div></div>';
-
   echo $output;
 }

@@ -2,7 +2,7 @@
   session_start();
   include('inc/head.php') 
 ?>
-
+<html>
 <body>
   <div id="mainpage">
   <header class="header">
@@ -214,30 +214,33 @@
       <div class="latest_background">
         <div class="latest_container row standard">
         <?php include('inc/latest.php'); ?>
-          <!--div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_1">
-            <div class="latest_card card latest-digm">
+        <?php foreach($posts as $post) {
+          $date = DateTime::createFromFormat('Y-m-d', $post['posted_date']);?>
+          <div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_<?=$post['id']?>">
+            <div class="latest_card card latest-<?=$post['color']?>">
               <div class="latest_img_container">
-                <a href="https://www.netmatters.co.uk/digital-marketing-consultant"><img
-                    src="img/digital-marketing-consultant-2LLW.jpg" class="latest_img card-img-top" alt="New director"></a>
-                <a href="https://www.netmatters.co.uk/our-careers/digital-marketing" class="latest_topiclink">careers</a>
+                <a href="<?=$post['link']?>">
+                  <img src="img/<?=$post['img']?>" class="latest_img card-img-top" alt="<?=$post['alt']?>"></a>
+                <a href="<?=$post['topic_link']?>" class="latest_topiclink"><?=$post['topic']?></a>
               </div>
               <div class="card-body">
-                <a href="#" class="latest_titlelink">Digital Marketing Consultant</a>
-                <p class="latest_firstlines">Salary Range £28,000 - £34,000 per annum + Bonus Hours 40 hours per week, 
-                Monday - Friday Location W...</p>
+                <a href="<?=$post['link']?>" class="latest_titlelink"><?=$post['title']?></a>
+                <p class="latest_firstlines"><?=$post['first_lines']?></p>
                 <a class="btn latest_btn"
-                  href="https://www.netmatters.co.uk/digital-marketing-consultant">Read more</a>
+                  href="<?=$post['link']?>">Read more</a>
                 <div class="latest_byline">
-                  <img class="latest_authorimg" src="img/lydia-whitney-u5hO.jpg" alt="author">
+                  <img class="latest_authorimg" src="<?=$post['author_img']?>" alt="author">
                   <div>
-                    <p class="latest_postedby">Posted by Lydia Whitney</p>
-                    <p class="latest_posteddate">8th July 2021</p>
+                    <p class="latest_postedby"><?=$post['posted_by']?></p>
+                    <p class="latest_posteddate"><?=$date->format('jS F Y')?></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_2">
+      <?php } ?>
+          
+          <!--div class="col-xs-12 col-md-6 my-col-xl-4" id="latest_2">
             <div class="latest_card card latest-digm">
               <div class="latest_img_container">
                 <a href="https://www.netmatters.co.uk/news/march-2021-notables"><img
