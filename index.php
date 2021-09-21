@@ -229,7 +229,7 @@
                 <a class="btn latest_btn"
                   href="<?=$post['link']?>">Read more</a>
                 <div class="latest_byline">
-                  <img class="latest_authorimg" src="<?=$post['author_img']?>" alt="author">
+                  <img class="latest_authorimg" src="img/<?=$post['author_img']?>" alt="author">
                   <div>
                     <p class="latest_postedby"><?=$post['posted_by']?></p>
                     <p class="latest_posteddate"><?=$date->format('jS F Y')?></p>
